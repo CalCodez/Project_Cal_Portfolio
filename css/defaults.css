@@ -17,6 +17,16 @@
 	--turquoise-dark: #00eaec;
 }
 
+:root {
+	--marquee-width: 100%;
+	--marquee-height: fit-content;
+	--marquee-elms-displayed: 3;
+	--marquee-elm-width: calc(
+		var(--marquee-width) / var(--marquee-elms-displayed)
+	);
+	--marquee-duration-animation: calc(var(--marquee-elms) * 2s);
+}
+
 body {
 	display: flex;
 	place-content: center;
