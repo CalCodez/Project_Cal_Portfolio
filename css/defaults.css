@@ -1,3 +1,38 @@
-h1 {
-	color: red;
+:root {
+	--cranberry-main: #7a1927;
+	--cranberry-light: #ba4242;
+	--cranberry-dark: #7a1717;
+	--cranberry-dark-transparent: #7a1717cc;
+	--cream-main: #c5b078;
+	--cream-light: #d8cba6;
+	--cream-dark: #c0a96d;
+	--gold-main: #998242;
+	--gold-light: #b49951;
+	--gold-dark: #7d6936;
+	--blue-main: #0f52ba;
+	--blue-light: #1695ff;
+	--blue-dark: #005dab;
+	--turquoise-main: #0efdff;
+	--turquoise-light: #a1feff;
+	--turquoise-dark: #00eaec;
+}
+
+body {
+	display: flex;
+	place-content: center;
+	padding-top: 50px;
+	background-color: #7a1717;
+	background-image: linear-gradient(
+		180deg,
+		#7a1717 0%,
+		#c0a96d 50%,
+		#7a1717 100%
+	);
+}
+
+li,
+a {
+	list-style: none;
+	text-decoration: none;
+	color: var(--cream-main);
 }
