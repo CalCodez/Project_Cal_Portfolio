@@ -46,3 +46,8 @@ a {
 	text-decoration: none;
 	color: var(--cream-main);
 }
+
+a:hover {
+	color: var(--blue-light);
+	text-decoration: underline var(--gold-light);
+}
