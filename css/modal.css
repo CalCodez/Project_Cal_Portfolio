@@ -1,0 +1,43 @@
+/*Modal Styles*/
+.page-block {
+	background: var(--cream-main);
+	width: 80vw;
+	height: 80vh;
+	border: 1.25rem outset var(--cranberry-dark-transparent);
+	position: relative;
+	overflow-y: scroll;
+	scroll-behavior: auto;
+	place-self: center;
+	place-content: center;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transition: all 0.35s ease-in;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 99;
+}
+
+.full-site-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	transition: all 0.6s ease-in;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 99;
+	padding: 2rem;
+}
+
+.full-site-modal.is-visible,
+.modal.is-visible {
+	visibility: visible;
+	opacity: 1;
+}
+
+[data-anamation='zoomInOUt'].full-site-modal {
+	transform: scale(5);
+}
