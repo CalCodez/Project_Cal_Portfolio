@@ -45,7 +45,11 @@ li,
 a {
 	list-style: none;
 	text-decoration: none;
-	color: var(--cream-main);
+	color: var(--cream-light);
+}
+
+.modal-navbar-container a {
+	color: var(--cranberry-dark);
 }
 
 a:hover {
