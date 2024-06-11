@@ -3,9 +3,10 @@
 	display: flex;
 	place-content: center;
 	background: var(--cranberry-dark-transparent);
-	width: 70vw;
+	width: 90%;
 	height: 80vh;
-	border: 10px ridge var(--gold-light);
+	border: 10px ridge var(--cream-main);
+	border-radius: 15px;
 	position: relative;
 	overflow-y: scroll;
 	scroll-behavior: auto;
@@ -20,69 +21,77 @@
 	visibility: hidden;
 	opacity: 0;
 	z-index: 99;
-	padding: 25px;
+	padding: 30px;
 }
 
 .modal-content-wrapper {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	place-content: center;
 	place-items: center;
 	width: 95%;
-	height: 99%;
+	height: 100%;
+	border: 5px solid var(--blue-light-transparent);
 	background-image: linear-gradient(
 		180deg,
-		var(--cream-light) 0%,
-		var(--cream-dark) 50%,
-		var(--cream-light) 100%
+		var(--cream-light) 10%,
+		var(--cream-main) 50%,
+		var(--cream-light) 70%
 	);
-	border: 2px solid white;
 }
 .modal-image-container {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	place-content: center;
-	width: 100%;
-	height: 40%;
+	place-items: center;
+	width: 20%;
+	height: 50%;
 }
 
 .modal-image-wrapper {
 	display: flex;
 	place-content: center;
 	place-items: center;
-	width: 55%;
+	width: 30%;
 	height: 100%;
 }
 
 .modal-image-container img {
-	width: 60%;
+	width: 100%;
 	height: 100%;
-	border-radius: 60%;
+	border-radius: 50%;
 }
 
 .modal-navbar-container {
 	display: flex;
 	flex-direction: row;
-	gap: 80px;
-	font-size: 25px;
-	font-weight: 600;
-	border-top: var(--cranberry-dark);
+	justify-content: space-evenly;
+	width: 100%;
+	font-size: 15px;
+	font-weight: 400;
 	margin: 30px 0;
 }
 
 .modal-about-container {
-	border: 3px groove var(--cranberry-dark);
-	color: var(--cream-main);
-	background: var(--cranberry-dark-transparent);
-	width: 60%;
-	height: 40%;
-	text-align: center;
-	font-size: 14px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	font-family: 'Lumanosimo', sans-serif;
+	color: var(--cranberry-dark);
+	justify-content: space-around;
+	width: 80%;
+	height: 90%;
+	font-size: 12px;
 	font-weight: 700;
 	letter-spacing: 1;
-	text-overflow: hidden;
-	overflow: scroll;
 	margin-bottom: 20px;
+	word-wrap: break-word;
+}
+
+article {
+	place-self: center;
+	width: 40%;
+	text-align: justify;
 }
 
 .full-site-modal.is-visible,

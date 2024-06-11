@@ -12,6 +12,7 @@
 	--blue-main: #0f52ba;
 	--blue-light: #1695ff;
 	--blue-dark: #005dab;
+	--blue-light-transparent: #3ba2f6ae;
 	--turquoise-main: #0efdff;
 	--turquoise-light: #a1feff;
 	--turquoise-dark: #00eaec;
@@ -45,7 +46,8 @@ li,
 a {
 	list-style: none;
 	text-decoration: none;
-	color: var(--cream-light);
+	color: var(--cream-dark);
+	font-family: 'GreenWood_RS', sans-serif;
 }
 
 .modal-navbar-container a {
