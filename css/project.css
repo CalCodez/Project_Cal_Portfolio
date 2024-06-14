@@ -1,7 +1,7 @@
 .project-body-container {
 	display: flex;
 	flex-direction: column;
-	border: 3px ridge var(--cranberry-dark);
+	border: 3px ridge var(--gold-main);
 	width: 70vw;
 	height: auto;
 	background-color: var(--cranberry-dark);
@@ -23,60 +23,60 @@
 	display: flex;
 	position: relative;
 	place-content: center;
+	place-items: center;
 	flex-direction: row;
-	height: 50%;
+	height: 60%;
 	width: 100%;
-	outline: 1px solid yellow;
 }
 
 .project-logo-container img {
-	width: 80%;
+	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 
-.project-logo-container .lang-logo-handlder {
+.lang-logo-handlder {
 	display: flex;
 	place-content: center;
 	place-items: center;
-	height: 100px;
-	width: 100px;
-	position: relative;
+	height: 80px;
+	width: 80px;
+	position: absolute;
 	border-radius: 50%;
-	border: 3px solid var(--cream-dark);
-	box-shadow: 2px 2px 20px 2px var(--blue-light);
+	box-shadow: 2px 2px 25px 5px var(--cream-light);
+	border: 2px solid var(--cream-dark);
 	background-color: var(--cranberry-dark-transparent);
+	z-index: 1;
 }
 
 .lang-logo-handlder img {
-	width: 75px;
-	height: 75px;
+	width: 50px;
+	height: 50px;
 	object-fit: cover;
 	position: absolute;
 }
 
 .html {
-	top: 6%;
-	left: 5%;
-	bottom: 0;
+	top: 8%;
+	left: 11%;
 }
 .css {
-	left: 48%;
-	top: 27%;
+	right: 46%;
+	top: 8%;
 }
 .git {
-	top: 20;
-	left: 80%;
+	left: 34%;
+	bottom: 10%;
 }
 
 .js {
-	bottom: 0;
-	left: 75%;
+	top: 8%;
+	left: 76%;
 }
 
 .react {
-	left: 19%;
-	top: 65%;
+	left: 64%;
+	bottom: 10%;
 }
 
 .lang-logo-handlder {
