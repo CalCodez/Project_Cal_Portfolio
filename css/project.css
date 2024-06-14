@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	border: 3px ridge var(--cranberry-dark);
-	width: 80vw;
+	width: 70vw;
 	height: auto;
 	background-color: var(--cranberry-dark);
 }
@@ -21,36 +21,27 @@
 
 .project-logo-container {
 	display: flex;
+	position: relative;
+	place-content: center;
 	flex-direction: row;
-	flex-wrap: wrap;
 	height: 50%;
 	width: 100%;
+	outline: 1px solid yellow;
 }
 
-.project-logo-wrapper {
-	width: 50%;
-	object-fit: cover;
-}
-
-.project-logo-wrapper img {
-	width: 100%;
+.project-logo-container img {
+	width: 80%;
 	height: 100%;
 	object-fit: cover;
 }
 
-.project-coding-container {
-	width: 40%;
-	height: 100%;
-	position: relative;
-}
-
-.project-coding-container .lang-logo-handlder {
+.project-logo-container .lang-logo-handlder {
 	display: flex;
 	place-content: center;
 	place-items: center;
 	height: 100px;
 	width: 100px;
-	position: absolute;
+	position: relative;
 	border-radius: 50%;
 	border: 3px solid var(--cream-dark);
 	box-shadow: 2px 2px 20px 2px var(--blue-light);
