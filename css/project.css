@@ -164,7 +164,6 @@
 	flex-wrap: wrap;
 	height: fit-content;
 	gap: 10px;
-	outline: 1px solid yellow;
 	place-content: center;
 	padding: 20px 5px;
 }
@@ -174,10 +173,6 @@
 	height: 300px;
 	border: 3px groove var(--cream-main);
 	padding: 8px;
-}
-
-.project-card > * {
-	outline: 1px solid white;
 }
 
 .card-image-container {
@@ -198,8 +193,10 @@
 	display: center;
 	place-content: center;
 	width: 100%;
-	height: 20%;
-	margin-top: -10px;
+	height: 33%;
+	margin-top: -15px;
+	margin-bottom: 10px;
+	background-color: var(--cranberry-main);
 }
 
 .card-info-container p {
@@ -213,22 +210,37 @@
 .card-btn-container {
 	display: flex;
 	width: 100%;
-	height: 30%;
+	height: fit-content;
 	place-content: center;
 	place-items: center;
 }
 
-span,
-button {
-	width: fit-content;
+.btn {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	width: 65px;
 	height: fit-content;
-	background-color: var(--cream-dark);
-	border-radius: 15px;
-	box-shadow: 2px 2px 15px 1px var(--blue-light);
+	background-color: var(--cranberry-dark);
+	border: 2px outset var(--gold-main);
+	border-radius: 20px;
+	box-shadow: 1px 1px 10px 1px var(--cream-light);
 	padding: 10px;
+	color: var(--cream-light);
+	font-size: small;
+	margin-bottom: 0;
 }
 
-span a,
 button a {
+	width: fit-content;
+	color: var(--cream-light);
+	text-align: center;
+	padding-top: 2px;
+}
+
+.btn:hover {
+	background-color: var(--cream-main);
 	color: var(--cranberry-dark);
+	transform: scale(1.2);
+	border: 2px inset var(--cranberry-dark);
 }

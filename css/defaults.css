@@ -51,7 +51,7 @@ a {
 	list-style: none;
 	text-decoration: none;
 	color: var(--cream-dark);
-	font-family: 'GreenWood_RS', sans-serif;
+	cursor: pointer;
 }
 
 .modal-navbar-container a {
@@ -59,8 +59,7 @@ a {
 }
 
 a:hover {
-	color: var(--blue-light);
-	text-decoration: underline var(--gold-light);
+	text-decoration: underline var(--cream-dark);
 }
 
 h5 {
@@ -80,5 +79,5 @@ h3 {
 h4 {
 	color: var(--cream-light);
 	text-align: center;
-	margin-top: -20px;
+	margin-top: -5px;
 }
