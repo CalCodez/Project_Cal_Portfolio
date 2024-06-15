@@ -58,3 +58,19 @@ a:hover {
 	color: var(--blue-light);
 	text-decoration: underline var(--gold-light);
 }
+
+h5 {
+	font-family: 'GreenWood_RS', sans-serif;
+	font-size: 30px;
+	color: var(--cream-dark);
+	text-align: center;
+}
+
+h3 {
+	color: var(--cream-light);
+	text-align: center;
+	font-size: 25px;
+	margin-top: -20px;
+	/*font-family: 'GreenWood_RS', sans-serif;*/
+	font-weight: 200;
+}

@@ -72,21 +72,6 @@
 	line-height: 1;
 }
 
-.intro-name-container #my-name {
-	font-family: 'GreenWood_RS', sans-serif;
-	font-size: 30px;
-	color: var(--cream-dark);
-}
-
-.intro-name-container h3 {
-	color: var(--cream-light);
-	text-align: center;
-	font-size: 25px;
-	margin-top: -20px;
-	/*font-family: 'GreenWood_RS', sans-serif;*/
-	font-weight: 200;
-}
-
 .image-container {
 	width: 50%;
 }
