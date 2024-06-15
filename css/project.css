@@ -45,7 +45,7 @@
 	width: 80px;
 	position: absolute;
 	border-radius: 50%;
-	box-shadow: 2px 2px 25px 5px var(--cream-light);
+	box-shadow: 2px 2px 50px 5px var(--cream-light);
 	border: 2px solid var(--cream-dark);
 	background-color: var(--cranberry-dark-transparent);
 	z-index: 1;
@@ -64,7 +64,7 @@
 }
 .css {
 	right: 46%;
-	top: 8%;
+	top: 0;
 }
 .git {
 	left: 34%;
@@ -157,4 +157,14 @@
 	font-weight: 700;
 	letter-spacing: 1;
 	word-wrap: break-word;
+}
+
+.project-card-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	place-content: center;
+	place-items: center;
+	height: 500px;
+	outline: 1px solid yellow;
 }
