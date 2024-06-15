@@ -42,6 +42,10 @@ body {
 	);
 }
 
+* {
+	font-family: 'Lumanosimo', sans-serif;
+}
+
 li,
 a {
 	list-style: none;
@@ -60,7 +64,6 @@ a:hover {
 }
 
 h5 {
-	font-family: 'GreenWood_RS', sans-serif;
 	font-size: 30px;
 	color: var(--cream-dark);
 	text-align: center;
@@ -71,6 +74,11 @@ h3 {
 	text-align: center;
 	font-size: 25px;
 	margin-top: -20px;
-	/*font-family: 'GreenWood_RS', sans-serif;*/
 	font-weight: 200;
+}
+
+h4 {
+	color: var(--cream-light);
+	text-align: center;
+	margin-top: -20px;
 }
