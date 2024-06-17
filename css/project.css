@@ -45,7 +45,7 @@
 	width: 80px;
 	position: absolute;
 	border-radius: 50%;
-	box-shadow: 2px 2px 50px 5px var(--cream-light);
+	box-shadow: 2px 2px 80px 5px var(--cream-light);
 	border: 2px solid var(--cream-dark);
 	background-color: var(--cranberry-dark-transparent);
 	z-index: 1;
@@ -64,21 +64,21 @@
 }
 .css {
 	right: 46%;
-	top: 0;
+	top: -30;
 }
 .git {
 	left: 34%;
-	bottom: 10%;
+	bottom: -10%;
 }
 
 .js {
-	top: 8%;
-	left: 76%;
+	top: 1%;
+	left: 79%;
 }
 
 .react {
 	left: 64%;
-	bottom: 10%;
+	bottom: -5%;
 }
 
 .project-image-container {
