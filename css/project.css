@@ -84,23 +84,31 @@
 .project-image-container {
 	display: flex;
 	flex-direction: row;
-	margin: 30px 0;
+	place-content: center;
+	gap: 50px;
+	flex-wrap: wrap;
+	margin: 25px 0;
 	width: 100%;
-	height: 500px;
+	height: 400px;
 }
 
 .project-image-wrapper {
 	display: flex;
 	place-items: center;
 	place-content: center;
-	width: 50%;
+	width: 40%;
 	height: 100%;
+	background-image: linear-gradient(
+		180deg,
+		#7a1717 0%,
+		var(--gold-dark) 50%,
+		#7a1717 100%
+	);
 }
 
 .project-image-handler {
-	position: absolute;
-	width: 300px;
-	height: 350px;
+	width: 50%;
+	height: 50%;
 	z-index: 1;
 	border-radius: 50%;
 	border: 2px groove var(--blue-light);
@@ -112,30 +120,19 @@
 	border-radius: 50%;
 }
 
-.empty {
-	position: relative;
-	width: 90%;
-	height: 400px;
-	background-image: linear-gradient(
-		180deg,
-		#7a1717 0%,
-		var(--gold-dark) 50%,
-		#7a1717 100%
-	);
-}
-
 .project-info-container {
 	display: flex;
 	flex-direction: column;
 	place-content: space-around;
 	place-items: center;
-	width: 50%;
+	place-content: center;
+	width: 40%;
 }
 
 .project-info-header-container {
 	display: flex;
-	justify-content: center;
-	align-items: flex-start;
+	place-content: center;
+	place-items: center;
 	width: 100%;
 	padding: 0;
 	line-height: 1;
@@ -151,9 +148,9 @@
 	flex-wrap: wrap;
 	color: var(--cream-light);
 	text-align: justify;
-	width: 80%;
-	font-size: 12px;
-	font-weight: 700;
+	width: auto;
+	font-size: 11.2px;
+	font-weight: 400;
 	letter-spacing: 1;
 	word-wrap: break-word;
 }
@@ -166,12 +163,13 @@
 	gap: 50px;
 	place-content: center;
 	padding: 25px 5px;
-	background-color: var(--cranberry-);
+	background-color: var(--cranberry-dark);
+	margin: 25px auto;
 }
 
 .project-card {
-	width: 195px;
-	height: 300px;
+	width: 150px;
+	height: 275px;
 	border: 3px groove var(--cream-main);
 	box-shadow: 3px 3px 8px 1px var(--cream-light);
 	border-radius: 15px;
@@ -189,7 +187,7 @@
 	display: flex;
 	place-content: center;
 	width: 100%;
-	height: 40%;
+	height: 35%;
 	margin-bottom: 10px;
 }
 
@@ -203,16 +201,17 @@
 	display: center;
 	place-content: center;
 	width: 100%;
-	height: 33%;
+	height: 35%;
 	margin-top: -15px;
 	margin-bottom: 10px;
 	background-color: var(--cranberry-main);
 }
 
 .card-info-container p {
-	font-size: 9px;
+	font-size: 0.6rem;
 	color: var(--cream-light);
 	width: 100%;
+	line-height: 1.8;
 	text-align: justify;
 	word-spacing: 0;
 }
@@ -220,32 +219,23 @@
 .card-btn-container {
 	display: flex;
 	width: 100%;
-	height: fit-content;
+	height: 20%;
 	place-content: center;
 	place-items: center;
 }
 
 .btn {
 	display: flex;
-	align-content: center;
-	justify-content: center;
-	width: 65px;
+	place-content: center;
+	place-items: center;
+	width: 50%;
 	height: fit-content;
 	background-color: var(--cranberry-dark);
 	border: 2px outset var(--gold-main);
 	border-radius: 20px;
 	box-shadow: 1px 1px 10px 1px var(--cream-light);
-	padding: 10px;
 	color: var(--cream-light);
-	font-size: small;
-	margin-bottom: 0;
-}
-
-button a {
-	width: fit-content;
-	color: var(--cream-light);
-	text-align: center;
-	padding-top: 2px;
+	padding: 5px;
 }
 
 .btn:hover {
