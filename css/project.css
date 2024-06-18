@@ -59,12 +59,12 @@
 }
 
 .html {
-	top: 8%;
+	top: 2%;
 	left: 11%;
 }
 .css {
 	right: 46%;
-	top: -30;
+	top: -10%;
 }
 .git {
 	left: 34%;
@@ -73,7 +73,7 @@
 
 .js {
 	top: 1%;
-	left: 79%;
+	left: 85%;
 }
 
 .react {
@@ -89,7 +89,7 @@
 	flex-wrap: wrap;
 	margin: 1.5625rem 0;
 	width: 100%;
-	height: 25rem;
+	height: 400px;
 }
 
 .project-image-wrapper {
@@ -107,8 +107,8 @@
 }
 
 .project-image-handler {
-	width: 50%;
-	height: 50%;
+	width: 70%;
+	height: 70%;
 	z-index: 1;
 	border-radius: 50%;
 	border: 0.125rem groove var(--blue-light);
