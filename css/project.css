@@ -1,11 +1,11 @@
 .project-body-container {
 	display: flex;
 	flex-direction: column;
-	border: 5px ridge var(--cream-main);
+	border: 0.3125rem ridge var(--cream-main);
 	width: 80vw;
 	height: fit-content;
 	background-color: var(--cranberry-dark);
-	padding: 8px;
+	padding: 0.5rem;
 }
 
 .project-navbar-container {
@@ -17,7 +17,7 @@
 	justify-content: space-around;
 	width: 60%;
 	height: 10%;
-	margin-bottom: 25px;
+	margin-bottom: 1.5625rem;
 }
 
 .project-logo-container {
@@ -26,9 +26,9 @@
 	place-content: center;
 	place-items: center;
 	flex-direction: row;
-	height: 250px;
+	height: 15.625rem;
 	width: 100%;
-	margin: 25px auto;
+	margin: 1.5625rem auto;
 }
 
 .project-logo-container img {
@@ -41,19 +41,19 @@
 	display: flex;
 	place-content: center;
 	place-items: center;
-	height: 80px;
-	width: 80px;
+	height: 5rem;
+	width: 5rem;
 	position: absolute;
 	border-radius: 50%;
-	box-shadow: 2px 2px 80px 5px var(--cream-light);
-	border: 2px solid var(--cream-dark);
+	box-shadow: 0.125rem 0.125rem 5rem 0.3125rem var(--cream-light);
+	border: 0.125rem solid var(--cream-dark);
 	background-color: var(--cranberry-dark-transparent);
 	z-index: 1;
 }
 
 .lang-logo-handlder img {
-	width: 50px;
-	height: 50px;
+	width: 3.125rem;
+	height: 3.125rem;
 	object-fit: cover;
 	position: absolute;
 }
@@ -85,11 +85,11 @@
 	display: flex;
 	flex-direction: row;
 	place-content: center;
-	gap: 50px;
+	gap: 3.125rem;
 	flex-wrap: wrap;
-	margin: 25px 0;
+	margin: 1.5625rem 0;
 	width: 100%;
-	height: 400px;
+	height: 25rem;
 }
 
 .project-image-wrapper {
@@ -111,8 +111,8 @@
 	height: 50%;
 	z-index: 1;
 	border-radius: 50%;
-	border: 2px groove var(--blue-light);
-	box-shadow: 2px 2px 80px 2px var(--blue-light-transparent);
+	border: 0.125rem groove var(--blue-light);
+	box-shadow: 0.125rem 0.125rem 5rem 0.125rem var(--blue-light-transparent);
 }
 .project-image-handler img {
 	width: 100%;
@@ -141,7 +141,7 @@
 
 .project-info-container h5 {
 	width: auto;
-	margin: 8px auto;
+	margin: 0.5rem auto;
 }
 .project-info-info-container {
 	display: flex;
@@ -149,7 +149,7 @@
 	color: var(--cream-light);
 	text-align: justify;
 	width: auto;
-	font-size: 11.2px;
+	font-size: 0.7rem;
 	font-weight: 400;
 	letter-spacing: 1;
 	word-wrap: break-word;
@@ -160,27 +160,27 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	height: fit-content;
-	gap: 50px;
+	gap: 3.125rem;
 	place-content: center;
-	padding: 25px 5px;
+	padding: 1.5625rem 0.3125rem;
 	background-color: var(--cranberry-dark);
-	margin: 25px auto;
+	margin: 1.5625rem auto;
 }
 
 .project-card {
-	width: 150px;
-	height: 275px;
-	border: 3px groove var(--cream-main);
-	box-shadow: 3px 3px 8px 1px var(--cream-light);
-	border-radius: 15px;
-	padding: 20px;
+	width: 9.375rem;
+	height: 17.1875rem;
+	border: 0.1875rem groove var(--cream-main);
+	box-shadow: 0.1875rem 0.1875rem 0.5rem 0.0625rem var(--cream-light);
+	border-radius: 0.9375rem;
+	padding: 1.25rem;
 	background-color: var(--cranberry-dark);
 }
 
 .project-card:hover {
 	transform: scale(1.09);
-	box-shadow: 3px 3px 1px 1px var(--turquoise-light);
-	border: 3px groove var(--turquoise-dark);
+	box-shadow: 0.1875rem 0.1875rem 0.0625rem 0.0625rem var(--turquoise-light);
+	border: 0.1875rem groove var(--turquoise-dark);
 }
 
 .card-image-container {
@@ -188,7 +188,7 @@
 	place-content: center;
 	width: 100%;
 	height: 35%;
-	margin-bottom: 10px;
+	margin-bottom: 0.625rem;
 }
 
 .card-image-container img {
@@ -202,13 +202,13 @@
 	place-content: center;
 	width: 100%;
 	height: 35%;
-	margin-top: -15px;
-	margin-bottom: 10px;
+	margin-top: -0.9375rem;
+	margin-bottom: 0.625rem;
 	background-color: var(--cranberry-main);
 }
 
 .card-info-container p {
-	font-size: 0.6rem;
+	font-size: 9.6px;
 	color: var(--cream-light);
 	width: 100%;
 	line-height: 1.8;
@@ -231,15 +231,15 @@
 	width: 50%;
 	height: fit-content;
 	background-color: var(--cranberry-dark);
-	border: 2px outset var(--gold-main);
-	border-radius: 20px;
-	box-shadow: 1px 1px 10px 1px var(--cream-light);
+	border: 0.125rem outset var(--gold-main);
+	border-radius: 1.25rem;
+	box-shadow: 0.0625rem 0.0625rem 0.625rem 0.0625rem var(--cream-light);
 	color: var(--cream-light);
-	padding: 5px;
+	padding: 0.3125rem;
 }
 
 .btn:hover {
 	background-color: var(--cream-main);
 	color: var(--cranberry-dark);
-	border: 2px inset var(--cranberry-dark);
+	border: 0.125rem inset var(--cranberry-dark);
 }

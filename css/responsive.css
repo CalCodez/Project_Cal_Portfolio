@@ -1,23 +1,36 @@
+@media (max-width: 1024px) {
+	h5 {
+		font-size: 1.5625rem;
+	}
+
+	.img-wrapper {
+		width: 80%;
+		height: 60%;
+	}
+
+	.full-site-modal .modal-content-wrapper {
+		width: 100%;
+	}
+}
+
 @media (max-width: 768px) {
-	.nav-container {
-		margin-bottom: 0;
+	body .main-portfolio-container {
+		width: 80vw;
+		height: 80vw;
+	}
+
+	body .portfolio-body-container {
+		height: 70%;
 	}
 
 	.nav-links-container a {
 		font-size: 15px;
 	}
 
-	.intro-name-container #my-name {
-		font-size: 18px;
-	}
-
-	.intro-name-container h3 {
-		font-size: 20px;
-	}
-
 	.img-wrapper {
 		width: 60%;
 		height: 40%;
+		margin-top: -50px;
 	}
 	.img-wrapper {
 		box-shadow: 0px 0px 40px 5px var(--cream-light);
@@ -31,6 +44,25 @@
 	.marquee:before,
 	.marquee:after {
 		width: 50px;
+	}
+
+	.full-site-modal .modal-content-wrapper {
+		flex-direction: column;
+	}
+
+	.modal-content-wrapper .modal-image-container {
+		width: 100%;
+		height: max-content;
+	}
+	.modal-image-container .modal-image-wrapper {
+		width: 45%;
+		height: 60%;
+	}
+
+	.modal-content-wrapper .modal-about-container {
+		font-size: 0.75em;
+		width: 90%;
+		margin-top: -25px;
 	}
 }
 
