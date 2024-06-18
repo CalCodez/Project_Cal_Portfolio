@@ -1,3 +1,20 @@
+function mobileMenu() {
+	if (document.getElementById('mainMenu').style.display == 'block') {
+		document.getElementById('mainMenu').style.display = 'none'
+	} else {
+		document.getElementById('mainMenu').style.display = 'block'
+	}
+}
+
+function displayTopButton() {
+	if (window.scrollY > 0) {
+		document.getElementById('ptb').style.display = 'block'
+	} else {
+		document.getElementById('ptb').style.display = 'none'
+	}
+}
+window.addEventListener('scroll', displayTopButton)
+
 //!!Modals Controls
 const modalOpen = '[data-open]'
 const modalClose = '[data-close]'
@@ -33,6 +50,8 @@ document.addEventListener('keyup', e => {
 		document.querySelector('.modal.is-visible').classList.remove(isVisible)
 	}
 })
+
+document.getElementById('menu-toggler').addEventListener('click', mobileMenu)
 
 //``Root Variable--
 const root = document.documentElement

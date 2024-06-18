@@ -11,6 +11,16 @@
 	.full-site-modal .modal-content-wrapper {
 		width: 100%;
 	}
+
+	#menu-toggler {
+		font-size: 25px;
+	}
+
+	#ptb {
+		outline: 1px solid yellow;
+		font-size: smaller;
+		text-align: center;
+	}
 }
 
 @media (max-width: 768px) {
