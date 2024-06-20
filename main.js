@@ -57,8 +57,6 @@ document.getElementById('menu-toggler').addEventListener('click', mobileMenu)
 const root = document.documentElement
 
 // Scrolling Marquee looping function
-
-// Scrolling Marquee looping function
 const elmDisplayed = getComputedStyle(root).getPropertyValue(
 	'--marquee-elms-displayed'
 )

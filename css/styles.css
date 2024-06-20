@@ -41,18 +41,6 @@
 	height: 100%;
 	width: 50%;
 }
-.nav-links-container li {
-	width: auto;
-	padding: 10px;
-}
-
-.nav-links-container li:hover,
-.modal-navbar-container li:hover {
-	transform: scale(1.3);
-}
-.nav-links-container a {
-	font-size: 20px;
-}
 
 .portfolio-body-container {
 	display: flex;
@@ -138,18 +126,6 @@
 		var(--cranberry-dark) 0%,
 		transparent 100%
 	);
-}
-
-@keyframes scrolling {
-	0% {
-		transform: translateX(0);
-	}
-
-	100% {
-		transform: translateX(
-			calc(-1 * var(--marquee-elm-width) * var(--marquee-elms))
-		);
-	}
 }
 
 .img-wrapper {

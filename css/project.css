@@ -9,41 +9,38 @@
 }
 
 .sticky-menu {
-	width: 10%;
+	display: flex;
+	place-content: center;
+	place-items: center;
+	flex-direction: row;
+	justify-content: flex-end;
+	width: 100%;
 	height: fit-content;
-	display: none;
-	background-color: var(--cream-main-transparent);
-	z-index: 2;
-
-	position: fixed;
-	padding: 10px;
 }
 
 .fi {
 	display: flex;
-	color: var(--gold-main);
+	visibility: hidden;
+	color: var(--cream-main);
 	font-size: 40px;
 	width: 40px;
 	height: 40px;
 	z-index: 3;
-	position: fixed;
 }
 
 .project-navbar-container {
 	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	width: 100%;
-	gap: 10px;
+	flex-direction: row;
+	width: fit-content;
+	gap: 50px;
 	height: 100%;
-	margin-bottom: 1.5625rem;
+	margin: 15px 50px 60px 0;
 	z-index: 2;
 	text-align: center;
 }
 
 .project-navbar-container a {
 	text-align: center;
-	color: var(--cranberry-dark);
 	font-size: 20px;
 }
 
@@ -269,7 +266,8 @@
 	position: fixed;
 	width: fit-content;
 	z-index: 3;
-	left: 91%;
+	left: 92%;
+	font-size: small;
 }
 
 .btn:hover {

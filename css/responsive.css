@@ -75,6 +75,37 @@
 		margin-top: -25px;
 	}
 
+	.project-logo-container {
+		margin-top: 60px;
+	}
+
+	.project-navbar-container {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	#menu-toggler {
+		position: absolute;
+		visibility: visible;
+		z-index: 3;
+		font-size: 30px;
+		right: 10%;
+	}
+	.sticky-menu {
+		position: absolute;
+		display: none;
+		place-items: center;
+		width: 50%;
+		z-index: 2;
+		right: 08%;
+		background: var(--cranberry-dark);
+	}
+
+	.sticky-menu a {
+		font-size: 25px;
+		font-weight: 600;
+	}
+
 	.css {
 		right: 40%;
 	}
