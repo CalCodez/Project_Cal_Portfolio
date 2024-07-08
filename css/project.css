@@ -202,7 +202,7 @@
 }
 
 .project-card:hover {
-	transform: scale(1.09);
+	transform: rotate3d(180deg);
 	box-shadow: 0.1875rem 0.1875rem 0.0625rem 0.0625rem var(--turquoise-light);
 	border: 0.1875rem groove var(--turquoise-dark);
 }
