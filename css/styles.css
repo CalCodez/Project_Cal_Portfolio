@@ -76,13 +76,14 @@
 .social-media-container {
 	display: flex;
 	width: 80%;
-	height: 40%;
+	height: 50%;
 }
 
 .inner-marquee-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	padding: 5px;
 }
 
 .social-media-container .fa-brands {
@@ -91,6 +92,10 @@
 	color: var(--gold-dark);
 	width: 25%;
 	text-shadow: 2px 3px 3px var(--cream-dark);
+}
+
+.social-media-container a {
+	text-decoration: none;
 }
 
 .social-media-container .fa-brands:hover {
