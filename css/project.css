@@ -192,17 +192,69 @@
 }
 
 .project-card {
-	width: 9.375rem;
-	height: 17.1875rem;
-	border: 0.1875rem groove var(--cream-main);
-	box-shadow: 0.1875rem 0.1875rem 0.5rem 0.0625rem var(--cream-light);
-	border-radius: 0.9375rem;
-	padding: 1.25rem;
+	width: 200px;
+	height: 320px;
+	border: 3px groove var(--cream-main);
+	box-shadow: 3px 3px 8px 1px var(--cream-light);
+	border-radius: 15px;
+	padding: 10px;
 	background-color: var(--cranberry-dark);
+	background-color: transparent;
+}
+
+.project-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.project-card:hover .project-card-inner {
+	transform: rotateY(180deg);
+	box-shadow: 1px 1px 1px 1px var(--turquoise-light);
+	border: 3px inset var(--turquoise-dark);
+}
+
+.project-card-front,
+.project-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.project-card-back {
+	display: felx;
+	flex-direction: column;
+	place-content: center;
+	transform: rotateY(180deg);
+}
+
+.project-card-back .card-btn-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	row-gap: 20px;
+	height: 100%;
+	width: 100%;
+	outline: 1px solid yellow;
+}
+
+.project-card-back .card-btn-container p {
+	color: var(--cream-light);
+	text-align: center;
+	font-size: 1em;
+}
+
+.project-card-back .card-btn-container .btn {
+	font-size: 0.8em;
+	height: 30px;
 }
 
 .project-card:hover {
-	transform: rotate3d(180deg);
 	box-shadow: 0.1875rem 0.1875rem 0.0625rem 0.0625rem var(--turquoise-light);
 	border: 0.1875rem groove var(--turquoise-dark);
 }
@@ -228,7 +280,7 @@
 	height: 35%;
 	margin-top: -0.9375rem;
 	margin-bottom: 0.625rem;
-	background-color: var(--cranberry-main);
+	/*background-color: var(--cranberry-main);*/
 }
 
 .card-info-container p {
@@ -237,7 +289,7 @@
 	width: 100%;
 	line-height: 1.8;
 	text-align: justify;
-	word-spacing: 0;
+	font-size: 0.9em;
 }
 
 .card-btn-container {

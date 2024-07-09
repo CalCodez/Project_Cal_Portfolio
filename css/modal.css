@@ -155,7 +155,7 @@
 	width: 50%;
 }
 
-.resource-image-continaer img {
+.resource-image-container img {
 	width: 160px;
 	height: 160px;
 	filter: drop-shadow(5px 1px 2px var(--cranberry-dark));
@@ -185,10 +185,11 @@
 }
 
 .resource-btn-container .btn {
-	font-size: 60%;
-	width: 30%;
+	font-size: 0.8em;
+	width: 40%;
 	height: 50%;
 	box-shadow: 3px 5px 10px 1px var(--cranberry-dark);
+	font-weight: 700;
 }
 
 .resource-btn-container .btn:hover {

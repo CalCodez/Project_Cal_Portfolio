@@ -17,7 +17,6 @@
 	}
 
 	#ptb {
-		outline: 1px solid yellow;
 		font-size: smaller;
 		text-align: center;
 	}
@@ -167,6 +166,25 @@
 		width: 40%;
 		height: 50%;
 		margin-bottom: -10px;
+	}
+
+	.resource-container .resource-image-container {
+		width: 40%;
+	}
+
+	.resource-container .resource-image-container img {
+		width: 120px;
+		height: 120px;
+	}
+
+	.resource-text-container {
+		font-size: 0.8em;
+		width: 60%;
+	}
+
+	.resource-text-container .resource-btn-container .btn {
+		width: 100%;
+		font-size: 1em;
 	}
 
 	.project-image-container {
