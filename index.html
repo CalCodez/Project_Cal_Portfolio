@@ -4,6 +4,9 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="https://fonts.cdnfonts.com/css/lumanosimo?styles=170790" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<link rel="stylesheet" href="./css/defaults.css" />
 		<link rel="stylesheet" href="./css/styles.css" />
 		<link rel="stylesheet" href="./css/responsive.css" />
@@ -27,7 +30,7 @@
 				</div>
 			</div>
 			<!-- **Portfolio Body Container -->
-			<di class="portfolio-body-container">
+			<div class="portfolio-body-container">
 				<!-- ++Intro Container -->
 				<div class="intro-container">
 					<!-- ^^Intro Name Container -->
@@ -37,32 +40,45 @@
 					</div>
 					<!-- ^^Marquee Container -->
 
-					<div class="marquee-container">
+					<div class="social-media-container">
 						<marquee behavior="slide" direction="left">
-							<d><img src="./assest/Logo_Images/html.png" alt="html" />
-								<img src="./assest/Logo_Images/css.png" alt="css" />
+							<div class="inner-marquee-container">
+								<div class="social-icon-wrappers">
+									<a href="https://www.facebook.com/CalvinCortezColbert"><i class="fa-brands fa-facebook"></i></a>
+								</div>
+								<div class="social-icon-wrappers">
+									<a href="https://www.instagram.com/calvincortezcolbert/"><i class="fa-brands fa-instagram"></i></a>
+								</div>
+								<div class="social-icon-wrappers">
+									<a href="https://www.threads.net/@calvincortezcolbert"><i class="fa-brands fa-square-threads"></i></a>
+								</div>
+								<div class="social-icon-wrappers">
+									<a data-open="snapchat"><i class="fa-brands fa-square-snapchat"></i></a>
+								</div>
+
+							</div>
 					</div>
-					<img src="./assest/Logo_Images/github3.png" alt="git" />
-
-					<img src="./assest/Logo_Images/java-script.png" alt="js" />
-
-					<img src="./assest/Logo_Images/react.png" alt="react" />
+					</marquee>
 				</div>
-				</marquee>
+			</div>
+			<!-- ^^Image Container -->
 
-		</div>
-		</div>
-		<!-- ^^Image Container -->
-
-		<div class="image-container">
-			<div class="img-wrapper">
-				<img src="./assest/Calvin/CalvinC_One.jpg" alt="calvin" />
+			<div class="image-container">
+				<div class="img-wrapper">
+					<img src="./assest/Calvin/CalvinC_One.jpg" alt="calvin" />
+				</div>
 			</div>
 		</div>
 		</div>
 
-		</div>
+
+
 		<!-- $$Modals -->
+
+		<!-- ++SnapChat Modal -->
+
+
+
 
 		<!-- ++About Modal -->
 		<div class="full-site-modal page-block modal" id="about" data-animation="zoomInOut" data-close="page-block">
@@ -85,7 +101,8 @@
 						I specialize in designing user-friendly websites that are visually appealing and optimized for
 						performance.
 						My approach
-						to web design is to blend creativity with technical expertise, ensuring that each site I create is unique,
+						to web design is to blend creativity with technical expertise, ensuring that each site I create is
+						unique,
 						engaging, and
 						effective. Whether you need a brand-new website or a redesign of your existing one, I am dedicated to
 						delivering
@@ -127,8 +144,6 @@
 						</div>
 					</div>
 				</div>
-
-
 				<div class="resource-container">
 					<div class="resource-text-container">
 						<div class="resource-text-wrapper">
@@ -148,6 +163,26 @@
 				</div>
 			</div>
 		</div>
+
+
+		<!-- ++Resources Modal -->
+
+		<div class="full-site-modal page-block modal snapchat-modal" id="snapchat" data-animation="zoomInOut"
+			data-close="page-block">
+			<div class="modal-content-wrapper snapchat-modal-content-wrapper resoure-modal-conent-wrapper">
+				<i data-close="page-block" class="fa-solid fa-x"></i>
+				<div class="snapchat-image-container">
+					<img src="./assest/snapcode/Snapchat-206999597.jpg" alt="coolcalmcollect-snapcode">
+				</div>
+
+
+			</div>
+
+		</div>
+		</div>
+
+
+
 
 		<!-- ++Projects Modal -->
 		<div class="full-site-modal page-block modal" id="projects" data-animation="zoomInOut" data-close="page-block">
