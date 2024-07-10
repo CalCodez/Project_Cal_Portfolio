@@ -173,9 +173,9 @@
 	color: var(--cream-light);
 	text-align: justify;
 	width: auto;
-	font-size: 0.7rem;
+	font-size: 12px;
 	font-weight: 400;
-	letter-spacing: 1;
+	letter-spacing: 1.2;
 	word-wrap: break-word;
 }
 
@@ -184,18 +184,18 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	height: fit-content;
-	gap: 3.125rem;
+	gap: 45px;
 	place-content: center;
-	padding: 1.5625rem 0.3125rem;
+	padding: 25px 5px;
 	background-color: var(--cranberry-dark);
-	margin: 1.5625rem auto;
+	margin: 25px auto;
 }
 
 .project-card {
 	width: 200px;
 	height: 320px;
-	border: 3px groove var(--cream-main);
-	box-shadow: 3px 3px 8px 1px var(--cream-light);
+	border: 3px groove var(--gold-light);
+	box-shadow: 3px 3px 8px 1px var(--gold-dark);
 	border-radius: 15px;
 	padding: 10px;
 	background-color: var(--cranberry-dark);
@@ -213,8 +213,8 @@
 
 .project-card:hover .project-card-inner {
 	transform: rotateY(180deg);
-	box-shadow: 1px 1px 1px 1px var(--turquoise-light);
-	border: 3px inset var(--turquoise-dark);
+	box-shadow: 1px 1px 1px 1px var(--cream-dark);
+	border: 3px inset var(--cream-light);
 }
 
 .project-card-front,
@@ -240,13 +240,12 @@
 	row-gap: 20px;
 	height: 100%;
 	width: 100%;
-	outline: 1px solid yellow;
 }
 
 .project-card-back .card-btn-container p {
 	color: var(--cream-light);
 	text-align: center;
-	font-size: 1em;
+	font-size: 12px;
 }
 
 .project-card-back .card-btn-container .btn {
@@ -255,8 +254,9 @@
 }
 
 .project-card:hover {
-	box-shadow: 0.1875rem 0.1875rem 0.0625rem 0.0625rem var(--turquoise-light);
-	border: 0.1875rem groove var(--turquoise-dark);
+	transform: scale(1.1);
+	box-shadow: 0.1875rem 0.1875rem 0.0625rem 0.0625rem var(--gold-dark);
+	border: 0.1875rem groove var(--gold-main);
 }
 
 .card-image-container {
@@ -278,18 +278,14 @@
 	place-content: center;
 	width: 100%;
 	height: 35%;
-	margin-top: -0.9375rem;
-	margin-bottom: 0.625rem;
-	/*background-color: var(--cranberry-main);*/
 }
 
 .card-info-container p {
-	font-size: 9.6px;
 	color: var(--cream-light);
 	width: 100%;
-	line-height: 1.8;
 	text-align: justify;
-	font-size: 0.9em;
+	line-height: 1.5;
+	font-size: 12px;
 }
 
 .card-btn-container {
