@@ -1,40 +1,40 @@
 :root {
-	--cranberry-main: #7a1927;
-	--cranberry-light: #ba4242;
+	--blue-dark: #005dab;
+	--blue-light: #1695ff;
+	--blue-light-transparent: #3ba2f6ae;
+	--blue-main: #0f52ba;
 	--cranberry-dark: #7a1717;
 	--cranberry-dark-transparent: #490f0fa4;
+	--cranberry-light: #ba4242;
+	--cranberry-main: #7a1927;
+	--cream-dark: #c0a96d;
+	--cream-light: #d8cba6;
 	--cream-main: #c5b078;
 	--cream-main-transparent: #c5b178be;
-	--cream-light: #d8cba6;
-	--cream-dark: #c0a96d;
-	--gold-main: #998242;
-	--gold-light: #b49951;
 	--gold-dark: #7d6936;
-	--blue-main: #0f52ba;
-	--blue-light: #1695ff;
-	--blue-dark: #005dab;
-	--blue-light-transparent: #3ba2f6ae;
-	--turquoise-main: #0efdff;
-	--turquoise-light: #a1feff;
+	--gold-light: #b49951;
+	--gold-main: #998242;
 	--turquoise-dark: #00eaec;
+	--turquoise-light: #a1feff;
+	--turquoise-main: #0efdff;
 }
-
 :root {
-	--marquee-width: 100%;
-	--marquee-height: fit-content;
+	--marquee-duration-animation: calc(var(--marquee-elms) * 4s);
 	--marquee-elms-displayed: 3;
+	--marquee-height: fit-content;
+	--marquee-width: 100%;
+
 	--marquee-elm-width: calc(
 		var(--marquee-width) / var(--marquee-elms-displayed)
 	);
-	--marquee-duration-animation: calc(var(--marquee-elms) * 4s);
 }
-
 body {
-	display: flex;
-	place-content: center;
-	padding-top: 3.125rem;
-	height: auto;
 	background-color: #7a1717;
+	display: flex;
+	height: auto;
+	padding-top: 3.125rem;
+	place-content: center;
+
 	background-image: linear-gradient(
 		180deg,
 		#7a1717 0%,
@@ -42,49 +42,41 @@ body {
 		#7a1717 100%
 	);
 }
-
 * {
 	font-family: 'Fira Code', monospace;
 	font-optical-sizing: auto;
-	font-weight: 400;
 	font-style: normal;
+	font-weight: 400;
 }
-
 li,
 a {
-	list-style: none;
-	text-decoration: none;
 	color: var(--cream-dark);
 	cursor: pointer;
 	font-size: 20px;
+	list-style: none;
+	text-decoration: none;
 }
-
 li:hover {
 	transform: scale(1.3);
 }
-
 .modal-navbar-container a {
 	color: var(--cranberry-dark);
 }
-
 a:hover {
 	text-decoration: underline var(--cream-dark);
 }
-
 h5 {
-	font-size: 1.875rem;
 	color: var(--cream-dark);
+	font-size: 1.875rem;
 	text-align: center;
 }
-
 h4 {
 	color: var(--cream-light);
-	text-align: center;
 	font-size: 1.125rem;
-	margin-top: -1.25rem;
 	font-weight: 200;
+	margin-top: -1.25rem;
+	text-align: center;
 }
-
 h2 {
 	color: var(--cream-light);
 	font-size: 0.875rem;
