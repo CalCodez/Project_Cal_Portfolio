@@ -1,0 +1,283 @@
+html {
+	display: flex;
+	place-content: center;
+	place-self: center;
+	outline: 1px solid #ffff00;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(0, 0, 0);
+	width: 100%;
+}
+
+#mainMenu {
+	display: block;
+	flex-direction: column;
+	width: 200px;
+	height: 450px;
+	outline: 1px solid red;
+	position: absolute;
+	z-index: 2;
+	align-items: center;
+	background-color: #000000ba;
+	padding: 8px;
+}
+#mainMenu li {
+	display: flex;
+	place-content: center;
+	width: 100%;
+	height: 9%;
+}
+
+#mainMenu li:hover {
+	transform: scale(1.1);
+	background: #000;
+}
+
+#mainMenu {
+	display: none;
+	right: 5%;
+	top: 4%;
+}
+
+#menu-toggler {
+	display: flex;
+	position: absolute;
+	z-index: 5;
+	cursor: pointer;
+	top: 4%;
+	right: 6%;
+	visibility: hidden;
+}
+
+.task-bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	justify-self: center;
+	background-color: rgba(0, 0, 0, 0.869);
+	height: 8%;
+	align-items: center;
+}
+
+.taskbar-links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.right-taskbar-container {
+	display: flex;
+	width: 40%;
+	justify-content: center;
+	height: 100%;
+}
+
+.taskbar-link-left {
+	width: 10%;
+}
+
+.taskbar-link-right {
+	width: 100%;
+	justify-content: flex-end;
+	column-gap: 20px;
+}
+
+.taskbar-image-container {
+	height: 80%;
+	width: 10%;
+	border: 2px solid;
+	border-radius: 100%;
+	border-left-color: yellow;
+	border-bottom-color: blue;
+	border-top-color: rgb(251, 0, 33);
+	border-right-color: rgb(18, 173, 18);
+}
+
+#img1 {
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+}
+
+li {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	text-decoration: none;
+}
+
+a {
+	color: red;
+	text-decoration: none;
+}
+
+.exit-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px ridge rgb(154, 1, 1);
+	box-shadow: 2px 1px 8px 1px rgb(154, 1, 1);
+	width: 80px;
+	height: 30px;
+	border-radius: 30px;
+	background-color: #000;
+	color: red;
+}
+
+.exit-btn:hover {
+	transform: scale(1.2);
+}
+
+.apps {
+	margin-left: -60px;
+}
+
+.logo-home {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	height: 200px;
+	width: 100%;
+}
+
+.logo {
+	display: flex;
+	flex-direction: row;
+	justify-self: center;
+	height: 80%;
+	width: 40%;
+}
+
+.gl {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.search-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: fit-content;
+}
+
+.search-container i {
+	position: absolute;
+	width: fit-content;
+}
+
+input {
+	border: 1px solid red;
+	width: 45%;
+	height: 30px;
+	padding: 8px;
+	border-top-color: yellow;
+	border-bottom-color: blue;
+	border-left-color: rgb(244, 0, 33);
+	border-right-color: rgb(18, 173, 18);
+	border-radius: 28px;
+	border-width: 3px;
+	border-style: ridge;
+	background-color: #040404;
+}
+
+input::placeholder {
+	color: red;
+}
+
+.search-icon {
+	right: 36%;
+	top: 41%;
+}
+
+.mic-icon {
+	right: 33%;
+	top: 41%;
+}
+
+.button-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 50%;
+	height: fit-content;
+	column-gap: 15px;
+	margin-top: 30px;
+	margin-bottom: 36px;
+}
+
+button {
+	color: red;
+	background-color: black;
+	border: 3px groove red;
+	height: 40px;
+}
+
+.tb1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: black;
+	height: 40px;
+	align-items: center;
+	margin-top: 200px;
+	margin-bottom: -32px;
+	width: 100%;
+}
+
+.l11 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 30%;
+	height: 100%;
+	align-items: center;
+}
+
+.l21 {
+	display: flex;
+	flex-direction: row;
+	width: 100px;
+	justify-content: space-around;
+	margin-left: 30px;
+	width: 30%;
+	height: 100%;
+	align-items: center;
+}
+
+@font-face {
+	font-family: 'Material Symbols Outlined';
+	font-style: normal;
+	font-weight: 100 700;
+	src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v120/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2)
+		format('woff2');
+}
+
+.material-symbols-outlined {
+	font-family: 'Material Symbols Outlined';
+	font-weight: normal;
+	font-style: normal;
+	color: red;
+	font-size: 30px;
+	line-height: 2;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	/*-webkit-font-feature-settings: 'liga';*/
+	-webkit-font-smoothing: antialiased;
+	position: relative;
+}
