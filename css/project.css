@@ -1,10 +1,21 @@
+/* **Back To The Top Button */
+.project-top-btn {
+	display: none;
+	font-size: small;
+	left: 92%;
+	top: 55%;
+	position: fixed;
+	width: fit-content;
+	z-index: 3;
+}
+
 .project-body-container {
 	background-color: var(--cranberry-dark);
 	border: 0.3125rem ridge var(--cream-main);
 	display: flex;
 	flex-direction: column;
 	height: fit-content;
-	padding: 0.5rem;
+	padding: 8px;
 	width: 80vw;
 }
 .sticky-menu {
@@ -12,9 +23,9 @@
 	flex-direction: row;
 	height: fit-content;
 	justify-content: flex-end;
-	place-content: center;
 	place-items: center;
 	width: 100%;
+	margin-top: -40px;
 }
 .fi {
 	color: var(--cream-main);
@@ -167,8 +178,9 @@
 	display: flex;
 	flex-direction: column;
 	height: auto;
-	outline: 1px solid yellow;
+	row-gap: 30px;
 	width: 100%;
+	margin-top: 80px;
 }
 .project-card-wrapper {
 	border-radius: 10px;
@@ -176,13 +188,20 @@
 	display: flex;
 	flex-direction: row;
 	height: 300px;
-	width: 70%;
+	width: 80%;
+	padding: 10px;
+	column-gap: 20px;
 }
+.project-card-wrapper:hover {
+	transform: scale(1.05);
+	box-shadow: 1px 1px 3px 2px var(--turquoise-main);
+}
+
 .filp-card-container {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	width: 20%;
+	width: 15%;
 	align-items: center;
 }
 .project-card {
@@ -191,8 +210,8 @@
 	border: 3px groove var(--gold-light);
 	border-radius: 15px;
 	box-shadow: 3px 3px 8px 1px var(--gold-dark);
-	height: 40%;
-	width: 90%;
+	height: 20%;
+	width: 60%;
 	place-content: center;
 }
 .project-card-inner {
@@ -206,7 +225,7 @@
 	justify-content: center;
 }
 .project-card:hover .project-card-inner {
-	border: 3px inset var(--cream-light);
+	border: 1px inset var(--cream-light);
 	box-shadow: 1px 1px 1px 1px var(--cream-dark);
 	transform: rotateY(180deg);
 	border-radius: 10px;
@@ -225,8 +244,7 @@
 
 .project-card-front i {
 	color: var(--gold-light);
-	font-size: 3em;
-	text-shadow: 2px 1px 5px var(--cream-light);
+	font-size: 2em;
 }
 
 .project-card-back {
@@ -239,7 +257,6 @@
 	font-size: 0.8em;
 	height: 20px;
 	width: 60px;
-	outline: 1px solid yellow;
 	place-self: center;
 }
 .project-card:hover {
@@ -248,38 +265,55 @@
 	transform: scale(1.1);
 }
 
-.card-info-container p {
-	color: var(--cream-light);
-	font-size: 12px;
-	line-height: 1.5;
-	text-align: justify;
+.project-description-container {
+	display: flex;
+	flex-direction: column;
+	width: 85%;
+}
+
+.project-description-container div {
+	display: flex;
+	align-items: center;
+}
+
+.project-name-container {
+	justify-content: center;
+	height: 10%;
 	width: 100%;
 }
 
-.btn {
-	background-color: var(--cranberry-dark);
-	border: 0.125rem outset var(--gold-main);
-	border-radius: 1.25rem;
-	box-shadow: 0.0625rem 0.0625rem 0.625rem 0.0625rem var(--cream-light);
-	color: var(--cream-light);
+.project-name-container h4 {
+	font-size: 2em;
+	font-weight: 700;
+}
+
+.project-description-wrapper {
 	display: flex;
-	height: fit-content;
-	padding: 0.3125rem;
-	place-content: center;
-	place-items: center;
-	width: 50%;
+	flex-direction: column;
+	height: 70%;
+	scrollbar-color: var(--cream-dark) var(--cranberry-main);
+	width: 80%;
+	place-self: center;
 }
-.project-top-btn {
-	display: none;
-	font-size: small;
-	left: 92%;
-	top: 55%;
-	position: fixed;
-	width: fit-content;
-	z-index: 3;
+
+.project-description-container p {
+	color: var(--cream-light);
+	font-size: 12px;
+	word-spacing: -2;
+	text-align: justify;
+	word-wrap: whitespace;
 }
-.btn:hover {
-	background-color: var(--cream-main);
-	border: 0.125rem inset var(--cranberry-dark);
-	color: var(--cranberry-dark);
+
+.project-wrapper-btn-container {
+	display: flex;
+	flex-direction: row;
+	height: 20%;
+	justify-content: center;
+	column-gap: 15px;
+}
+
+.project-wrapper-btn-container .btn {
+	width: 60px;
+	height: 25px;
+	font-size: 12;
 }
