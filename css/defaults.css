@@ -17,6 +17,11 @@
 	--turquoise-dark: #00eaec;
 	--turquoise-light: #a1feff;
 	--turquoise-main: #0efdff;
+	--ture-black: #000000ed;
+	--black-transparent: #000000aa;
+	--devslopes-black: #303136;
+	--devslopes-logo-red: #db5252;
+	--deveslopes-button-red: #ff5267;
 }
 :root {
 	--marquee-duration-animation: calc(var(--marquee-elms) * 4s);

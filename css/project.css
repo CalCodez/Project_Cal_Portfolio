@@ -77,6 +77,7 @@
 	position: absolute;
 	width: 5rem;
 	z-index: 1;
+	flex-shrink: 1;
 }
 .lang-logo-handlder img {
 	height: 3.125rem;
@@ -87,6 +88,7 @@
 .html {
 	left: 11%;
 	top: 2%;
+	flex-shrink: 1;
 }
 .css {
 	right: 46%;
@@ -187,8 +189,8 @@
 	box-shadow: 1px 1px 3px 2px var(--cream-light);
 	display: flex;
 	flex-direction: row;
-	height: 300px;
-	width: 80%;
+	height: 350px;
+	width: 65%;
 	padding: 10px;
 	column-gap: 20px;
 }
@@ -292,7 +294,7 @@
 	flex-direction: column;
 	height: 70%;
 	scrollbar-color: var(--cream-dark) var(--cranberry-main);
-	width: 80%;
+	width: 85%;
 	place-self: center;
 }
 
@@ -302,6 +304,7 @@
 	word-spacing: -2;
 	text-align: justify;
 	word-wrap: whitespace;
+	line-height: 1.3;
 }
 
 .project-wrapper-btn-container {
