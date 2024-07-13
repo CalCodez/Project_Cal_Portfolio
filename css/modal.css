@@ -236,7 +236,7 @@
 .devslopes-modal-content-wrapper {
 	background: var(--devslopes-black);
 	border: 5px inset var(--devslopes-logo-red);
-	width: 90%;
+	width: 95%;
 }
 
 .devslope-modal-header-container {
@@ -298,10 +298,11 @@
 
 .devslopes-lang-contianer {
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	height: 60%;
 	outline: 1px solid var(--gold-dark);
+	width: 100%;
 }
 
 .devslopes-lang-contianer .devslopes-logo-handler {
@@ -309,24 +310,81 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 100%;
-	width: 25%;
-	outline: 1px solid gold;
+	height: 70%;
+	width: 18%;
+	/*background-color: var(--true-black);*/
+	border-radius: 10px;
+	border: 5px groove var(--devslopes-logo-red);
 }
 
 .devslopes-logo-handler .project-card {
-	outline: 2px solid white;
-	width: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 	height: 70%;
+	box-shadow: none;
+	border: none;
+}
+
+/*.devslope-logo-contaianer .project-card:hover,
+.devslope-logo-contaianer .projec-card-back {
+	border: 1px inset var(--devslopes-logo-red);
+	box-shadow: 1px 1px 1px 1px var(--devslopes-logo-red);
+	transform: rotateY(180deg);
+	border-radius: 10px;
+}
+.devslopes-logo-handler .project-card:hover,
+.devslopes-logo-handler .prject-card-inner {
+	border: 2px groove var(--devslopes-logo-red);
+	transform: scale(1);
+}*/
+
+.devslopes-logo-handler .project-card-inner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 4px ridge var(--devslopes-logo-red);
+	width: 80%;
+	height: 90%;
+	border-radius: 8px;
+	background-color: var(--devslopes-black);
+}
+
+.devslopes-logo-handler .project-card-inner img {
+	width: 50%;
+	height: 50%;
+}
+
+.devslopes-logo-handler .project-card-back {
+	display: flex;
+	align-items: flex-start;
+	text-align: justify;
+	color: var(--devslopes-logo-red);
+}
+
+.devslopes-logo-handler .project-card-back li {
+	justify-self: flex-start;
+	font-size: 0.8em;
+	color: var(--devslopes-white);
+	margin: -5px 0 -5px 4px;
+}
+
+.devslopes-logo-handler .dev-react-card-back li {
+	margin: -6px 0 -6px 4px;
+}
+
+.devslopes-logo-handler .project-card li:hover {
+	transform: scale(1);
 }
 
 .devslopes-logo-handler .devslopes-lang-name-container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	outline: 2px solid yellow;
-	height: 30%;
+	height: 10%;
 	width: 100%;
+	color: var(--devslopes-logo-red);
 }
 
 .modal.is-visible {
