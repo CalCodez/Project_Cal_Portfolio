@@ -251,7 +251,7 @@
 
 .devslope-logo-contaianer {
 	height: 100%;
-	width: 25%;
+	width: 15%;
 }
 
 .devslope-logo-contaianer img {
@@ -263,7 +263,7 @@
 .devslopes-name-container {
 	display: flex;
 	height: 100%;
-	width: 75%;
+	width: 85%;
 	align-items: center;
 	justify-content: center;
 }
@@ -272,8 +272,9 @@
 	color: var(--devslopes-logo-red);
 	height: 60%;
 	width: 80%;
-	font-size: 200%;
-	font-weight: 700;
+	font-size: 60px;
+	font-weight: 500;
+	align-content: center;
 }
 
 .devslopes-marquee-container {
@@ -286,11 +287,12 @@
 
 .devslopes-marquee-container marquee {
 	display: flex;
-	align-items: center;
+	align-content: center;
+	justify-content: center;
 	width: 100%;
 	height: 100%;
 	color: var(--devslopes-logo-red);
-	font-size: 200%;
+	font-size: 25px;
 	letter-spacing: 1.3;
 }
 
@@ -383,13 +385,14 @@
 }
 
 .devslopes-btn-container .btn {
-	width: 20%;
+	width: 10%;
 	height: 45%;
 	background-color: var(--devslopes-black);
 	border: 2px inset var(--true-black);
 	color: var(--devslopes-btn-red);
 	box-shadow: 2px 2px 2px 1px var(--true-black);
 	text-decoration: none;
+	font-size: 1em;
 }
 
 .devslopes-btn-container .btn:hover {
