@@ -189,8 +189,8 @@
 	box-shadow: 1px 1px 3px 2px var(--cream-light);
 	display: flex;
 	flex-direction: row;
-	height: 350px;
-	width: 65%;
+	height: 300px;
+	width: 80%;
 	padding: 10px;
 	column-gap: 20px;
 }
