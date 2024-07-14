@@ -231,7 +231,7 @@
 #devslopes {
 	background-color: var(--black-transparent);
 	border: 2px outset var(--devslopes-logo-red);
-	padding: 8rem;
+	padding: 10rem;
 }
 
 .devslopes-modal-content-wrapper {
@@ -239,6 +239,8 @@
 	border: 5px inset var(--devslopes-logo-red);
 	width: 95%;
 	height: 100%;
+	border-radius: 8px;
+	position: relative;
 }
 
 .devslope-modal-header-container {
@@ -246,7 +248,9 @@
 	flex-direction: row;
 	align-items: center;
 	width: 100%;
-	height: 20%;
+	height: 15%;
+	justify-content: flex-start;
+	position: relative;
 }
 
 .devslope-logo-contaianer {
@@ -265,42 +269,24 @@
 	height: 100%;
 	width: 85%;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 }
 
 .devslopes-name-container h4 {
 	color: var(--devslopes-logo-red);
 	height: 60%;
-	width: 80%;
-	font-size: 60px;
-	font-weight: 500;
+	width: fit-content;
+	font-size: 50px;
+	font-weight: 400;
 	align-content: center;
-}
-
-.devslopes-marquee-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 8%;
-}
-
-.devslopes-marquee-container marquee {
-	display: flex;
-	align-content: center;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
-	color: var(--devslopes-logo-red);
-	font-size: 25px;
-	letter-spacing: 1.3;
+	text-align: left;
 }
 
 .devslopes-lang-contianer {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	height: 60%;
+	height: 65%;
 	width: 100%;
 }
 
@@ -309,9 +295,8 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 70%;
-	width: 18%;
-	/*background-color: var(--true-black);*/
+	height: 55%;
+	width: 15%;
 	border-radius: 10px;
 	border: 5px groove var(--devslopes-logo-red);
 }
@@ -338,8 +323,8 @@
 }
 
 .devslopes-logo-handler .project-card-inner img {
-	width: 50%;
-	height: 50%;
+	width: 45%;
+	height: 45%;
 }
 
 .devslopes-logo-handler .project-card-back {
@@ -352,13 +337,14 @@
 
 .devslopes-logo-handler .project-card-back li {
 	justify-self: flex-start;
-	font-size: 0.8em;
+	font-size: 0.6em;
 	color: var(--devslopes-white);
 	margin: -5px 0 -5px 4px;
 }
 
 .devslopes-logo-handler .dev-react-card-back li {
 	margin: -6px 0 -6px 4px;
+	font-size: 0.6em;
 }
 
 .devslopes-logo-handler .project-card li:hover {
@@ -373,7 +359,26 @@
 	width: 100%;
 	color: var(--devslopes-logo-red);
 	font-size: 20px;
-	text-shadow: 2px 1px 1px var(--devslopes-white);
+	text-shadow: 2px 1px 2px var(--true-black);
+}
+
+.devslopes-marquee-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 8%;
+}
+
+.devslopes-marquee-container marquee {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	color: var(--devslopes-logo-red);
+	font-size: 25px;
+	letter-spacing: 1.3;
 }
 
 .devslopes-btn-container {
