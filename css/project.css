@@ -192,12 +192,11 @@
 	display: flex;
 	flex-direction: row;
 	height: 250px;
-	width: 90%;
+	width: 60%;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-between;
 }
 .project-card-wrapper:hover {
-	transform: scale(1.05);
 	box-shadow: 1px 1px 3px 2px var(--turquoise-main);
 }
 
@@ -206,42 +205,41 @@
 	justify-content: center;
 	align-items: center;
 	height: 100%;
-	outline: 1px solid yellow;
+	width: 50%;
 }
-.project-title-container {
-	width: 30%;
+
+.project-title-container h4 {
+	font-size: 1.5em;
+}
+
+.project-title-container ruby rt {
+	color: var(--gold-light);
 }
 
 .filp-card-container {
 	display: flex;
 	height: 100%;
-	width: 60%;
 	align-items: center;
 	height: 15%;
-	outline: 1px solid blue;
 }
 .project-card {
 	background-color: var(--cranberry-dark);
 	background-color: transparent;
-	border: 3px groove var(--gold-light);
 	border-radius: 15px;
-	box-shadow: 3px 3px 8px 1px var(--gold-dark);
-	height: 50%;
-	width: 60%;
+	height: 90%;
+	width: 50%;
 	place-content: center;
 }
+
 .project-card-inner {
 	height: 80%;
-	width: 80%;
 	position: relative;
-	text-align: center;
 	transform-style: preserve-3d;
-	transition: transform 0.8s;
+	transition: transform 0.9s;
 	width: 100%;
 	justify-content: center;
 }
 .project-card:hover .project-card-inner {
-	border: 1px inset var(--cream-light);
 	box-shadow: 1px 1px 1px 1px var(--cream-dark);
 	transform: rotateY(180deg);
 	border-radius: 10px;
@@ -259,12 +257,13 @@
 }
 
 .project-card-front i {
-	color: var(--gold-light);
-	font-size: 2em;
+	color: var(--cream-light);
+	font-size: 2.5em;
+	text-shadow: 1px 1px 8px #000;
 }
 
 .project-card-back {
-	flex-direction: row;
+	flex-direction: column;
 	transform: rotateY(180deg);
 	row-gap: 20px;
 	justify-content: space-evenly;
@@ -276,8 +275,8 @@
 	width: 110px;
 	place-self: center;
 }
-.project-card:hover {
+/*.project-card:hover {
 	border: 0.1875rem groove var(--gold-main);
 	box-shadow: 0.1875rem 0.1875rem 0.0625rem 0.0625rem var(--gold-dark);
 	transform: scale(1.1);
-}
+}*/
