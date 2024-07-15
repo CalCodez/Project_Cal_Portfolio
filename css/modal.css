@@ -405,6 +405,62 @@
 	color: var(--devslopes-white);
 }
 
+/* Project-info-modals */
+
+.project-info-modal {
+	border: 4px ridge var(--gold-dark);
+}
+
+.project-info-content-wrapper {
+	display: flex;
+	flex-direction: column;
+	background: var(--cranberry-dark);
+	border: 4px ridge var(--gold-light);
+	border-radius: 8px;
+}
+
+.project-info-content-wrapper div {
+	display: flex;
+	width: 70%;
+	justify-content: center;
+	align-items: center;
+}
+
+.info-title-container {
+	height: 15%;
+}
+
+.info-title-container h4 {
+	color: var(--gold-light);
+	font-size: 30px;
+}
+
+.info-description-container {
+	flex-direction: column;
+	height: 75%;
+	color: var(--gold-light);
+}
+
+.info-btn-container {
+	height: 10%;
+}
+
+.info-btn-container .btn {
+	height: 55%;
+	width: 15%;
+	color: var(--gold-light);
+	box-shadow: none;
+	border: 1px groove var(--gold-light);
+	font-size: 1em;
+}
+
+.info-btn-container .btn:hover {
+	background-color: var(--gold-light);
+	color: var(--cranberry-dark);
+	text-decoration: none;
+	box-shadow: none;
+}
+
 .modal.is-visible {
 	visibility: visible;
 	opacity: 1;
