@@ -123,17 +123,17 @@
 	place-items: center;
 	width: 40%;
 
-	background-image: linear-gradient(
+	/*background-image: linear-gradient(
 		180deg,
 		#7a1717 0%,
 		var(--gold-dark) 50%,
 		#7a1717 100%
-	);
+	);*/
 }
 .project-image-handler {
 	border: 0.125rem groove var(--blue-light);
 	border-radius: 50%;
-	box-shadow: 0.125rem 0.125rem 5rem 0.125rem var(--blue-light-transparent);
+	box-shadow: 0.125rem 0.125rem 5rem 0.125rem var(--cream-light);
 	height: 70%;
 	width: 70%;
 	z-index: 1;
@@ -178,33 +178,47 @@
 .project-card-container {
 	align-items: center;
 	display: flex;
-	flex-direction: column;
+	justify-content: space-evenly;
+	flex-direction: row;
 	height: auto;
 	row-gap: 30px;
 	width: 100%;
 	margin-top: 80px;
+	flex-wrap: wrap;
 }
 .project-card-wrapper {
 	border-radius: 10px;
 	box-shadow: 1px 1px 3px 2px var(--cream-light);
 	display: flex;
 	flex-direction: row;
-	height: 300px;
-	width: 80%;
-	padding: 10px;
-	column-gap: 20px;
+	height: 250px;
+	width: 100%;
+	align-items: center;
+	justify-content: space-evenly;
 }
 .project-card-wrapper:hover {
 	transform: scale(1.05);
 	box-shadow: 1px 1px 3px 2px var(--turquoise-main);
 }
 
+.project-card-wrapper > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	outline: 1px solid yellow;
+}
+.project-title-container {
+	width: 30%;
+}
+
 .filp-card-container {
 	display: flex;
-	flex-direction: column;
 	height: 100%;
-	width: 15%;
+	width: 60%;
 	align-items: center;
+	height: 15%;
+	outline: 1px solid blue;
 }
 .project-card {
 	background-color: var(--cranberry-dark);
@@ -212,8 +226,8 @@
 	border: 3px groove var(--gold-light);
 	border-radius: 15px;
 	box-shadow: 3px 3px 8px 1px var(--gold-dark);
-	height: 20%;
-	width: 60%;
+	height: 50%;
+	width: 40%;
 	place-content: center;
 }
 .project-card-inner {
@@ -265,58 +279,4 @@
 	border: 0.1875rem groove var(--gold-main);
 	box-shadow: 0.1875rem 0.1875rem 0.0625rem 0.0625rem var(--gold-dark);
 	transform: scale(1.1);
-}
-
-.project-description-container {
-	display: flex;
-	flex-direction: column;
-	width: 85%;
-}
-
-.project-description-container div {
-	display: flex;
-	align-items: center;
-}
-
-.project-name-container {
-	justify-content: center;
-	height: 10%;
-	width: 100%;
-}
-
-.project-name-container h4 {
-	font-size: 2em;
-	font-weight: 700;
-}
-
-.project-description-wrapper {
-	display: flex;
-	flex-direction: column;
-	height: 70%;
-	scrollbar-color: var(--cream-dark) var(--cranberry-main);
-	width: 85%;
-	place-self: center;
-}
-
-.project-description-container p {
-	color: var(--cream-light);
-	font-size: 12px;
-	word-spacing: -2;
-	text-align: justify;
-	word-wrap: whitespace;
-	line-height: 1.3;
-}
-
-.project-wrapper-btn-container {
-	display: flex;
-	flex-direction: row;
-	height: 20%;
-	justify-content: center;
-	column-gap: 15px;
-}
-
-.project-wrapper-btn-container .btn {
-	width: 60px;
-	height: 25px;
-	font-size: 12;
 }
