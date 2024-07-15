@@ -192,7 +192,7 @@
 	display: flex;
 	flex-direction: row;
 	height: 250px;
-	width: 100%;
+	width: 90%;
 	align-items: center;
 	justify-content: space-evenly;
 }
@@ -227,7 +227,7 @@
 	border-radius: 15px;
 	box-shadow: 3px 3px 8px 1px var(--gold-dark);
 	height: 50%;
-	width: 40%;
+	width: 60%;
 	place-content: center;
 }
 .project-card-inner {
@@ -264,15 +264,16 @@
 }
 
 .project-card-back {
-	flex-direction: column;
+	flex-direction: row;
 	transform: rotateY(180deg);
 	row-gap: 20px;
+	justify-content: space-evenly;
 }
 
 .project-card-back .btn {
 	font-size: 0.8em;
-	height: 20px;
-	width: 60px;
+	height: 30px;
+	width: 110px;
 	place-self: center;
 }
 .project-card:hover {

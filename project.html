@@ -27,7 +27,6 @@
       <div id="mainMenu" class="sticky-menu">
         <div class="project-navbar-container">
           <li><a href="./index.html">Home</a></li>
-          <li><a data-open="about">About</a></li>
           <li><a href="https://medium.com/@calvincortezcolbert">Medium</a></li>
           <li><a data-open="devslopes">Training</a></li>
         </div>
@@ -83,7 +82,7 @@
         <div class="project-card-wrapper">
           <div class="project-title-container">
 
-            <h4>My Tube</h4>
+            <h4 class="styled-header">My Tube</h4>
           </div>
           <div class="filp-card-container">
             <!-- ``Project Card -->
@@ -93,6 +92,8 @@
                   <i class="fa-solid fa-eye"></i>
                 </div>
                 <div class="project-card-back">
+                  <a class="btn" data-open="mytube"><i class="fa-solid fa-circle-info">
+                      Info</i></a>
                   <a class="btn" href="/projects/my_tube/Project_My_Tube/main.html"><i class="fa-solid fa-eye">
                       View</i></a>
                 </div>
@@ -244,6 +245,17 @@
       </div>
 
     </div>
+
+    <!-- ++ Project Info Modals -->
+    <div class="full-site-modal page-block modal devslopes-modal" id="mytube" data-animation="zoomInOut"
+      data-close="page-block">
+
+      <div class="modal-content-wrapper mytube-modal-conent-wrapper">
+
+      </div>
+    </div>
+
+
 
     <script src="./main.js"></script>
   </body>
