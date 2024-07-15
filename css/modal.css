@@ -231,7 +231,6 @@
 #devslopes {
 	background-color: var(--black-transparent);
 	border: 2px outset var(--devslopes-logo-red);
-	padding: 10rem;
 }
 
 .devslopes-modal-content-wrapper {

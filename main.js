@@ -1,4 +1,12 @@
 function mobileMenu() {
+	if (document.getElementById('homeMenu').style.display == 'block') {
+		document.getElementById('homeMenu').style.display = 'none'
+	} else {
+		document.getElementById('homeMenu').style.display = 'block'
+	}
+}
+
+function mobileMenu() {
 	if (document.getElementById('mainMenu').style.display == 'block') {
 		document.getElementById('mainMenu').style.display = 'none'
 	} else {

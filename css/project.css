@@ -69,7 +69,7 @@
 	background-color: var(--cranberry-dark-transparent);
 	border: 0.125rem solid var(--cream-dark);
 	border-radius: 50%;
-	box-shadow: 0.125rem 0.125rem 5rem 0.3125rem var(--cream-light);
+	box-shadow: 2px 2px 20px 1px var(--cream-light);
 	display: flex;
 	height: 5rem;
 	place-content: center;
@@ -80,10 +80,10 @@
 	flex-shrink: 1;
 }
 .lang-logo-handlder img {
-	height: 3.125rem;
+	height: 50px;
 	object-fit: cover;
 	position: absolute;
-	width: 3.125rem;
+	width: 50px;
 }
 .html {
 	left: 11%;
@@ -227,7 +227,7 @@
 	background-color: transparent;
 	border-radius: 15px;
 	height: 90%;
-	width: 50%;
+	width: 80%;
 	place-content: center;
 }
 
@@ -271,8 +271,8 @@
 
 .project-card-back .btn {
 	font-size: 0.8em;
-	height: 30px;
-	width: 110px;
+	height: 15%;
+	width: 50%;
 	place-self: center;
 }
 /*.project-card:hover {

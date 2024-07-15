@@ -4,7 +4,8 @@
 	--blue-light-transparent: #3ba2f6ae;
 	--blue-main: #0f52ba;
 	--cranberry-dark: #7a1717;
-	--cranberry-dark-transparent: #490f0fa4;
+	--cranberry-dark-transparent: #341313e2;
+	--cranberry-dark-transparent-menu: #740b0bde;
 	--cranberry-light: #ba4242;
 	--cranberry-main: #7a1927;
 	--cream-dark: #c0a96d;
@@ -63,13 +64,10 @@ a {
 	text-decoration: none;
 }
 li:hover {
-	transform: scale(1.3);
+	transform: scale(1.2);
 }
 .modal-navbar-container a {
 	color: var(--cranberry-dark);
-}
-a:hover {
-	text-decoration: underline var(--cream-dark);
 }
 
 .styled-header {
