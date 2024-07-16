@@ -318,7 +318,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 200px;
+	width: 220px;
 	height: 250px;
 	border: 3px ridge var(--devslopes-logo-red);
 	border-radius: 8px;
@@ -334,11 +334,8 @@
 }
 
 .devslopes-card .project-card {
-	border: 2px groove var(--devslopes-logo-red);
-}
-
-.devslopes-card .project-card .project-card-inner {
-	height: 100%;
+	border: 2px groove var(--devslopes-black);
+	width: 95%;
 	border-radius: 8px;
 }
 
@@ -350,12 +347,18 @@
 	text-align: left;
 }
 
+.devslopes-card .project-card .project-card-front,
+.devslopes-card .project-card .project-card-back {
+	width: 95%;
+}
+
 .devslopes-card .project-card .project-card-back li {
 	display: flex;
 	justify-content: left;
 	font-size: 1em;
 	margin: -3px 0;
 	color: var(--devslopes-logo-red);
+	margin-left: 10px;
 }
 
 #react-card-back li {
@@ -445,6 +448,7 @@
 	transform-style: preserve-3d;
 	transition: transform 0.9s;
 	width: 100%;
+	border-radius: 8px;
 	justify-content: center;
 	box-shadow: -1px 2px 8px var(--cranberry-dark-transparent);
 }
