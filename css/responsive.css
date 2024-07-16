@@ -26,7 +26,6 @@
 		text-align: center;
 		width: 100px;
 		height: 30px;
-		outline: 1px solid red;
 		left: 20px;
 	}
 	.devslopes-btn-container {
@@ -140,7 +139,6 @@
 
 @media (max-width: 481px) {
 	.main-portfolio-container {
-		outline: 1px solid red;
 		height: 100vh;
 		padding-bottom: 80px;
 	}

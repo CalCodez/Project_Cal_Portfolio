@@ -156,6 +156,10 @@
 	padding: 20px 0;
 }
 
+.responsive-reference-container {
+	display: none;
+}
+
 .reference-container {
 	display: flex;
 	flex-direction: column;
