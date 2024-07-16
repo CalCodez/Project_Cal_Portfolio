@@ -71,11 +71,11 @@
 	border-radius: 50%;
 	box-shadow: 2px 2px 20px 1px var(--cream-light);
 	display: flex;
-	height: 5rem;
+	height: 80px;
 	place-content: center;
 	place-items: center;
 	position: absolute;
-	width: 5rem;
+	width: 80px;
 	z-index: 1;
 	flex-shrink: 1;
 }
@@ -131,9 +131,9 @@
 	);*/
 }
 .project-image-handler {
-	border: 0.125rem groove var(--blue-light);
+	border: 0.125rem groove var(--cream-dark);
 	border-radius: 50%;
-	box-shadow: 0.125rem 0.125rem 5rem 0.125rem var(--cream-light);
+	box-shadow: 2px 2px 80px 2px var(--cream-light);
 	height: 70%;
 	width: 70%;
 	z-index: 1;

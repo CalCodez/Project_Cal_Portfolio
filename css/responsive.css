@@ -188,7 +188,36 @@
 	}
 
 	.project-body-container .project-logo-container .lang-logo-handlder {
-		display: none;
+		display: flex;
+	}
+
+	.lang-logo-handlder {
+		box-shadow: 1px 1px 10px 1px var(--cream-light);
+		width: 50px;
+		height: 50px;
+	}
+
+	.lang-logo-handlder img {
+		height: 30px;
+		width: 30px;
+	}
+
+	.html {
+		left: 3%;
+	}
+
+	.git {
+		bottom: 40px;
+		left: 20px;
+	}
+
+	.react {
+		bottom: 20%;
+		left: 74%;
+	}
+
+	.project-image-hander {
+		box-shadow: 2px 2px 10px 8px var(--cream-light);
 	}
 
 	.sticky-menu {
