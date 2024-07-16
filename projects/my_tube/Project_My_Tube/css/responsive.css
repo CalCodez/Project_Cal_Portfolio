@@ -194,7 +194,6 @@
 	}
 
 	.modal .main-menu-container {
-		outline: 1px solid yellow;
 		margin-top: 15px;
 	}
 	.modal .main-menu-container li {
@@ -202,7 +201,7 @@
 	}
 
 	.modal #menu-toggler {
-		left: 84%;
+		left: 81%;
 	}
 
 	.logo-continaer {
