@@ -124,12 +124,8 @@
 	.react {
 		bottom: 0;
 	}
-
-	.devslopes-modal .devslopes-btn-container .btn {
-		width: 30%;
-		height: 47%;
-	}
 }
+
 @media (max-width: 481px) {
 	.main-portfolio-container {
 		outline: 1px solid red;
@@ -224,14 +220,5 @@
 		margin-top: -40px;
 		place-content: center;
 		place-items: center;
-	}
-
-	.devslopes-modal
-		.devslopes-lang-contianer
-		.devslopes-logo-handler
-		.project-card {
-		width: 100%;
-		height: 100%;
-		outline: 1px solid red;
 	}
 }
