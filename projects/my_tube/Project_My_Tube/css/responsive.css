@@ -189,8 +189,11 @@
 
 @media (max-width: 481px) {
 	.menu-toggler-mr {
-		top: 2.5%;
-		left: 87%;
+		top: 4%;
+		left: 86%;
+	}
+	.modal .main-menu-container li {
+		margin-top: 13px;
 	}
 
 	.modal #menu-toggler {
