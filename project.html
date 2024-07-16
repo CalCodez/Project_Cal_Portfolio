@@ -95,7 +95,7 @@
           <div class="devslopes-card-container">
             <div class="devslopes-card dev-html">
               <div class="project-card">
-                <div class="project-card-inner">
+                <div class="devslopes-project-card-inner">
                   <div class="project-card-front">
                     <img src="./assest/Logo_Images/html.png" alt="Flaticon html logo">
                   </div>
@@ -112,7 +112,7 @@
             </div>
             <div class="devslopes-card dev-css ">
               <div class="project-card">
-                <div class="project-card-inner">
+                <div class="devslopes-project-card-inner">
                   <div class="project-card-front">
                     <img src="./assest/Logo_Images/css.png" alt="Flaticon css logo">
                   </div>
@@ -130,7 +130,7 @@
 
             <div class="devslopes-card dev-git ">
               <div class="project-card">
-                <div class="project-card-inner">
+                <div class="devslopes-project-card-inner">
                   <div class="project-card-front">
                     <img src="./assest/Logo_Images/github3.png" alt="Flaticon git logo">
                   </div>
@@ -148,7 +148,7 @@
 
             <div class="devslopes-card dev-js ">
               <div class="project-card">
-                <div class="project-card-inner">
+                <div class="devslopes-project-card-inner">
                   <div class="project-card-front">
                     <img src="./assest/Logo_Images/java-script.png" alt="Flaticon javascript logo">
                   </div>
@@ -168,11 +168,11 @@
 
             <div class="devslopes-card dev-react ">
               <div class="project-card">
-                <div class="project-card-inner">
+                <div class="devslopes-project-card-inner">
                   <div class="project-card-front">
                     <img src="./assest/Logo_Images/react.png" alt="Flaticon react logo">
                   </div>
-                  <div class="project-card-back">
+                  <div class="project-card-back" id="react-card-back">
                     <li class="titled-li">REACT</li>
                     <li>Stateless</li>
                     <li>Functional Componets</li>
@@ -185,14 +185,20 @@
             </div>
           </div>
 
-          <div class="devslopes-marquee-container">
+          <div class=" devslopes-marquee-container">
             <marquee behavior="scroll" direction="left">
-              Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com |
-              Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com |
-              Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com
-              Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com |
-              Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com |
-              Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com
+              Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit
+              www.Devslopes.com |
+              Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit
+              www.Devslopes.com |
+              Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit
+              www.Devslopes.com
+              Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit
+              www.Devslopes.com |
+              Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit
+              www.Devslopes.com |
+              Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit
+              www.Devslopes.com
             </marquee>
 
           </div>
@@ -226,8 +232,7 @@
                   <i class="fa-regular fa-eye"></i>
                 </div>
                 <div class="project-card-back">
-                  <a class="btn" data-open="Caltube"><i class="fa-solid fa-circle-info">
-                      Info</i></a>
+
                   <a class="btn" href="/projects/my_tube/Project_My_Tube/main.html"><i class="fa-solid fa-eye">
                       View</i></a>
                 </div>
@@ -251,8 +256,7 @@
                   <i class="fa-regular fa-eye"></i>
                 </div>
                 <div class="project-card-back">
-                  <a class="btn" data-open="SaaS"><i class="fa-solid fa-circle-info">
-                      Info</i></a>
+
                   <a class="btn" href="/projects/Saas_Project/index.html"><i class="fa-solid fa-eye">
                       View</i></a>
                 </div>
@@ -276,8 +280,7 @@
                   <i class="fa-regular fa-eye"></i>
                 </div>
                 <div class="project-card-back">
-                  <a class="btn" data-open="Pokemon"><i class="fa-solid fa-circle-info">
-                      Info</i></a>
+
                   <a class="btn" href="/projects/Js_Project3_ApiWebsite/index.html"><i class="fa-solid fa-eye">
                       View</i></a>
                 </div>
@@ -302,8 +305,7 @@
                   <i class="fa-regular fa-eye"></i>
                 </div>
                 <div class="project-card-back">
-                  <a class="btn" data-open="Google"><i class="fa-solid fa-circle-info">
-                      Info</i></a>
+
                   <a class="btn" href="/projects/Googe Page/Css_google page.html"><i class="fa-solid fa-eye">
                       View</i></a>
                 </div>
@@ -339,105 +341,7 @@
 
 
 
-    <!-- ++ Project Info Modals -->
 
-    <!-- $$CalTube Modal -->
-    <div class="full-site-modal page-block modal project-info-modal" id="Caltube" data-animation="zoomInOut"
-      data-close="page-block">
-      <div class="modal-content-wrapper project-info-content-wrapper ">
-        <div class="info-title-container">
-          <h4 class="styled-header">'CalTube'</h4>
-        </div>
-        <div class="info-description-container">
-          <p>A youtube design inspired project that is a collection of some of my favorite songs and thier videos.
-            This project features 3 collections. 1 collection of 'Female Artist', 1 collection of 'Male artist', and
-            1 collection of 'Group artist'.
-          </p>
-          <p>
-            This project has a sorting design where all the featured artist can be sorted by collection catagory.
-            All featured artist can also be viewed in an 'All Artist Category'
-          </p>
-          <p>
-            All featured artist in this project has thier own styled page, that display information about the
-            featured song/video for the artist. The featured artist page also displays four related videos with a
-            mock comment sections that contains information about the for related videos.
-          </p>
-        </div>
-        <div class="info-btn-container">
-          <a class="btn" href="/projects/my_tube/Project_My_Tube/main.html"><i class="fa-solid fa-eye">
-              View</i></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- $$SaaS Modal -->
-    <div class="full-site-modal page-block modal project-info-modal" id="SaaS" data-animation="zoomInOut"
-      data-close="page-block">
-      <div class="modal-content-wrapper project-info-content-wrapper ">
-        <div class="info-title-container">
-          <h4 class="styled-header">'SaaS'</h4>
-        </div>
-        <div class="info-description-container">
-          <p>A fully featured website landing page design. With a clean and professional look.
-          </p>
-
-        </div>
-        <div class="info-btn-container">
-          <a class="btn" href="/projects/Saas_Project/index.html"><i class="fa-solid fa-eye">
-              View</i></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- $$Pokemon Modal -->
-    <div class="full-site-modal page-block modal project-info-modal" id="Pokemon" data-animation="zoomInOut"
-      data-close="page-block">
-      <div class="modal-content-wrapper project-info-content-wrapper ">
-        <div class="info-title-container">
-          <h4 class="styled-header">'Pokemon Card Collection'</h4>
-        </div>
-        <div class="info-description-container">
-          <p>A Pokemon Card Collection. That allows you to capture your favorite pokemon and add them to your
-            'Favorites' collecion.
-          </p>
-          <p>
-            In this project you will be able to sort your favorite pokemon cards in neumerical order based on their
-            card's
-            id number. Sort from lowest to highest, or highest to lowest, with the click of a button. You will also
-            be able to
-            see the total number of collected cards in the favorites section.
-          </p>
-          <p>
-            Also includes a feature that disaplys the total amout of Pokemons with the same special abilities.
-          </p>
-
-        </div>
-        <div class="info-btn-container">
-          <a class="btn" href="/projects/Js_Project3_ApiWebsite/index.html"><i class="fa-solid fa-eye">
-              View</i></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- $$Google Modal -->
-    <div class="full-site-modal page-block modal project-info-modal" id="Google" data-animation="zoomInOut"
-      data-close="page-block">
-      <div class="modal-content-wrapper project-info-content-wrapper ">
-        <div class="info-title-container">
-          <h4 class="styled-header">'CalTube'</h4>
-        </div>
-        <div class="info-description-container">
-          <p>A simple Google homepage landing page clone. Nothing to fancy, pretty straight forwared. However, as a
-            begining developer, I had tons of fun developing this simple landing page.
-          </p>
-
-        </div>
-        <div class="info-btn-container">
-          <a class="btn" href="/projects/Googe Page/Css_google page.html"><i class="fa-solid fa-eye">
-              View</i></a>
-        </div>
-      </div>
-    </div>
 
 
 

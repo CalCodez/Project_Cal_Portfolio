@@ -324,6 +324,15 @@
 	border-radius: 8px;
 }
 
+.devslopes-project-card-inner {
+	height: 80%;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 0.9s;
+	width: 100%;
+	justify-content: center;
+}
+
 .devslopes-card .project-card {
 	border: 2px groove var(--devslopes-logo-red);
 }
@@ -349,6 +358,9 @@
 	color: var(--devslopes-logo-red);
 }
 
+#react-card-back li {
+	font-size: 0.8em;
+}
 .devslopes-card .project-card-back .titled-li {
 	place-self: center;
 	font-weight: 700;
@@ -385,9 +397,9 @@
 	border-radius: 10px;
 	box-shadow: 1px 1px 3px 2px var(--cream-light);
 	display: flex;
-	flex-direction: row;
-	height: 250px;
-	width: 60%;
+	flex-direction: column;
+	height: 400px;
+	width: 280px;
 	align-items: center;
 	justify-content: space-between;
 }
@@ -400,7 +412,7 @@
 	justify-content: center;
 	align-items: center;
 	height: 100%;
-	width: 50%;
+	width: 100%;
 }
 
 .project-title-container h4 {
@@ -416,13 +428,14 @@
 	height: 100%;
 	align-items: center;
 	height: 15%;
+	width: 80%;
 }
 .project-card {
 	background-color: var(--cranberry-dark);
 	background-color: transparent;
 	border-radius: 15px;
-	height: 90%;
-	width: 80%;
+	height: 100%;
+	width: 70%;
 	place-content: center;
 }
 
@@ -433,8 +446,10 @@
 	transition: transform 0.9s;
 	width: 100%;
 	justify-content: center;
+	box-shadow: -1px 2px 8px var(--cranberry-dark-transparent);
 }
-.project-card:hover .project-card-inner {
+.project-card:hover .project-card-inner,
+.project-card:hover .devslopes-project-card-inner {
 	box-shadow: 1px 1px 1px 1px var(--cream-dark);
 	transform: rotateY(180deg);
 	border-radius: 10px;
