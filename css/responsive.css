@@ -143,12 +143,20 @@
 		padding-bottom: 80px;
 	}
 
+	#mobile-toggler {
+		display: block;
+	}
+
 	.nav-container {
 		flex-wrap: wrap;
 		height: initial;
 		height: 20%;
-		margin-bottom: -50px;
+		margin-bottom: -60px;
 		width: 100%;
+	}
+
+	.nav-container .nav-links-container {
+		display: none;
 	}
 	.logo-conatiner {
 		height: 80%;
@@ -184,7 +192,8 @@
 	}
 
 	.sticky-menu {
-		right: 55px;
+		right: 35px;
+		width: 180px;
 	}
 	.sticky-menu li {
 		margin-bottom: -20px;

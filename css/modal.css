@@ -226,6 +226,29 @@
 	height: 100%;
 }
 
+/* Mobile Nav */
+#mobile-menu {
+	width: 150px;
+	border: none;
+	background: var(--cranberry-dark-transparent-menu);
+	height: 100px;
+	overflow: hidden;
+	left: 30%;
+	top: -57%;
+	z-index: 2;
+	border-radius: 0;
+}
+
+.mobile-nav-content-wrapper {
+	background: var(--cranberry-dark-transparent-menu);
+	border: none;
+	margin-top: -29px;
+}
+
+.mobile-nav-content-wrapper li {
+	margin-bottom: 10px;
+}
+
 .modal.is-visible {
 	visibility: visible;
 	opacity: 1;
