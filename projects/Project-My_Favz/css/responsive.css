@@ -58,7 +58,7 @@
 	}
 }
 
-@media (max-width: 381px) {
+@media (max-width: 500px) {
 	h1,
 	h2 {
 		font-size: 2.5em;
