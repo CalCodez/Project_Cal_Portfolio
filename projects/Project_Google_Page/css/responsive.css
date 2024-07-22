@@ -27,7 +27,8 @@
 	}
 
 	i,
-	#mobile-menu a {
+	#mobile-menu a,
+	#mobile-menu i {
 		visibility: visible;
 	}
 }
