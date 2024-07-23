@@ -62,3 +62,34 @@
 		width: 20%;
 	}
 }
+
+@media (max-width: 381px) {
+	.left-links-container {
+		display: none;
+	}
+
+	.right-links-container {
+		margin-left: 93px;
+	}
+
+	.section-image-container {
+		width: 380px;
+		margin-bottom: -120px;
+	}
+
+	.search-bar-container input {
+		width: 90%;
+	}
+
+	.fa-magnifying-glass {
+		left: 8%;
+	}
+
+	.fa-camera {
+		left: 86%;
+	}
+
+	.fa-microphone {
+		right: 20%;
+	}
+}
