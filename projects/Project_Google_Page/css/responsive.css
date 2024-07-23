@@ -64,21 +64,25 @@
 }
 
 @media (max-width: 381px) {
+	* {
+		outline: 1px solid white;
+	}
+
 	.left-links-container {
 		display: none;
 	}
 
 	.right-links-container {
-		margin-left: 93px;
+		margin-left: 75px;
 	}
 
 	.section-image-container {
-		width: 380px;
+		width: 360px;
 		margin-bottom: -120px;
 	}
 
 	.search-bar-container input {
-		width: 90%;
+		width: 95%;
 	}
 
 	.fa-magnifying-glass {
