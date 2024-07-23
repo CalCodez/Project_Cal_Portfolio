@@ -64,10 +64,6 @@
 }
 
 @media (max-width: 381px) {
-	* {
-		outline: 1px solid white;
-	}
-
 	.left-links-container {
 		display: none;
 	}
