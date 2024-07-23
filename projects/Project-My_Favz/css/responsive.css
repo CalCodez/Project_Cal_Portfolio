@@ -68,3 +68,11 @@
 		padding: 10px;
 	}
 }
+
+@media (max-width: 381px) {
+	.card-section .container {
+		outline: 1px solid yellow;
+		width: 280px;
+		height: 280px;
+	}
+}

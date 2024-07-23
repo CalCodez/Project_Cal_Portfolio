@@ -278,6 +278,21 @@
 		height: auto;
 	}
 
+	.video-container {
+		width: 350px;
+		height: 350px;
+	}
+
+	.video-btn-container a {
+		width: 40%;
+		justify-content: center;
+		font-size: 1.5em;
+	}
+
+	.video-btn-container a i {
+		font-size: 1.3em;
+	}
+
 	.reference-container {
 		display: none;
 	}
