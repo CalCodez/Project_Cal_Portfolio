@@ -12,7 +12,8 @@
 		row-gap: 50px;
 	}
 	.body-main .social-containers {
-		width: 350px;
+		width: 300px;
+		height: 350px;
 	}
 
 	.body-facebook .profile-pic-container,
