@@ -199,8 +199,9 @@
 	.body-threads .mobile-section .login-with-instagram-container {
 		justify-content: space-around;
 		height: 90px;
-		font-size: 1.2rem;
-		width: 100%;
+		font-size: 1rem;
+		width: 300px;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	}
 
 	.threads-mobile-switch-profile-container {
