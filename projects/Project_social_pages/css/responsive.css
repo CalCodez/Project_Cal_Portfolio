@@ -5,7 +5,7 @@
 	}
 
 	.body-main h1 {
-		font-size: 35px;
+		font-size: 30px;
 	}
 
 	.body-main .social-meadia-section {
@@ -198,12 +198,13 @@
 	.body-threads .mobile-section .login-with-instagram-container {
 		justify-content: space-around;
 		height: 90px;
-		font-size: 1.5rem;
+		font-size: 1.2rem;
+		width: 100%;
 	}
 
 	.threads-mobile-switch-profile-container {
 		color: lightgrey;
 		margin-top: 30px;
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 	}
 }
