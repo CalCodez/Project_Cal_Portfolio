@@ -410,9 +410,9 @@
 	}
 }
 
-.login-width-instagram-container {
+.login-with-instagram-container {
 	width: 85%;
-	justify-content: space-around;
+	justify-content: space-between;
 	color: var(--white);
 	border: 1px solid #818078;
 	align-items: center;
@@ -420,12 +420,12 @@
 	padding: 15px;
 }
 
-.login-width-instagram-container img {
+.login-with-instagram-container img {
 	height: 50px;
 	width: 50px;
 }
 
-.login-width-instagram-container i {
+.login-with-instagram-container i {
 	color: #818078;
 	font-size: 1.4rem;
 }

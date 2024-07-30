@@ -5,7 +5,7 @@
 	}
 
 	.body-main h1 {
-		font-size: 30px;
+		font-size: 35px;
 	}
 
 	.body-main .social-meadia-section {
@@ -28,7 +28,9 @@
 	.body-facebook footer,
 	.body-instagram .main-header,
 	.ig-form-container,
-	.body-instagram footer {
+	.body-instagram footer,
+	.body-threads .threads-form-container,
+	.body-threads footer {
 		display: none;
 	}
 
@@ -175,9 +177,6 @@
 		display: none;
 	}
 
-	.body-threads {
-		padding-top: 60px;
-	}
 	.body-threads #menu-toggler {
 		color: var(--project-red-dark);
 		display: flex;
@@ -187,5 +186,23 @@
 		background-color: #000;
 		border: none;
 		padding: 5px;
+	}
+
+	.body-threads .mobile-section {
+		height: 100%;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	.body-threads .mobile-section .login-with-instagram-container {
+		justify-content: space-around;
+		height: 90px;
+		font-size: 1.5rem;
+	}
+
+	.threads-mobile-switch-profile-container {
+		color: lightgrey;
+		margin-top: 30px;
+		font-size: 1.3rem;
 	}
 }
