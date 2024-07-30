@@ -24,6 +24,7 @@
 }
 
 @media (max-width: 700px) {
+	.body-main footer,
 	.body-facebook .main-header,
 	.fb-login-container,
 	.body-facebook footer,
