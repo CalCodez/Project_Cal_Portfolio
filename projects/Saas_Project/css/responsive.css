@@ -1159,6 +1159,10 @@
 }
 
 @media (max-width: 481px) {
+	body {
+		width: 400px;
+	}
+
 	.hubspot-section {
 		position: relative;
 		height: inherit;
@@ -1196,5 +1200,21 @@
 	.hub-woman-wrapper img {
 		width: 225px;
 		height: 300px;
+	}
+	.footer-card {
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	footer {
+		padding: 0;
+	}
+
+	.footer-card .addy-help {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 }
