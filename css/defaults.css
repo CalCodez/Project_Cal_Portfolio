@@ -55,6 +55,19 @@ body {
 	font-style: normal;
 	font-weight: 400;
 }
+
+.container {
+	box-sizing: border-box;
+	justify-content: center;
+	align-items: center;
+}
+
+.content {
+	box-sizing: content-box;
+	justify-content: center;
+	align-items: center;
+}
+
 li,
 a {
 	color: var(--cream-dark);

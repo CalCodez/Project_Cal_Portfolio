@@ -254,12 +254,12 @@
 .devslopes-card {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+
 	width: 220px;
 	height: 250px;
 	border: 3px ridge var(--devslopes-logo-red);
 	border-radius: 8px;
+	place-content: center;
 }
 
 .devslopes-project-card-inner {
@@ -267,14 +267,19 @@
 	position: relative;
 	transform-style: preserve-3d;
 	transition: transform 0.9s;
-	width: 100%;
-	justify-content: center;
+	width: 90%;
+	/*margin-left: 10px;*/
 }
 
 .devslopes-card .project-card {
+	display: flex;
 	border: 2px groove var(--devslopes-black);
 	width: 95%;
 	border-radius: 8px;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	border: 0;
 }
 
 .devslopes-card .project-card .project-card-back {
@@ -371,6 +376,7 @@
 	align-items: center;
 	height: 15%;
 	width: 80%;
+	box-sizing: border-box;
 }
 .project-card {
 	background-color: var(--cranberry-dark);
@@ -379,9 +385,12 @@
 	height: 100%;
 	width: 70%;
 	place-content: center;
+	box-sizing: border-box;
 }
 
 .project-card-inner {
+	box-sizing: border-box;
+
 	height: 80%;
 	position: relative;
 	transform-style: preserve-3d;
@@ -393,7 +402,6 @@
 }
 .project-card:hover .project-card-inner,
 .project-card:hover .devslopes-project-card-inner {
-	box-shadow: 1px 1px 1px 1px var(--cream-dark);
 	transform: rotateY(180deg);
 	border-radius: 10px;
 }
@@ -407,6 +415,7 @@
 	place-content: center;
 	place-items: center;
 	display: flex;
+	box-sizing: border-box;
 }
 
 .project-card-front i {
@@ -428,8 +437,3 @@
 	width: 50%;
 	place-self: center;
 }
-/*.project-card:hover {
-	border: 0.1875rem groove var(--gold-main);
-	box-shadow: 0.1875rem 0.1875rem 0.0625rem 0.0625rem var(--gold-dark);
-	transform: scale(1.1);
-}*/
