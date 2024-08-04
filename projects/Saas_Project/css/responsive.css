@@ -145,7 +145,7 @@
 
 	.empower-section h2 {
 		text-align: center;
-		font-size: 3.75rem;
+		font-size: 3.4375rem;
 		font-weight: 600;
 		padding-bottom: -0.625rem;
 		width: inherit;
@@ -1216,5 +1216,30 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+}
+
+@media (max-width: 381px) {
+	html {
+		width: 100vw;
+	}
+
+	body {
+		box-sizing: border-box;
+		overflow-x: hidden;
+	}
+
+	.banner2 img {
+		width: 100%;
+	}
+
+	footer {
+		box-sizing: border-box;
+		padding: 0;
+	}
+
+	.form-div {
+		box-sizing: border-box;
+		width: 100%;
 	}
 }
