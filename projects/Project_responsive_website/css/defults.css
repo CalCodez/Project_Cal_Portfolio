@@ -1,11 +1,10 @@
 :root {
-	--black: #0000;
+	--black: #000;
 	--white: #ffff;
-	--project-color-yellow: #fffb97;
-	--project-color-orange: #fe7f42;
 	--project-color-red: #b32c1a;
-	--project-color-brown: #3f2826;
-	--project-color-black: #2a1617;
+	--project-font-color: #aaaaaa;
+	--project-font-dark: #4e4d4d;
+	--project-bg: #fefefa;
 }
 
 html {
@@ -61,7 +60,7 @@ a:hover {
 }
 
 #menu-toggler {
-	color: var(--project-color-orange);
+	color: var(--project-font-dark);
 	font-size: 1.2rem;
 	position: absolute;
 	top: 0;
@@ -75,7 +74,7 @@ a:hover {
 	flex-direction: column;
 	width: fit-content;
 	height: fit-content;
-	background: var(--project-color-brown);
+	background: var(--white);
 	justify-content: flex-start;
 	align-items: flex-start;
 	padding: 20px;
@@ -86,6 +85,6 @@ a:hover {
 }
 
 #mobile-menu a {
-	color: var(--project-color-orange);
+	color: var(--project-font-dark);
 	font-size: 1.2rem;
 }

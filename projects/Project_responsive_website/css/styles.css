@@ -12,7 +12,7 @@
 	width: 300px;
 	font-size: 1.6rem;
 	column-gap: 10px;
-	color: var(--project-color-orange);
+	color: var(--project-font-dark);
 }
 
 .logo-container img {
@@ -29,7 +29,7 @@
 }
 
 .nav-links-container a {
-	color: var(--project-color-orange);
+	color: var(--project-font-dark);
 }
 
 .header-container {
@@ -38,12 +38,12 @@
 	text-align: center;
 	height: auto;
 	margin: 80px;
-	color: var(--project-color-orange);
+	color: var(--project-font-color);
 	font-weight: 600;
 }
 
 .header-container h1 {
-	color: var(--project-color-yellow);
+	color: var(--project-font-dark);
 	font-weight: 100;
 	font-size: 50px;
 }
@@ -60,7 +60,6 @@
 	flex-direction: column;
 	width: 300px;
 	height: 350px;
-	color: var(--project-color-orange);
 	font-weight: 200;
 	font-size: 0.98rem;
 	line-height: 1;
@@ -85,13 +84,13 @@
 
 .card-text-container p {
 	font-size: 1.2rem;
-	color: var(--project-color-yellow);
+	color: var(--project-font-dark);
 	width: 100%;
 	font-weight: 600;
 }
 
 .card-text-container .card-descriptive-text {
-	color: var(--project-color-orange);
+	color: var(--project-font-color);
 	font-weight: 200;
 	font-size: 0.98rem;
 	line-height: 1;
@@ -110,7 +109,7 @@
 	max-width: 560px;
 	text-align: center;
 
-	color: var(--project-color-yellow);
+	color: var(--project-font-color);
 }
 
 .team-header-container h3 {
@@ -134,7 +133,7 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
-	color: var(--project-color-orange);
+	color: var(--project-font-dark);
 	font-weight: 500;
 }
 
@@ -155,18 +154,19 @@
 	justify-content: flex-start;
 	gap: 10px;
 	margin: 10px 0 -20px 0;
-	color: var(--project-color-red);
+	color: var(--project-font-color);
 }
 
 .team-social-container .icon-yellow {
-	color: var(--project-color-yellow);
+	color: var(--project-font-dark);
+	font-weight: 700;
 }
 
 footer {
 	width: 100%;
 	height: fit-content;
 	flex-direction: column;
-	background-color: var(--project-color-yellow);
+	background-color: var(--black);
 	align-items: flex-start;
 	margin-top: 80px;
 }
@@ -191,7 +191,7 @@ footer {
 }
 
 .footer-social-container .social-instagram {
-	color: var(--project-color-brown);
+	color: var(--project-font-color);
 }
 
 .footer-company-info-container {
@@ -221,7 +221,7 @@ footer {
 hr {
 	border: 0.1px solid var(--project-color-red);
 	width: 90%;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .copyright-container {

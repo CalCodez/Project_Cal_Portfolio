@@ -15,7 +15,6 @@
 		right: 1%;
 		padding: 30px;
 		top: 2%;
-		box-shadow: 1px 1px 5px 2px var(--project-color-yellow);
 		row-gap: 10px;
 	}
 
@@ -89,8 +88,11 @@
 		top: 16px;
 		right: 25px;
 		padding: 30px;
-		box-shadow: 1px 1px 5px 2px var(--project-color-yellow);
 		row-gap: 15px;
+	}
+
+	.logo-nav-container {
+		justify-content: space-between;
 	}
 
 	.header-container {
