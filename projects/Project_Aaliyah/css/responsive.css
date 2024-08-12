@@ -113,10 +113,7 @@
 
 	.pages-movies .movie-details-container {
 		width: 300px;
-	}
-
-	.pages-movies .movie-images-container .content {
-		outline: 1px solid red;
+		font-size: 25px;
 	}
 
 	.pages-movies .movie-images-container img {
