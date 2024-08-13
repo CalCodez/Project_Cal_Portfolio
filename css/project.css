@@ -17,6 +17,7 @@
 	height: fit-content;
 	padding: 8px;
 	width: 80vw;
+	box-sizing: border-box;
 }
 .sticky-menu {
 	display: flex;
@@ -54,11 +55,12 @@
 	display: flex;
 	flex-direction: row;
 	height: 15.625rem;
-	margin: 1.5625rem auto;
+	margin: 30px 0 80px 0;
 	place-content: center;
 	place-items: center;
 	position: relative;
 	width: 100%;
+	box-sizing: border-box;
 }
 .project-logo-container img {
 	height: 100%;
@@ -110,9 +112,9 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: 3.125rem;
-	height: 400px;
-	margin: 1.5625rem 0;
+	gap: 80px;
+	height: auto;
+	margin: 50px 0;
 	place-content: center;
 	width: 100%;
 }
@@ -121,20 +123,15 @@
 	height: 100%;
 	place-content: center;
 	place-items: center;
-	width: 40%;
+	width: 320px;
+	box-sizing: content-box;
 }
-.project-image-handler {
-	border: 0.125rem groove var(--cream-dark);
-	border-radius: 50%;
-	box-shadow: 2px 2px 40px 2px var(--cranberry-dark-transparent);
-	height: 70%;
-	width: 70%;
-	z-index: 1;
-}
-.project-image-handler img {
+
+.project-image-wrapper img {
 	border-radius: 50%;
 	height: 100%;
 	width: 100%;
+	box-shadow: 2px 2px 20px 2px var(--cream-light);
 }
 .project-info-container {
 	display: flex;
@@ -142,7 +139,7 @@
 	place-content: space-around;
 	place-content: center;
 	place-items: center;
-	width: 40%;
+	width: 320px;
 }
 .project-info-header-container {
 	display: flex;
@@ -156,17 +153,18 @@
 .project-info-container h5 {
 	margin: 0.5rem auto;
 	width: auto;
+	box-sizing: border-box;
 }
 .project-info-info-container {
 	color: var(--cream-light);
 	display: flex;
 	flex-wrap: wrap;
-	font-size: 12px;
-	font-weight: 400;
-	letter-spacing: 1.2;
+	font-size: 0.9rem;
+	font-weight: 600;
 	text-align: justify;
 	width: auto;
 	word-wrap: break-word;
+	line-height: 1.5;
 }
 
 /* **Devslopes Section */
@@ -177,6 +175,7 @@
 	margin: 50px 0;
 	width: 100%;
 	justify-content: center;
+	box-sizing: border-box;
 }
 
 .devslopes-body-container {
@@ -188,6 +187,7 @@
 	background: var(--devslopes-black);
 	border-radius: 10px;
 	padding: 1rem;
+	box-sizing: content-box;
 }
 
 .devslopes-header-container {
@@ -195,6 +195,7 @@
 	flex-direction: row;
 	width: 100%;
 	height: 20%;
+	box-sizing: border-box;
 }
 
 .devslopes-logo-container {
@@ -213,12 +214,14 @@
 	justify-content: space-between;
 	align-items: center;
 	width: 70%;
+	box-sizing: content-box;
 }
 
 .devslopes-name-container h4 {
 	color: var(--devslopes-logo-red);
 	font-size: 50px;
 	font-weight: 700;
+	margin-left: 10px;
 }
 
 .devslopes-btn-container {
@@ -227,6 +230,7 @@
 	width: 40%;
 	justify-content: flex-end;
 	align-items: center;
+	box-sizing: content-box;
 }
 
 .devslopes-btn-container .btn {
@@ -234,10 +238,10 @@
 	color: var(--devslopes-logo-red);
 	box-shadow: 1px 1px 3px 1px var(--devslopes-logo-red);
 	border: 3px groove var(--devslopes-black);
-	font-size: 1em;
+	font-size: 1.25rem;
 	height: 30%;
-	font-size: 20px;
-	width: 40%;
+	width: 120px;
+	box-sizing: content-box;
 }
 
 .devslopes-card-container {
@@ -249,17 +253,18 @@
 	height: 80%;
 	flex-wrap: wrap;
 	overflow-y: scroll;
+	box-sizing: border-box;
 }
 
 .devslopes-card {
 	display: flex;
 	flex-direction: column;
-
-	width: 220px;
+	width: 200px;
 	height: 250px;
 	border: 3px ridge var(--devslopes-logo-red);
 	border-radius: 8px;
 	place-content: center;
+	box-sizing: border-box;
 }
 
 .devslopes-project-card-inner {
@@ -268,7 +273,6 @@
 	transform-style: preserve-3d;
 	transition: transform 0.9s;
 	width: 90%;
-	/*margin-left: 10px;*/
 }
 
 .devslopes-card .project-card {
@@ -367,10 +371,11 @@
 	width: 300px;
 	box-sizing: border-box;
 	flex-direction: column;
+	padding: 10px;
 }
 
 .project-title-container h4 {
-	font-size: 1.5em;
+	font-size: 1.8em;
 }
 
 .project-title-container ruby rt {
