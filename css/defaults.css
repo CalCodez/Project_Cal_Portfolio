@@ -39,7 +39,7 @@ body {
 	background-color: #7a1717;
 	display: flex;
 	height: auto;
-	padding-top: 3.125rem;
+	padding-top: 50px;
 	place-content: center;
 
 	background-image: linear-gradient(
