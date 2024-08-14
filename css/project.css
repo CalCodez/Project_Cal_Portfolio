@@ -409,6 +409,8 @@
 .project-card-preview-container img {
 	width: 90%;
 	height: 90%;
+	border: 10px groove var(--cranberry-dark-transparent);
+	box-shadow: 3px 3px 3px 3px var(--cranberry-dark-transparent);
 }
 
 .project-card-container .project-card {
