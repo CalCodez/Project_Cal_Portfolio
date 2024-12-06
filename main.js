@@ -15,30 +15,80 @@ const projectData = {
               and group artists, along with artist pages that include a sub collection of videos from similar artists.`,
 		href: '/projects/my_tube/Project_My_Tube/main.html',
 	},
-	saas: { title: 'SaaS', src: '#', alt: '', description: '#', href: '#' },
+	saas: {
+		title: 'SaaS',
+		src: '/assets/project_card_images/SaaS.png',
+		alt: 'SaaS landing page',
+		description: `"A fully featured website landing page. This was my first project that tested all my skills in HTML and
+              CSS. I learned
+              to apply elements using advanced HTML, CSS positioning, forms, inputs, and sizing to achieve a
+              professional-looking
+              website."`,
+		href: '/projects/Saas_Project/index.html',
+	},
 	pokemon: {
 		title: 'Pokemon Cards',
-		src: '#',
-		alt: '',
-		description: '#',
-		href: '#',
+		src: '/assets/project_card_images/Pokemon.png',
+		alt: 'Pokemon Cards',
+		description: `"A Pokémon card collection project. This project allows users to collect and release Pokémon by adding and
+              removing
+              their favorite cards. The favorites section displays the total number of cards currently in their
+              collection. The
+              project also tallies common skills among the displayed Pokémon."`,
+		href: '/projects/Js_Project3_ApiWebsite/index.html',
 	},
-	google: { title: 'Google', src: '#', alt: '', description: '#', href: '#' },
-	favz: { title: 'My Favz', src: '#', alt: '', description: '#', href: '#' },
-	logins: { title: 'Logins', src: '#', alt: '', description: '#', href: '#' },
+	google: {
+		title: 'Google',
+		src: '/assets/project_card_images/Google.png',
+		alt: 'Google Landing Homepage',
+		description: `A simple Google homepage clone built by studying an example, with functional links. The project involved
+              replicating the
+              layout, styling, and search bar, ensuring an accurate visual match. It’s a straightforward demonstration
+              of
+              understanding basic HTML, CSS, and link functionality.`,
+		href: '/projects/Project_Google_Page/index.html',
+	},
+	favz: {
+		title: 'My Favz',
+		src: '/assets/project_card_images/My_Favz.png',
+		alt: 'My Favz',
+		description: `"A beginner project displaying a list of things I favor and don't favor, with each topic providing 3 key
+              reasons for its
+              inclusion. This project helped me learn HTML tables displayed on the homepage. User-interactive: click the
+              topics to
+              jump to the pages."`,
+		href: '/projects/Project-My_Favz/index.html',
+	},
+	logins: {
+		title: 'Logins',
+		src: '/assets/project_card_images/Social_Media.png',
+		alt: 'Social Media Logins',
+		description: `A social media login page clone project. I successfully created login pages for various platforms,
+              optimized for
+              desktop, tablet, and mobile. The displayed login page adapts based on the device used, showcasing
+              responsive design
+              skills across different screen sizes.`,
+		href: '/projects/Project_social_pages/index.html',
+	},
 	responsive: {
 		name: 'Responsive Website',
-		img: '#',
-		alt: '',
-		description: '#',
-		href: '#',
+		src: '/assets/project_card_images/Responsive_websie.png',
+		alt: 'Responsive Website',
+		description: `"My first mobile-responsive project. I learned to style website elements to make them automatically
+              responsive for all
+              device types."`,
+		href: '/projects/Project_responsive_website/index.html',
 	},
 	tribute: {
 		title: 'Aaliyah Tribute',
-		src: '#',
-		alt: '',
-		description: '#',
-		href: '#',
+		src: '/assets/project_card_images/Aaliyah_tribute.png',
+		alt: 'Aaliyah Tribute Project',
+		description: `A tribute page dedicated to the late Aaliyah. This project features a detailed biography, a curated
+              collection of her
+              music and videos, and a page highlighting the movies she starred in. Each section pays homage to her
+              impactful career
+              and lasting legacy in entertainment.`,
+		href: '/projects/Project_Aaliyah/index.html',
 	},
 };
 
