@@ -25,13 +25,13 @@
 	justify-content: space-between;
 	margin-bottom: 20px;
 }
-.logo-conatiner {
+.logo-container {
 	display: flex;
 	height: 100%;
-	place-content: felx-start;
+	place-content: flex-start;
 	width: 35%;
 }
-.logo-conatiner img {
+.logo-container img {
 	height: 100%;
 	object-fit: cover;
 	width: 60%;
@@ -42,6 +42,7 @@
 	height: 100%;
 	justify-content: space-around;
 	width: 60%;
+	outline: 1px solid yellow;
 }
 .portfolio-body-container {
 	display: flex;
