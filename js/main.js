@@ -37,20 +37,74 @@ const snapAndAbout = {
 const { snap, about } = snapAndAbout;
 
 const navTogglers = getByClass('nav-toggle');
-const [aboutToggle, contactToggle] = navTogglers;
+const [aboutToggleMobile, contactToggleMobile, aboutToggle, contactToggle] =
+	navTogglers;
+
+const menuToggler = getById('menu-toggler');
+const mainMobileMenu = getById('main-mobile-menu');
+
+menuToggler.addEventListener(click, function () {
+	if (!mainMobileMenu.classList.contains('flexActive')) {
+		toggleClass(mainMobileMenu, flexActive);
+	} else {
+		toggleClass(mainMobileMenu, flexActive);
+	}
+	document.addEventListener('keyup', function (event) {
+		if (
+			event.key === 'Escape' &&
+			mainMobileMenu.classList.contains(flexActive)
+		) {
+			toggleClass(mainMobileMenu, flexActive);
+		}
+	});
+});
+
 const contactIcons = getByClass('contact-icons');
+
 const toggleContactIcons = (toggler) => {
 	const activeIcons = 'contact-icons-active';
-
 	toggler.addEventListener(click, function () {
 		for (let icons of contactIcons)
-			if (!icons.classList.contains(activeIcons)) {
+			if (
+				!icons.classList.contains(activeIcons) &&
+				!aboutContainer.classList.contains(flexActive) &&
+				!mainMobileMenu.classList.contains(flexActive)
+			) {
 				toggleClass(icons, activeIcons);
+			} else if (
+				!icons.classList.contains(activeIcons) &&
+				aboutContainer.classList.contains(flexActive) &&
+				!mainMobileMenu.classList.contains(flexActive)
+			) {
+				toggleClass(icons, activeIcons);
+				toggleClass(aboutContainer, flexActive);
+				toggleClass(introContainer, flexInactive);
+				profileImage.src = about.mainImg;
+			} else if (
+				!icons.classList.contains(activeIcons) &&
+				aboutContainer.classList.contains(flexActive) &&
+				mainMobileMenu.classList.contains(flexActive)
+			) {
+				toggleClass(icons, activeIcons);
+				toggleClass(mainMobileMenu, flexActive);
+				toggleClass(aboutContainer, flexActive);
+				toggleClass(introContainer, flexInactive);
+				profileImage.src = about.mainImg;
+			} else if (
+				!icons.classList.contains(activeIcons) &&
+				!aboutContainer.classList.contains(flexActive) &&
+				mainMobileMenu.classList.contains('flexActive')
+			) {
+				toggleClass(icons, activeIcons);
+				toggleClass(mainMobileMenu, flexActive);
+				console.log(mainMobileMenu);
 			} else {
 				toggleClass(icons, activeIcons);
 			}
 	});
 };
+
+toggleContactIcons(contactToggleMobile);
 
 toggleContactIcons(contactToggle);
 
@@ -61,17 +115,32 @@ const aboutDescription = getById('about-description');
 const flexActive = 'flex-active';
 const flexInactive = 'flex-inactive';
 
-console.log(aboutContainer);
+const toggleAboutContainer = (toggler) => {
+	toggler.addEventListener(click, function () {
+		if (
+			!aboutContainer.classList.contains(flexActive) &&
+			!mainMobileMenu.classList.contains(flexActive)
+		) {
+			toggleClass(aboutContainer, flexActive);
+			toggleClass(introContainer, flexInactive);
+			profileImage.src = about.aboutImg;
+			textContent(aboutDescription, about.text);
+		} else if (
+			!aboutContainer.classList.contains(flexActive) &&
+			mainMobileMenu.classList.contains(flexActive)
+		) {
+			toggleClass(aboutContainer, flexActive);
+			toggleClass(introContainer, flexInactive);
+			toggleClass(mainMobileMenu, flexActive);
+			profileImage.src = about.aboutImg;
+			textContent(aboutDescription, about.text);
+		} else {
+			toggleClass(aboutContainer, flexActive);
+			toggleClass(introContainer, flexInactive);
+			profileImage.src = about.mainImg;
+		}
+	});
+};
 
-aboutToggle.addEventListener(click, function () {
-	if (!aboutContainer.classList.contains(flexActive)) {
-		toggleClass(aboutContainer, flexActive);
-		toggleClass(introContainer, flexInactive);
-		profileImage.src = about.aboutImg;
-		textContent(aboutDescription, about.text);
-	} else {
-		toggleClass(aboutContainer, flexActive);
-		toggleClass(introContainer, flexInactive);
-		profileImage.src = about.mainImg;
-	}
-});
+toggleAboutContainer(aboutToggleMobile);
+toggleAboutContainer(aboutToggle);

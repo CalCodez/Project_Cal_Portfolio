@@ -111,7 +111,7 @@
 	flex-direction: column;
 	border: 2px solid var(--cranberry-dark);
 	border-radius: 8px;
-	background: radial-gradient(var(--gold-dark), var(--gold-main));
+	background: radial-gradient(var(--gold-dark), var(--gold));
 
 	row-gap: 20px;
 }

@@ -1,4 +1,7 @@
 @media (max-width: 1024px) {
+	.main-portfolio-container {
+		width: 80vw;
+	}
 	.nav-links-container a {
 		font-size: 0.8em;
 		gap: 15px;
@@ -17,17 +20,6 @@
 		width: 60%;
 	}
 
-	.full-site-modal .modal-content-wrapper {
-		width: 100%;
-	}
-
-	#ptb {
-		font-size: smaller;
-		text-align: center;
-		width: 100px;
-		height: 30px;
-		left: 20px;
-	}
 	.devslopes-btn-container {
 		justify-content: center;
 	}
@@ -45,24 +37,24 @@
 }
 
 @media (max-width: 768px) {
-	body .main-portfolio-container {
-		height: 80vw;
-		width: 80vw;
+	.main-portfolio-container {
+		height: 90vw;
+		width: 90vw;
 	}
 	body .portfolio-body-container {
 		height: 70%;
 	}
 	.nav-container {
-		position: relative;
+		display: none;
 	}
 
 	#menu-toggler {
 		font-size: 30px;
 		position: absolute;
-		right: 10%;
-		visibility: visible;
+		right: 20px;
 		z-index: 3;
 		color: var(--cream-light);
+		display: 'block';
 	}
 
 	.nav .img-wrapper {
@@ -186,10 +178,6 @@
 	.main-portfolio-container {
 		height: 100vh;
 		padding-bottom: 80px;
-	}
-
-	#mobile-toggler {
-		display: block;
 	}
 
 	.nav-container {
