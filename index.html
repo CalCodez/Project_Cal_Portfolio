@@ -28,16 +28,16 @@
 					<img src="./assets/Logo_Images/CalCodez2.png" alt="Calcodez" />
 				</div>
 				<div class="nav-links-container">
-					<li><a data-open="about">About Me</a></li>
+					<li><a class="nav-toggle" href="#">About Me</a></li>
 					<li><a href="./project.html">Projects</a></li>
 					<li><a href="https://medium.com/@calvincortezcolbert">Medium</a></li>
-					<li><a data-open="resources"="https://medium.com/@calvincortezcolbert">Resources</a></li>
+					<li><a class="nav-toggle" href="#">Contact</a></li>
 				</div>
 			</div>
 			<!-- **Portfolio Body Container -->
 			<div class="portfolio-body-container">
 				<!-- ++Intro Container -->
-				<div class="intro-container">
+				<div class="intro-container  ">
 					<!-- ^^Intro Name Container -->
 					<div class="intro-name-container">
 						<h5>Calvin Cortez Colbert</h5>
@@ -49,28 +49,43 @@
 						<marquee behavior="slide" direction="down">
 							<div class="inner-marquee-container">
 								<div class="social-icon-wrappers">
-									<a href="https://www.facebook.com/CalvinCortezColbert"><i class="fa-brands fa-facebook"></i></a>
+									<a class="contact-icons" href="https://www.facebook.com/CalvinCortezColbert"><i
+											class="fa-brands fa-facebook"></i></a>
 								</div>
 								<div class="social-icon-wrappers">
-									<a href="https://www.instagram.com/calvincortezcolbert/"><i class="fa-brands fa-instagram"></i></a>
+									<a class="contact-icons" href="https://www.instagram.com/calvincortezcolbert/"><i
+											class="fa-brands fa-instagram"></i></a>
 								</div>
 								<div class="social-icon-wrappers">
-									<a href="https://www.threads.net/@calvincortezcolbert"><i class="fa-brands fa-threads"></i></a>
+									<a class="contact-icons" href="https://www.threads.net/@calvincortezcolbert"><i
+											class="fa-brands fa-threads"></i></a>
 								</div>
 								<div class="social-icon-wrappers">
-									<a data-open="snapchat"><i class="fa-brands fa-snapchat"></i></a>
+									<a class="contact-icons"><i class="fa-brands fa-snapchat"></i></a>
 								</div>
-
+								<div class="social-icon-wrappers">
+									<a class="contact-icons"><i class="fa-regular fa-envelope"></i></a>
+								</div>
 							</div>
 					</div>
 					</marquee>
 				</div>
 			</div>
+
+
+			<div class="about-text-container container ">
+				<p id="about-description">
+
+
+				</p>
+
+
+			</div>
 			<!-- ^^Image Container -->
 
 			<div class="image-container">
 				<div class="img-wrapper">
-					<img src="./assets/Calvin/CalvinC_One.jpg" alt="calvin" />
+					<img id="main-profile-img" src="./assets/Calvin/CalvinC_One.jpg" alt="calvin" />
 				</div>
 			</div>
 		</div>
@@ -78,6 +93,7 @@
 
 
 		<!-- $$Modals -->
+		<!-- !!DELETE MODALS -->
 		<!-- ++SnapChat Modal -->
 
 		<!-- ++About Modal -->
@@ -118,55 +134,14 @@
 			</div>
 		</div>
 
-		<!-- ++Resources Modal -->
-		<div class="full-site-modal page-block modal resource-modal" id="resources" data-animation="zoomInOut"
-			data-close="page-block">
-			<div class="modal-content-wrapper resoure-modal-conent-wrapper">
-				<div class="resource-modal-banner-container">
-					PROJECT RESOURCES
-				</div>
-				<div class="resource-modal-nav-container">
-					<li><a href="./index.html">Home</a></li>
-					<li><a href="./project.html">Projects</a></li>
-					<li><a href="https://medium.com/@calvincortezcolbert">Medium</a></li>
 
-				</div>
-				<div class="resource-container">
-					<div class="resource-image-container">
-						<img src="./assets/Logo_Images/fontawesome.png" alt="fontawesome-logo">
-					</div>
-					<div class="resource-text-container">
-						<div class="resource-text-wrapper">
-							<p>Source For All Icons In This Project is Fontawesome</p>
-						</div>
-						<div class="resource-btn-container">
-							<a class="btn" href="https://fontawesome.com/">Fontawesome</a>
-						</div>
-					</div>
-				</div>
-				<div class="resource-container">
-					<div class="resource-text-container">
-						<div class="resource-text-wrapper">
-							<p>Image Icons Sorce "Flaticon icons
-								created by
-								Freepik -
-								Flaticon""</p>
-						</div>
-						<div class="resource-btn-container">
-							<a class="btn" href="https://www.flaticon.com/free-icons/flaticon" title="flaticon icons">Flaticon</a>
 
-						</div>
-					</div>
-					<div class="resource-image-container flaticon-image">
-						<img src="./assets/Logo_Images/flaticon.png" alt="flaticon-logo">
-					</div>
-				</div>
-			</div>
-		</div>
+		<!-- !!DELETE MODALS -->
 
+
+		<!-- !!DELETE MODALS -->
 
 		<!-- ++Snapchat modal Modal -->
-
 		<div class="full-site-modal page-block modal snapchat-modal" id="snapchat" data-animation="zoomInOut"
 			data-close="page-block">
 			<div class="modal-content-wrapper snapchat-modal-content-wrapper resoure-modal-conent-wrapper">
@@ -180,9 +155,9 @@
 
 
 
-
+		<!-- !!DELETE MODALS -->
 		<!-- ++Mobile Menu Modal -->
-		<div class="full-site-modal page-block modal" id="mobile-menu" data-animation="zoomInOut" data-close="page-block">
+		<!--<div class="full-site-modal page-block modal" id="mobile-menu" data-animation="zoomInOut" data-close="page-block">
 			<div class="modal-content-wrapper mobile-nav-content-wrapper">
 				<div class="mobile-modal-nav-links-container">
 					<li><a data-open="about">About Me</a></li>
@@ -191,12 +166,12 @@
 					<li><a data-open="resources"="https://medium.com/@calvincortezcolbert">Resources</a></li>
 				</div>
 			</div>
-		</div>
+		</div>-->
 
 
 
 
-		<script src="./main.js"></script>
+		<script src="./js/main.js"></script>
 	</body>
 
 </html>
