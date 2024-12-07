@@ -5,6 +5,7 @@ const select = (arg) => document.querySelector(arg);
 const append = (parent, child) => parent.appendChild(child);
 const toggleClass = (arg1, arg2) => arg1.classList.toggle(arg2);
 const addClass = (arg1, arg2) => arg1.classList.add(arg2);
+const textContent = (arg1, arg2) => (arg1.textContent = arg2);
 
 const click = 'click';
 
@@ -33,6 +34,8 @@ const snapAndAbout = {
 	},
 };
 
+const { snap, about } = snapAndAbout;
+
 const navTogglers = getByClass('nav-toggle');
 const [aboutToggle, contactToggle] = navTogglers;
 const contactIcons = getByClass('contact-icons');
@@ -50,3 +53,25 @@ const toggleContactIcons = (toggler) => {
 };
 
 toggleContactIcons(contactToggle);
+
+const profileImage = getById('main-profile-img');
+const aboutContainer = getById('about-text-container');
+const introContainer = getById('intro-container');
+const aboutDescription = getById('about-description');
+const flexActive = 'flex-active';
+const flexInactive = 'flex-inactive';
+
+console.log(aboutContainer);
+
+aboutToggle.addEventListener(click, function () {
+	if (!aboutContainer.classList.contains(flexActive)) {
+		toggleClass(aboutContainer, flexActive);
+		toggleClass(introContainer, flexInactive);
+		profileImage.src = about.aboutImg;
+		textContent(aboutDescription, about.text);
+	} else {
+		toggleClass(aboutContainer, flexActive);
+		toggleClass(introContainer, flexInactive);
+		profileImage.src = about.mainImg;
+	}
+});
