@@ -138,7 +138,7 @@
 	width: 100%;
 }
 
-.snapchat-container {
+.popup-container {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -151,11 +151,36 @@
 	display: none;
 }
 
-.snapchat-container img {
+.popup-container img {
 	width: 30%;
 	height: 60%;
 	border: 15px ridge var(--gold);
 	border-radius: 50px;
+}
+
+.popup-container2 {
+	width: 100%;
+	height: 100%;
+	background-color: var(--cranberry-dark-transparent);
+	position: absolute;
+	z-index: 99;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	place-content: center;
+	place-items: center;
+	display: none;
+}
+
+.popup-container2 p {
+	color: var(--gold);
+	width: 100%;
+	font-size: 30px;
+	text-align: center;
+	letter-spacing: 3;
+	font-weight: 600;
+	text-shadow: 5px 5px 5px var(--true-black);
 }
 
 .flex-active {

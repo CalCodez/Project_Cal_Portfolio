@@ -1,6 +1,7 @@
 @media (max-width: 1024px) {
 	.main-portfolio-container {
-		width: 80vw;
+		width: 95%;
+		height: 95%;
 	}
 	.nav-links-container a {
 		font-size: 0.8em;
@@ -38,23 +39,20 @@
 
 @media (max-width: 768px) {
 	.main-portfolio-container {
-		height: 90vw;
-		width: 90vw;
+		height: fit-content;
+		width: 100%;
+
+		outline: var(--ol);
 	}
-	body .portfolio-body-container {
-		height: 70%;
+	.portfolio-body-container {
+		height: 100%;
 	}
 	.nav-container {
 		display: none;
 	}
 
 	#menu-toggler {
-		font-size: 30px;
-		position: absolute;
-		right: 20px;
-		z-index: 3;
-		color: var(--cream-light);
-		display: 'block';
+		display: block;
 	}
 
 	.nav .img-wrapper {
@@ -65,27 +63,33 @@
 	.img-wrapper {
 		box-shadow: 0px 0px 40px 5px var(--cream-light);
 	}
-	.full-site-modal .modal-content-wrapper {
-		flex-direction: column;
-	}
-	.modal-content-wrapper .modal-image-container {
-		height: max-content;
-		width: 100%;
-	}
-	.modal-image-container .modal-image-wrapper {
-		height: 60%;
-		width: 45%;
-	}
-	.modal-content-wrapper .modal-about-container {
-		font-size: 0.75em;
-		margin-top: -25px;
-		width: 90%;
-	}
 	.project-logo-container {
 		margin-top: 60px;
 	}
 	.project-navbar-container {
 		flex-direction: column;
+		width: 100%;
+	}
+
+	.about-text-container {
+		width: 100%;
+		height: 50%;
+	}
+
+	.about-text-container p {
+		align-self: flex-start;
+		width: 100%;
+	}
+
+	.image-container {
+		height: 50%;
+		width: 100%;
+		margin-top: 50px;
+		outline: var(--ol);
+	}
+
+	.image-container .img-wrapper {
+		outline: 5px solid blue;
 		width: 100%;
 	}
 

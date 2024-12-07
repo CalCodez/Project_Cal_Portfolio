@@ -94,15 +94,12 @@ li:hover {
 }
 
 #menu-toggler {
-	font-size: 25px;
-	color: var(--cream-light);
-	position: absolute;
-	cursor: pointer;
-	z-index: 3;
-	font-weight: 600;
 	display: none;
+	font-size: 30px;
+	position: absolute;
 	right: 20px;
-	z-index: 2;
+	z-index: 3;
+	color: var(--cream-light);
 }
 
 .mobile-menu {

@@ -36,6 +36,7 @@ const snapAndAbout = {
 						not
 						only meet
 						their needs but also captivate their audiences.`,
+		email: 'WWW.CALCODEZ@OUTLOOK.COM',
 	},
 };
 
@@ -150,32 +151,47 @@ const toggleAboutContainer = (toggler) => {
 toggleAboutContainer(aboutToggleMobile);
 toggleAboutContainer(aboutToggle);
 
-const snapChatToggle = getById('snapChat-toggle');
-const img = createElement('img');
+//??Snapchat and Email Vars and Function
+const popupToggles = getByClass('popupToggle');
 
-snapChatToggle.addEventListener(click, function () {
-	const parent = getById('snapchat-container');
-	if (!parent.classList.contains(flexActive)) {
-		img.src = snap.src;
-		img.alt = snap.alt;
-		append(parent, img);
-		toggleClass(parent, flexActive);
-	} else {
-		toggleClass(parent, flexActive);
-		remove(parent, img);
-	}
+const [snapChatToggle, emailToggle] = popupToggles;
 
-	parent.addEventListener(click, function () {
-		if (parent.classList.contains(flexActive)) {
+console.log(popupToggles);
+
+const popUpContainer = getById('popup-container');
+const popUpContainer2 = getById('popup-container2');
+const snapCode = createElement('img');
+snapCode.src = snap.src;
+snapCode.alt = snap.alt;
+
+const email = createElement('p');
+textContent(email, about.email);
+
+const snapAndEmailToggle = (toggler, parent, child) => {
+	toggler.addEventListener(click, function () {
+		if (!parent.classList.contains(flexActive)) {
 			toggleClass(parent, flexActive);
-			remove(parent, img);
-		}
-	});
-
-	document.addEventListener('keyup', function (event) {
-		if (event.key === 'Escape' && parent.classList.contains(flexActive)) {
+			append(parent, child);
+		} else {
 			toggleClass(parent, flexActive);
-			remove(parent, img);
+			remove(parent, child);
 		}
+
+		parent.addEventListener(click, function () {
+			if (parent.classList.contains(flexActive)) {
+				toggleClass(parent, flexActive);
+				remove(parent, child);
+			}
+		});
+
+		document.addEventListener('keyup', function (event) {
+			if (event.key === 'Escape' && parent.classList.contains(flexActive)) {
+				toggleClass(parent, flexActive);
+				remove(parent, child);
+			}
+		});
 	});
-});
+};
+
+snapAndEmailToggle(snapChatToggle, popUpContainer, snapCode);
+snapAndEmailToggle(emailToggle, popUpContainer2, email);
