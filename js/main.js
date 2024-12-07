@@ -3,14 +3,19 @@ const getById = (arg) => document.getElementById(arg);
 const selectAll = (arg) => document.querySelectorAll(arg);
 const select = (arg) => document.querySelector(arg);
 const append = (parent, child) => parent.appendChild(child);
+const remove = (parent, child) => parent.removeChild(child);
 const toggleClass = (arg1, arg2) => arg1.classList.toggle(arg2);
 const addClass = (arg1, arg2) => arg1.classList.add(arg2);
 const textContent = (arg1, arg2) => (arg1.textContent = arg2);
+const createElement = (arg) => document.createElement(arg);
 
 const click = 'click';
 
 const snapAndAbout = {
-	snap: {},
+	snap: {
+		src: './assets/snapcode/Snapchat-206999597.jpg',
+		alt: 'CooCalmCollect Snap Code',
+	},
 	about: {
 		mainImg: './assets/Calvin/CalvinC_One.jpg',
 
@@ -144,3 +149,33 @@ const toggleAboutContainer = (toggler) => {
 
 toggleAboutContainer(aboutToggleMobile);
 toggleAboutContainer(aboutToggle);
+
+const snapChatToggle = getById('snapChat-toggle');
+const img = createElement('img');
+
+snapChatToggle.addEventListener(click, function () {
+	const parent = getById('snapchat-container');
+	if (!parent.classList.contains(flexActive)) {
+		img.src = snap.src;
+		img.alt = snap.alt;
+		append(parent, img);
+		toggleClass(parent, flexActive);
+	} else {
+		toggleClass(parent, flexActive);
+		remove(parent, img);
+	}
+
+	parent.addEventListener(click, function () {
+		if (parent.classList.contains(flexActive)) {
+			toggleClass(parent, flexActive);
+			remove(parent, img);
+		}
+	});
+
+	document.addEventListener('keyup', function (event) {
+		if (event.key === 'Escape' && parent.classList.contains(flexActive)) {
+			toggleClass(parent, flexActive);
+			remove(parent, img);
+		}
+	});
+});

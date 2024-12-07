@@ -61,12 +61,14 @@ body {
 }
 
 .container {
+	display: flex;
 	box-sizing: border-box;
 	justify-content: center;
 	align-items: center;
 }
 
 .content {
+	display: flex;
 	box-sizing: content-box;
 	justify-content: center;
 	align-items: center;
@@ -98,7 +100,7 @@ li:hover {
 	cursor: pointer;
 	z-index: 3;
 	font-weight: 600;
-	display: block;
+	display: none;
 	right: 20px;
 	z-index: 2;
 }
