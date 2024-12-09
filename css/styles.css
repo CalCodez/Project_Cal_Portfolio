@@ -2,14 +2,14 @@
 	background-color: var(--cranberry-dark);
 	border: 3px groove var(--cream-dark);
 	border-radius: 2%;
-	box-shadow: 0px 0px 80px 5px var(--cream-light);
+	box-shadow: 0px 0px 10px 1px var(--cream-light);
 	display: flex;
 	flex-direction: column;
 	height: auto;
 	justify-self: center;
 	margin-bottom: 50px;
 	padding: 15px;
-	width: 60vw;
+	width: 80vw;
 	position: relative;
 }
 
@@ -20,7 +20,7 @@
 	flex-wrap: wrap;
 	height: 10%;
 	justify-content: space-between;
-	margin-bottom: 20px;
+	outline: 1px solid white;
 }
 .logo-container {
 	display: flex;
@@ -46,7 +46,7 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	height: auto;
-	margin-top: 50px;
+	margin-top: 25px;
 	place-items: center;
 	width: 100%;
 }
@@ -54,10 +54,27 @@
 .image-container {
 	display: flex;
 	flex-direction: column;
-	height: 360px;
+	height: 450px;
 	place-content: center;
 	width: 50%;
 	align-items: center;
+}
+
+.intro-name-container {
+	display: flex;
+	flex-direction: column;
+	line-height: 1;
+	margin-bottom: 10px;
+	place-items: center;
+	place-self: center;
+	width: fit-content;
+	outline: 1px solid yellow;
+	width: 100%;
+	height: 50%;
+}
+
+.intro-name-container > * {
+	outline: 1px solid lime;
 }
 
 .about-text-container {
@@ -74,28 +91,30 @@
 	text-shadow: 3px 3px 3px #000;
 }
 
-.intro-name-container {
-	display: flex;
-	flex-direction: column;
-	line-height: 1;
-	margin-bottom: 10px;
-	place-items: center;
-	place-self: center;
-	width: fit-content;
-}
 /* Marquee */
 .social-media-container {
 	display: flex;
 	height: 50%;
 	width: 80%;
+	outline: 1px solid blue;
+	width: 100%;
 }
+
+.social-media-container marquee {
+	outline: 1px solid green;
+	/*height: 100%;*/
+}
+
 .inner-marquee-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	padding: 5px;
-	height: fit-content;
-	margin-top: -50px;
+	/*padding: 5px;*/
+	height: 50%;
+	margin-top: -150px;
+	align-items: center;
+
+	outline: 1px solid hotpink;
 }
 .contact-icons {
 	color: var(--gold-dark);
@@ -124,9 +143,9 @@
 }
 
 .img-wrapper {
-	border: 5px ridge var(--cream-light);
+	border: 5px solid var(--cream-light);
 	border-radius: 50%;
-	box-shadow: 5px 3px 80px 10px var(--cream-light);
+	box-shadow: 5px 3px 20px 1px var(--cream-light);
 	height: 80%;
 	object-fit: cover;
 	place-self: center;
