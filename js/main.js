@@ -6,7 +6,9 @@ const append = (parent, child) => parent.appendChild(child);
 const remove = (parent, child) => parent.removeChild(child);
 const toggleClass = (arg1, arg2) => arg1.classList.toggle(arg2);
 const addClass = (arg1, arg2) => arg1.classList.add(arg2);
+const removeClass = (arg1, arg2) => arg1.classList.remove(arg2);
 const textContent = (arg1, arg2) => (arg1.textContent = arg2);
+const innerText = (arg1, arg2) => (arg1.innerText = arg2);
 const createElement = (arg) => document.createElement(arg);
 
 const click = 'click';
@@ -118,8 +120,10 @@ const profileImage = getById('main-profile-img');
 const aboutContainer = getById('about-text-container');
 const introContainer = getById('intro-container');
 const aboutDescription = getById('about-description');
+const aboutIcon = getById('about-icon');
 const flexActive = 'flex-active';
 const flexInactive = 'flex-inactive';
+const newIcon = createElement('i');
 
 const toggleAboutContainer = (toggler) => {
 	toggler.addEventListener(click, function () {
@@ -131,6 +135,15 @@ const toggleAboutContainer = (toggler) => {
 			toggleClass(introContainer, flexInactive);
 			profileImage.src = about.aboutImg;
 			textContent(aboutDescription, about.text);
+			textContent(toggler, 'Home');
+		} else if (
+			aboutContainer.classList.contains(flexActive) &&
+			!mainMobileMenu.classList.contains(flexActive)
+		) {
+			toggleClass(aboutContainer, flexActive);
+			toggleClass(introContainer, flexInactive);
+			profileImage.src = about.mainImg;
+			textContent(toggler, 'About Me');
 		} else if (
 			!aboutContainer.classList.contains(flexActive) &&
 			mainMobileMenu.classList.contains(flexActive)
@@ -140,10 +153,29 @@ const toggleAboutContainer = (toggler) => {
 			toggleClass(mainMobileMenu, flexActive);
 			profileImage.src = about.aboutImg;
 			textContent(aboutDescription, about.text);
-		} else {
+			toggleClass(aboutIcon, 'fa-user');
+			toggleClass(aboutIcon, 'fa-house');
+
+			toggler.childNodes.forEach((node) => {
+				if (node.nodeType === Node.TEXT_NODE) {
+					node.textContent = ' Home';
+				}
+			});
+		} else if (
+			aboutContainer.classList.contains(flexActive) &&
+			mainMobileMenu.classList.contains(flexActive)
+		) {
 			toggleClass(aboutContainer, flexActive);
 			toggleClass(introContainer, flexInactive);
+			toggleClass(mainMobileMenu, flexActive);
 			profileImage.src = about.mainImg;
+			toggleClass(aboutIcon, 'fa-user');
+			toggleClass(aboutIcon, 'fa-house');
+			toggler.childNodes.forEach((node) => {
+				if (node.nodeType === Node.TEXT_NODE) {
+					node.textContent = ' About Me';
+				}
+			});
 		}
 	});
 };
@@ -155,8 +187,6 @@ toggleAboutContainer(aboutToggle);
 const popupToggles = getByClass('popupToggle');
 
 const [snapChatToggle, emailToggle] = popupToggles;
-
-console.log(popupToggles);
 
 const popUpContainer = getById('popup-container');
 const popUpContainer2 = getById('popup-container2');

@@ -38,6 +38,7 @@
 	}
 	.portfolio-body-container {
 		height: 100%;
+		width: 100%;
 	}
 	.nav-container {
 		display: none;
@@ -49,12 +50,12 @@
 
 	.intro-container,
 	.image-container {
-		outline: 2px solid yellow;
-		width: 100%;
+		width: 90%;
 	}
 
 	.img-wrapper {
-		height: 90%;
+		height: 80%;
+		width: 50%;
 	}
 
 	.about-text-container {
