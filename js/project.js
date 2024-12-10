@@ -115,7 +115,6 @@ const projectMenuToggler = getById('project-menu-toggler');
 const projectMobileMenu = getById('project-mobile-menu');
 
 const projectContactToggles = getByClass('project-contact-toggles');
-const [projectContactMobile, projectContactToggleMain] = projectContactToggles;
 const projectContactMenu = getById('project-contact-menu');
 
 projectMenuToggler.addEventListener(click, function () {
@@ -170,5 +169,5 @@ const toggleProjectContactMenu = (toggler) => {
 	});
 };
 
-toggleProjectContactMenu(projectContactMobile);
-toggleProjectContactMenu(projectContactToggleMain);
+toggleProjectContactMenu(projectContactToggles[0]);
+toggleProjectContactMenu(projectContactToggles[1]);
