@@ -1,13 +1,4 @@
 /* **Back To The Top Button */
-.project-top-btn {
-	display: none;
-	font-size: small;
-	left: 92%;
-	top: 55%;
-	position: fixed;
-	width: fit-content;
-	z-index: 3;
-}
 
 .project-body-container {
 	background-color: var(--cranberry-dark);
@@ -18,6 +9,7 @@
 	padding: 8px;
 	width: 80vw;
 	box-sizing: border-box;
+	position: relative;
 }
 .sticky-menu {
 	display: flex;
@@ -26,14 +18,14 @@
 	justify-content: flex-end;
 	place-items: center;
 	width: 100%;
-	margin-top: -40px;
+	position: sticky;
 }
 .fi {
 	color: var(--cream-main);
 	display: flex;
 	font-size: 40px;
 	height: 40px;
-	visibility: hidden;
+	visibility: visible;
 	width: 40px;
 	z-index: 3;
 }
@@ -475,4 +467,12 @@
 	height: 35%;
 	width: 60%;
 	place-self: center;
+}
+
+.flex-active {
+	display: flex;
+}
+
+.flex-inactive {
+	display: none;
 }

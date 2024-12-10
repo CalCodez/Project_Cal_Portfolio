@@ -3,8 +3,16 @@ const getById = (arg) => document.getElementById(arg);
 const selectAll = (arg) => document.querySelectorAll(arg);
 const select = (arg) => document.querySelector(arg);
 const append = (parent, child) => parent.appendChild(child);
-const toggleClass = (arg1, arg2) => arg1.toggleClass(arg2);
+const remove = (parent, child) => parent.removeChild(child);
+const toggleClass = (arg1, arg2) => arg1.classList.toggle(arg2);
 const addClass = (arg1, arg2) => arg1.classList.add(arg2);
+const removeClass = (arg1, arg2) => arg1.classList.remove(arg2);
+const textContent = (arg1, arg2) => (arg1.textContent = arg2);
+const innerText = (arg1, arg2) => (arg1.innerText = arg2);
+const createElement = (arg) => document.createElement(arg);
+
+const click = 'click';
+const keyUp = 'keyup';
 
 const projectData = {
 	calTube: {
@@ -99,3 +107,68 @@ const snapChatData = {
 	image: '',
 	class: '',
 };
+
+const flexActive = 'flex-active';
+const flexInactive = 'flex-inactive';
+
+const projectMenuToggler = getById('project-menu-toggler');
+const projectMobileMenu = getById('project-mobile-menu');
+
+const projectContactToggles = getByClass('project-contact-toggles');
+const [projectContactMobile, projectContactToggleMain] = projectContactToggles;
+const projectContactMenu = getById('project-contact-menu');
+
+projectMenuToggler.addEventListener(click, function () {
+	if (
+		!projectMobileMenu.classList.contains(flexActive) &&
+		!projectContactMenu.classList.contains(flexActive)
+	) {
+		toggleClass(projectMobileMenu, flexActive);
+	} else if (
+		!projectMobileMenu.classList.contains(flexActive) &&
+		projectContactMenu.classList.contains(flexActive)
+	) {
+		toggleClass(projectContactMenu, flexActive);
+	} else {
+		toggleClass(projectMobileMenu, flexActive);
+	}
+
+	document.addEventListener(keyUp, function (event) {
+		if (
+			event.key === 'Escape' &&
+			projectMobileMenu.classList.contains(flexActive)
+		) {
+			removeClass(projectMobileMenu, flexActive);
+		}
+	});
+});
+
+const toggleProjectContactMenu = (toggler) => {
+	toggler.addEventListener(click, function () {
+		if (
+			!projectContactMenu.classList.contains(flexActive) &&
+			!projectMobileMenu.classList.contains(flexActive)
+		) {
+			toggleClass(projectContactMenu, flexActive);
+		} else if (
+			!projectContactMenu.classList.contains(flexActive) &&
+			projectMobileMenu.classList.contains(flexActive)
+		) {
+			toggleClass(projectMobileMenu, flexActive);
+			toggleClass(projectContactMenu, flexActive);
+		} else {
+			toggleClass(projectContactMenu, flexActive);
+		}
+	});
+	document.addEventListener(keyUp, function (event) {
+		if (
+			event.key === 'Escape' &&
+			projectContactMenu.classList.contains(flexActive)
+		) {
+			toggleClass(projectContactMenu, flexActive);
+		}
+	});
+};
+
+toggleProjectContactMenu(projectContactMobile);
+toggleProjectContactMenu(projectContactToggleMain);

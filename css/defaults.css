@@ -29,22 +29,14 @@
 	--olYellow: 1px solid yellow;
 	--olRed: 1px solid red;
 }
-:root {
-	--marquee-duration-animation: calc(var(--marquee-elms) * 4s);
-	--marquee-elms-displayed: 3;
-	--marquee-height: fit-content;
-	--marquee-width: 100%;
 
-	--marquee-elm-width: calc(
-		var(--marquee-width) / var(--marquee-elms-displayed)
-	);
-}
 body {
 	background-color: #7a1717;
 	display: flex;
 	height: auto;
 	padding-top: 50px;
 	place-content: center;
+	position: relative;
 
 	background-image: linear-gradient(
 		180deg,
@@ -52,6 +44,10 @@ body {
 		var(--gold-dark) 50%,
 		#7a1717 100%
 	);
+
+	width: 100%;
+	max-width: 1300px;
+	justify-self: center;
 }
 * {
 	font-family: 'Fira Code', monospace;
@@ -93,16 +89,23 @@ li:hover {
 	font-family: 'Lumanosimo', sans-serif;
 }
 
-#menu-toggler {
-	display: flex;
+#menu-toggler,
+#project-menu-toggler {
+	display: none;
 	font-size: 30px;
 	position: absolute;
 	right: 20px;
 	z-index: 3;
 	color: var(--cream-light);
+	cursor: pointer;
 }
 
-.mobile-menu {
+#project-menu-toggler {
+	top: 15px;
+}
+
+.mobile-menu,
+.project-mobile-menu {
 	width: 200px;
 	height: 300px;
 	background-color: var(--cranberry-dark-transparent);
@@ -114,15 +117,18 @@ li:hover {
 	justify-content: space-evenly;
 	right: 10px;
 	top: 10px;
+	z-index: 2;
 }
 
-.mobile-menu li {
+.mobile-menu li,
+.project-mobile-menu li {
 	box-sizing: content-box;
 	width: 100%;
 	width: 100%;
 }
 
-.mobile-menu li a {
+.mobile-menu li a,
+.project-mobile-menu li a {
 	margin-left: 10px;
 }
 
