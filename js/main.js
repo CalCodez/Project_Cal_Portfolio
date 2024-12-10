@@ -110,6 +110,15 @@ const toggleContactIcons = (toggler) => {
 				toggleClass(mainMobileMenu, flexActive);
 			}
 	});
+
+	document.addEventListener('keyup', function (event) {
+		if (
+			event.key === 'Escape' &&
+			mainMobileMenu.classList.contains(flexActive)
+		) {
+			toggleClass(mainMobileMenu, flexActive);
+		}
+	});
 };
 
 toggleContactIcons(contactToggleMobile);
