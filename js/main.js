@@ -80,6 +80,13 @@ const toggleContactIcons = (toggler) => {
 			) {
 				toggleClass(icons, activeIcons);
 			} else if (
+				mainMobileMenu.classList.contains('flexActive') &&
+				!icons.classList.contains(activeIcons) &&
+				!aboutContainer.classList.contains(flexActive)
+			) {
+				toggleClass(icons, activeIcons);
+				toggleClass(mainMobileMenu, flexActive);
+			} else if (
 				!icons.classList.contains(activeIcons) &&
 				aboutContainer.classList.contains(flexActive) &&
 				!mainMobileMenu.classList.contains(flexActive)
@@ -98,16 +105,9 @@ const toggleContactIcons = (toggler) => {
 				toggleClass(aboutContainer, flexActive);
 				toggleClass(introContainer, flexInactive);
 				profileImage.src = about.mainImg;
-			} else if (
-				!icons.classList.contains(activeIcons) &&
-				!aboutContainer.classList.contains(flexActive) &&
-				mainMobileMenu.classList.contains('flexActive')
-			) {
-				toggleClass(icons, activeIcons);
-				toggleClass(mainMobileMenu, flexActive);
-				console.log(mainMobileMenu);
 			} else {
 				toggleClass(icons, activeIcons);
+				toggleClass(mainMobileMenu, flexActive);
 			}
 	});
 };
