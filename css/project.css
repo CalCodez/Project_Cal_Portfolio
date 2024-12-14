@@ -201,6 +201,7 @@
 	padding: 10px;
 	column-gap: 10%;
 	border: 5px inset var(--gold);
+	display: flex;
 }
 
 .panel-control-container {
@@ -400,7 +401,7 @@
 	font-size: 1rem;
 }
 
-.filp-card-container {
+.flip-card-container {
 	row-gap: 20px;
 }
 
@@ -482,6 +483,8 @@
 	width: 60%;
 	place-self: center;
 }
+
+/* ?? Project list display; */
 
 /* **Devslopes Section */
 
