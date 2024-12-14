@@ -38,6 +38,7 @@ body {
 
 	z-index: -1;
 	background-position: center;
+	background-color: #000;
 	position: relative;
 	background-image: url('https://cdn.creazilla.com/illustrations/1668489/space-pokemon-go-virtual-illustration-md.jpeg');
 	background-size: cover;

@@ -322,7 +322,7 @@
 	flex-direction: column;
 }
 
-#panel-project-link {
+.panel-project-link {
 	width: 80px;
 	height: 10px;
 	background-color: var(--cranberry-dark-transparent);

@@ -27,21 +27,21 @@ const projectData = {
 		title: 'SaaS',
 		src: '/assets/project_card_images/SaaS.png',
 		alt: 'SaaS landing page',
-		description: `"A fully featured website landing page. This was my first project that tested all my skills in HTML and
+		description: `A fully featured website landing page. This was my first project that tested all my skills in HTML and
               CSS. I learned
               to apply elements using advanced HTML, CSS positioning, forms, inputs, and sizing to achieve a
               professional-looking
-              website."`,
+              website.`,
 		href: '/projects/Saas_Project/index.html',
 	},
 	pokemon: {
 		title: 'Pokemon Cards',
 		src: '/assets/project_card_images/Pokemon.png',
 		alt: 'Pokemon Cards',
-		description: `""A Pokémon card collection project. This project allows users to collect and release Pokémon by adding
+		description: `A Pokémon card collection project. This project allows users to collect and release Pokémon by adding
                 and
                 removing
-                their favorite cards to the favorites section""`,
+                their favorite cards to the favorites section`,
 		href: '/projects/Js_Project3_ApiWebsite/index.html',
 	},
 	google: {
@@ -59,11 +59,11 @@ const projectData = {
 		title: 'My Favz',
 		src: '/assets/project_card_images/My_Favz.png',
 		alt: 'My Favz',
-		description: `"A beginner project displaying a list of things I favor and don't favor, with each topic providing 3 key
+		description: `A beginner project displaying a list of things I favor and don't favor, with each topic providing 3 key
               reasons for its
               inclusion. This project helped me learn HTML tables displayed on the homepage. User-interactive: click the
               topics to
-              jump to the pages."`,
+              jump to the pages.`,
 		href: '/projects/Project-My_Favz/index.html',
 	},
 	logins: {
@@ -78,12 +78,12 @@ const projectData = {
 		href: '/projects/Project_social_pages/index.html',
 	},
 	responsive: {
-		name: 'Responsive Website',
-		src: '/assets/project_card_images/Responsive_websie.png',
+		title: 'Responsive Website',
+		src: '/assets/project_card_images/Responsive_website.png',
 		alt: 'Responsive Website',
-		description: `"My first mobile-responsive project. I learned to style website elements to make them automatically
+		description: `My first mobile-responsive project. I learned to style website elements to make them automatically
               responsive for all
-              device types."`,
+              device types.`,
 		href: '/projects/Project_responsive_website/index.html',
 	},
 	tribute: {
@@ -97,10 +97,25 @@ const projectData = {
               and lasting legacy in entertainment.`,
 		href: '/projects/Project_Aaliyah/index.html',
 	},
+
+	defaults: {
+		title: 'Cal Codez',
+		image: './assets/Logo_Images/CalCodez2.png',
+		description: 'Select Project From Project Panel',
+	},
 };
 
-const { saas, calTube, pokemon, responsive, favz, logins, tribute, google } =
-	projectData;
+const {
+	saas,
+	calTube,
+	pokemon,
+	responsive,
+	favz,
+	logins,
+	tribute,
+	google,
+	defaults,
+} = projectData;
 
 const snapChatData = {
 	image: '',
@@ -172,18 +187,119 @@ toggleProjectContactMenu(projectContactToggles[0]);
 toggleProjectContactMenu(projectContactToggles[1]);
 
 //??Project Panel Vars and Functions
-const defaultDescription = 'Select Project From Project Panel';
-const fontLumanosimo = 'Lumanosimo';
-const fontSegoe = 'Segoe UI';
-const alignCenter = 'center';
-const alignJustify = 'justify';
 
 //**Update date the text align for the panel-project-description from center to justify in the function */
 //**adjust the font size to the panel-project-description (differ from default and project description) */
 //** change the font family (differ from default and project description) */
 
+const projectButtons = getByClass('project-btns');
+const projectNameDisplay = getById('project-name-display');
+const panelProjectImage = getById('panel-project-image');
 const panelProjectDescription = getById('panel-project-description');
+const panelProjectLink = getById('panel-project-link');
+
+const [
+	caltubeBtn,
+	saasBtn,
+	pokemonBtn,
+	googleBtn,
+	favzBtn,
+	loginsBtn,
+	responsiveBtn,
+	tributeBtn,
+] = projectButtons;
 
 const alignText = (arg, arg2) => (arg.style.textAlign = arg2);
 const fontAdjust = (arg1, arg2) => (arg1.style.fontFamily = arg2);
 const fontSize = (arg1, arg2) => (arg1.style.fontSize = arg2);
+
+const panelProjectsDisplay = (toggler, src, title, description, href) => {
+	const fontSegoe = 'Segoe UI';
+	const alignJustify = 'justify';
+	const fontLumanosimo = 'Lumanosimo';
+	const alignCenter = 'center';
+
+	toggler.addEventListener(click, function () {
+		panelProjectImage.src = src;
+		textContent(projectNameDisplay, title);
+		textContent(panelProjectDescription, description);
+		toggleClass(panelProjectLink, flexActive);
+		panelProjectLink.href = href;
+
+		panelProjectDescription.style.fontFamily = fontSegoe;
+		panelProjectDescription.style.fontSize = '1rem';
+		panelProjectDescription.style.textAlign = alignJustify;
+	});
+
+	document.addEventListener(keyUp, function (event) {
+		if (event.key === 'Escape') {
+			panelProjectImage.src = defaults.image;
+			textContent(projectNameDisplay, defaults.title);
+			textContent(panelProjectDescription, defaults.description);
+			panelProjectDescription.style.fontFamily = fontLumanosimo;
+			panelProjectDescription.style.fontSize = '1.5rem';
+			panelProjectDescription.style.textAlign = alignCenter;
+			toggleClass(panelProjectLink, flexActive);
+		}
+	});
+};
+
+panelProjectsDisplay(
+	caltubeBtn,
+	calTube.src,
+	calTube.title,
+	calTube.description,
+	calTube.href
+);
+
+panelProjectsDisplay(
+	saasBtn,
+	saas.src,
+	saas.title,
+	saas.description,
+	saas.href
+);
+panelProjectsDisplay(
+	pokemonBtn,
+	pokemon.src,
+	pokemon.title,
+	pokemon.description,
+	pokemon.href
+);
+panelProjectsDisplay(
+	googleBtn,
+	google.src,
+	google.title,
+	google.description,
+	google.href
+);
+panelProjectsDisplay(
+	favzBtn,
+	favz.src,
+	favz.title,
+	favz.description,
+	favz.href
+);
+panelProjectsDisplay(
+	loginsBtn,
+	logins.src,
+	logins.title,
+	logins.description,
+	logins.href
+);
+
+panelProjectsDisplay(
+	responsiveBtn,
+	responsive.src,
+	responsive.title,
+	responsive.description,
+	responsive.href
+);
+
+panelProjectsDisplay(
+	tributeBtn,
+	tribute.src,
+	tribute.title,
+	tribute.description,
+	tribute.href
+);
