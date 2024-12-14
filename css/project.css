@@ -151,8 +151,7 @@
 	line-height: 1.5;
 }
 
-/* ??Project Cards Section */
-
+/* ?? Project Display Buttons*/
 .display-button-container {
 	width: 50%;
 	height: 80px;
@@ -186,6 +185,7 @@
 	transform: scale(1.1);
 }
 
+/* !!Project Display Container */
 .display-container {
 	width: 100%;
 	height: auto;
@@ -193,15 +193,24 @@
 	justify-content: center;
 	display: flex;
 	flex-direction: row;
+	border: 5px groove var(--gold);
+	background: radial-gradient(
+		var(--cranberry-dark-transparent),
+		var(--cranberry-main),
+		var(--cranberry-dark-transparent),
+		var(--cranberry-main),
+		var(--cranberry-dark-transparent)
+	);
 }
 
+/* ^^PANEL^^ */
 .project-panel-container {
 	width: 100%;
 	height: 550px;
 	padding: 10px;
 	column-gap: 10%;
 	border: 5px inset var(--gold);
-	display: flex;
+	display: none;
 }
 
 .panel-control-container {
@@ -342,6 +351,8 @@
 .panel-project-link:hover {
 	transform: scale(1.1);
 }
+
+/* ^^CARDS^^ */
 
 .project-card-container {
 	align-items: center;
@@ -485,7 +496,71 @@
 	place-self: center;
 }
 
-/* ?? Project list display; */
+/* ^^LIST^^ */
+
+.project-list-container {
+	height: 600px;
+	width: 400px;
+	min-width: 380px;
+	/*outline: var(--ol);*/
+	flex-direction: column;
+	overflow: scroll;
+	row-gap: 20px;
+	padding-top: 250px;
+}
+
+.project-li {
+	width: 100%;
+	height: 200px;
+	justify-content: space-between;
+	padding: 5px;
+	border: 3px outset var(--gold);
+}
+
+.project-li .container {
+	height: 100%;
+	border: 2px inset var(--gold-dark);
+}
+
+.image-li {
+	width: 40%;
+}
+
+.image-li img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.title-li {
+	width: 30%;
+}
+.title-li h3 {
+	color: var(--gold);
+	font-weight: 600;
+}
+
+.link-li {
+	width: 30%;
+}
+
+.link-li a {
+	width: 60px;
+	height: 8px;
+	background-color: var(--cranberry-dark-transparent);
+	padding: 10px;
+	border: 3px outset var(--gold);
+	border-radius: 8px;
+	color: var(--gold);
+	box-sizing: content-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+	font-size: 1rem;
+	text-shadow: 1px 1px 1px #000;
+	box-shadow: 2px 1px 10px 1px #000;
+}
 
 /* **Devslopes Section */
 
