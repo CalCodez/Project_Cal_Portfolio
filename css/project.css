@@ -262,10 +262,6 @@
 	box-shadow: 2px 1px 10px 1px #000;
 }
 
-.project-buttons-container button:hover {
-	transform: scale(1.1);
-}
-
 .project-title-display-container {
 	height: 20%;
 	width: 100%;
@@ -340,6 +336,11 @@
 	box-shadow: 2px 1px 10px 1px #000;
 	margin-top: -5px;
 	display: none;
+}
+
+.project-buttons-container button:hover,
+.panel-project-link:hover {
+	transform: scale(1.1);
 }
 
 .project-card-container {

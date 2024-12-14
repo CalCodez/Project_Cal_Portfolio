@@ -223,7 +223,7 @@ const panelProjectsDisplay = (toggler, src, title, description, href) => {
 		panelProjectImage.src = src;
 		textContent(projectNameDisplay, title);
 		textContent(panelProjectDescription, description);
-		toggleClass(panelProjectLink, flexActive);
+		panelProjectLink.style.display = 'flex';
 		panelProjectLink.href = href;
 
 		panelProjectDescription.style.fontFamily = fontSegoe;
@@ -234,12 +234,13 @@ const panelProjectsDisplay = (toggler, src, title, description, href) => {
 	document.addEventListener(keyUp, function (event) {
 		if (event.key === 'Escape') {
 			panelProjectImage.src = defaults.image;
+			panelProjectLink.style.display = 'none';
+
 			textContent(projectNameDisplay, defaults.title);
 			textContent(panelProjectDescription, defaults.description);
 			panelProjectDescription.style.fontFamily = fontLumanosimo;
 			panelProjectDescription.style.fontSize = '1.5rem';
 			panelProjectDescription.style.textAlign = alignCenter;
-			toggleClass(panelProjectLink, flexActive);
 		}
 	});
 };
