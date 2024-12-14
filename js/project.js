@@ -38,22 +38,21 @@ const projectData = {
 		title: 'Pokemon Cards',
 		src: '/assets/project_card_images/Pokemon.png',
 		alt: 'Pokemon Cards',
-		description: `"A Pokémon card collection project. This project allows users to collect and release Pokémon by adding and
-              removing
-              their favorite cards. The favorites section displays the total number of cards currently in their
-              collection. The
-              project also tallies common skills among the displayed Pokémon."`,
+		description: `""A Pokémon card collection project. This project allows users to collect and release Pokémon by adding
+                and
+                removing
+                their favorite cards to the favorites section""`,
 		href: '/projects/Js_Project3_ApiWebsite/index.html',
 	},
 	google: {
 		title: 'Google',
 		src: '/assets/project_card_images/Google.png',
 		alt: 'Google Landing Homepage',
-		description: `A simple Google homepage clone built by studying an example, with functional links. The project involved
-              replicating the
-              layout, styling, and search bar, ensuring an accurate visual match. It’s a straightforward demonstration
-              of
-              understanding basic HTML, CSS, and link functionality.`,
+		description: `Google homepage clone built eyeing Google's homepage. The project involved
+                replicating the
+                layout, styling, to achieve accurate visual match. It’s a straightforward demonstration
+                of
+                understanding basic HTML, CSS, and link functionality.`,
 		href: '/projects/Project_Google_Page/index.html',
 	},
 	favz: {
@@ -171,3 +170,12 @@ const toggleProjectContactMenu = (toggler) => {
 
 toggleProjectContactMenu(projectContactToggles[0]);
 toggleProjectContactMenu(projectContactToggles[1]);
+
+const defaultDescription = 'Select Project From Project Panel';
+//**Update date the text align for the panel-description from center to justify in the function */
+
+const test = getById('panel-description');
+
+const autoStyle = (arg, arg2) => (arg.style.textAlign = arg2);
+
+autoStyle(test, 'center');
