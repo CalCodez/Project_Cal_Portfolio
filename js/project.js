@@ -171,11 +171,19 @@ const toggleProjectContactMenu = (toggler) => {
 toggleProjectContactMenu(projectContactToggles[0]);
 toggleProjectContactMenu(projectContactToggles[1]);
 
+//??Project Panel Vars and Functions
 const defaultDescription = 'Select Project From Project Panel';
-//**Update date the text align for the panel-description from center to justify in the function */
+const fontLumanosimo = 'Lumanosimo';
+const fontSegoe = 'Segoe UI';
+const alignCenter = 'center';
+const alignJustify = 'justify';
 
-const test = getById('panel-description');
+//**Update date the text align for the panel-project-description from center to justify in the function */
+//**adjust the font size to the panel-project-description (differ from default and project description) */
+//** change the font family (differ from default and project description) */
 
-const autoStyle = (arg, arg2) => (arg.style.textAlign = arg2);
+const panelProjectDescription = getById('panel-project-description');
 
-autoStyle(test, 'center');
+const alignText = (arg, arg2) => (arg.style.textAlign = arg2);
+const fontAdjust = (arg1, arg2) => (arg1.style.fontFamily = arg2);
+const fontSize = (arg1, arg2) => (arg1.style.fontSize = arg2);
