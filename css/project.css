@@ -153,35 +153,55 @@
 
 /* ?? Project Display Buttons*/
 .display-button-container {
-	width: 50%;
-	height: 80px;
+	width: 90%;
+	height: 150px;
 	margin: 20px 0;
 	place-self: center;
-	justify-content: space-around;
+	flex-direction: column;
+	border: 5px outset var(--gold);
+	border-radius: 8px;
+	justify-content: flex-start;
 	background: linear-gradient(
-		90deg,
-		var(--cream-main),
-		var(--cream-dark),
-		var(--cream-main)
+		var(--cranberry-dark-transparent),
+		var(--cranberry-dark),
+		var(--gold-dark),
+		var(--cranberry-dark-transparent)
 	);
-	border-radius: 20px;
-	border: 10px solid var(--cranberry-dark);
+	box-shadow: 2px 2px 15px 2px #000;
 }
 
-.display-button-container button {
+.display-button-container h3 {
+	width: 100%;
+	color: var(--gold);
+	text-align: center;
+	font-size: 1.5rem;
+	font-family: 'Lumanosimo';
+	font-weight: 600;
+	letter-spacing: 1.5;
+	text-shadow: 2px 2px 4px #000;
+}
+
+.display-button-wrapper {
+	width: 60%;
+	height: fit-content;
+	justify-content: space-around;
+}
+
+.display-button-wrapper button {
 	width: 100px;
 	height: 40px;
-	background-color: var(--cranberry-dark);
-	border: 2px solid var(--cream-dark);
+	background-color: var(--cranberry-dark-transparent);
+	border: 3px outset var(--gold);
 	border-radius: 8px;
 	box-shadow: 3px 5px 5px 1px var(--true-black);
-	color: var(--cream-main);
+	color: var(--gold);
 	font-size: 1rem;
 	font-weight: 600;
 	cursor: pointer;
+	text-shadow: 2px 2px 2px var(--true-black);
 }
 
-.display-button-container button:hover {
+.display-button-wrapper button:hover {
 	transform: scale(1.1);
 }
 
@@ -194,11 +214,10 @@
 	display: flex;
 	flex-direction: row;
 	border: 5px groove var(--gold);
-	background: radial-gradient(
+	background: linear-gradient(
 		var(--cranberry-dark-transparent),
-		var(--cranberry-main),
-		var(--cranberry-dark-transparent),
-		var(--cranberry-main),
+		var(--gold-dark),
+		var(--cranberry-dark),
 		var(--cranberry-dark-transparent)
 	);
 }
