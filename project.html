@@ -92,15 +92,15 @@
       <div class="display-button-container container">
         <h3>Select Project View</h3>
         <div class="display-button-wrapper container">
-          <button>Panel</button>
-          <button>Cards</button>
-          <button>Grid</button>
+          <button id="panel-toggle" class="project-container-toggles">Panel</button>
+          <button id="cards-toggle" class="project-container-toggles">Cards</button>
+          <button id="grid-toggle" class="project-container-toggles">Grid</button>
         </div>
       </div>
 
       <div class="display-container container">
         <!-- ^^PANEL^^  -->
-        <div id="project-panel-container" class="project-panel-container container ">
+        <div id="project-panel-container" class="project-panel-container container flex-active">
           <div class="container panel-control-container">
             <h3 class="project-control-labels">Project Panel</h3>
             <div class=" project-buttons-container container">
@@ -133,7 +133,7 @@
         </div>
 
         <!-- ^^CARDS^^-->
-        <div id="project-card-container" class="project-card-container ">
+        <div id="project-card-container" class="project-card-container  ">
           <!-- !! My Tube -->
           <div class="project-card-wrapper">
             <div class="project-title-container">
@@ -408,7 +408,7 @@
         </div>
 
         <!-- ^^LIST^^ -->
-        <div id="project-list-container" class="container project-list-container">
+        <div id="project-grid-container" class="container project-list-container">
 
           <div class="container project-li">
             <div class="container image-li">
@@ -706,6 +706,7 @@
     </div>-->
 
     <script src="./js/project.js"></script>
+    <script src="./js/project_static.js"></script>
   </body>
 
 </html>
