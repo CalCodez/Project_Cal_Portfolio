@@ -98,7 +98,7 @@
 	flex-wrap: wrap;
 	gap: 80px;
 	height: auto;
-	margin: 50px 0;
+	margin: 50px 0 100px 0;
 	place-content: center;
 	width: 100%;
 }
@@ -153,7 +153,7 @@
 
 /* ?? Project Display Buttons*/
 .display-button-container {
-	width: 90%;
+	width: 320px;
 	height: 150px;
 	margin: 20px 0;
 	place-self: center;
@@ -185,7 +185,7 @@
 	width: fit-content;
 	height: 50px;
 	justify-content: space-around;
-	column-gap: 30px;
+	column-gap: 60px;
 }
 
 .display-button-wrapper button {
@@ -516,72 +516,89 @@
 	place-self: center;
 }
 
-/* ^^LIST^^ */
+/* ^^Grid^^ */
 
-.project-list-container {
+.project-grid-container {
 	height: 800px;
-	width: 480px;
+	width: 100%;
 	min-width: 380px;
 	flex-direction: column;
-	row-gap: 10px;
 	padding: 5px 10px;
 	border: 3px outset var(--gold);
-	background: radial-gradient(var(--gold), var(--gold-dark), var(--gold-light));
 	display: none;
 }
 
-.project-li {
+.grid-rows {
+	width: 90%;
+	height: 200px;
+	padding: 8px;
+}
+
+.project-squares {
+	width: 25%;
+	height: 100%;
+	justify-content: space-around;
+	flex-direction: column;
+	padding: 5px;
+	background-color: var(--cranberry-dark-transparent);
+	border: 2px groove var(--gold);
+}
+
+.square-btn-container {
 	width: 100%;
-	height: 100px;
-	justify-content: space-between;
-	border: 3px outset var(--cranberry-dark);
+}
+
+.square-btn-container button {
+	width: 80px;
+	height: 30px;
 	background-color: var(--cranberry-dark);
+	color: var(--gold);
+	font-weight: 600;
+	border-radius: 8px;
+	box-shadow: 1px 1px 1px 1px #000;
+	text-shadow: 1px 1px 1px #000;
 }
 
-.project-li .container {
+.project-squares img {
+	width: 80%;
+	height: 70%;
+}
+
+.grid-description-container,
+.grid-link-container {
+	width: 50%;
 	height: 100%;
-	border: 2px inset var(--gold-dark);
 }
 
-.image-li {
-	width: 30%;
-}
+.grid-description-container {
+	background: linear-gradient(
+		var(--cranberry-dark-transparent),
+		var(--cranberry-dark),
+		var(--cranberry-dark)
+	);
 
-.image-li img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.title-li {
-	width: 40%;
+	border: 2px solid var(--gold);
 	text-align: center;
-}
-.title-li h3 {
 	color: var(--gold);
 	font-weight: 600;
 }
 
-.link-li {
-	width: 30%;
+.grid-description-container h3 {
+	margin-top: 2px;
+	font-size: 1.5rem;
+	font-family: 'Lumanosimo';
 }
 
-.link-li a {
-	width: 60px;
-	height: 8px;
-	background-color: var(--cranberry-dark-transparent);
-	padding: 10px;
+.grid-link-container a {
+	width: 200px;
+	height: 50px;
+	background-color: var(--cranberry-dark);
 	border: 3px outset var(--gold);
 	border-radius: 8px;
-	color: var(--gold);
-	box-sizing: content-box;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-weight: 600;
-	font-size: 1rem;
-	text-shadow: 1px 1px 1px #000;
-	box-shadow: 2px 1px 10px 1px #000;
+	cursor: pointer;
+	box-shadow: 2px 2px 15px 2px #000;
+	text-shadow: 2px 2px 2px #000;
+	display: none;
 }
 
 /* **Devslopes Section */

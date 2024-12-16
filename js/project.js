@@ -100,6 +100,8 @@ const projectData = {
 		title: 'Cal Codez',
 		image: './assets/Logo_Images/CalCodez2.png',
 		description: 'Select Project From Project Panel',
+		gridTitle: 'Click Project Details',
+		gridDescription: 'Choose a Project To Get The Details',
 	},
 };
 
@@ -180,19 +182,93 @@ const toggleProjectContactMenu = (toggler) => {
 		}
 	});
 };
-
 toggleProjectContactMenu(projectContactToggles[0]);
 toggleProjectContactMenu(projectContactToggles[1]);
 
 //``Toggle Project Display Containers Var and Function */
 
 const panelToggle = getById('panel-toggle');
-const cardsToggle = getById('card-toggle');
+const cardsToggle = getById('cards-toggle');
 const gridToggle = getById('grid-toggle');
-
 const panelContainer = getById('project-panel-container');
-const cardContainer = getById('project-card-container');
+const cardsContainer = getById('project-card-container');
 const gridContainer = getById('project-grid-container');
+
+cardsToggle.addEventListener(click, function () {
+	if (
+		!cardsContainer.classList.contains(flexActive) &&
+		panelContainer.classList.contains(flexActive)
+	) {
+		toggleClass(cardsContainer, flexActive);
+		toggleClass(panelContainer, flexActive);
+		toggleClass(panelToggle, flexInactive);
+		toggleClass(cardsToggle, flexInactive);
+	} else if (
+		!cardsContainer.classList.contains(flexActive) &&
+		gridContainer.classList.contains(flexActive)
+	) {
+		toggleClass(gridContainer, flexActive);
+		toggleClass(cardsContainer, flexActive);
+		toggleClass(cardsToggle, flexInactive);
+		toggleClass(gridToggle, flexInactive);
+	}
+});
+
+const toggleProjectContainers = (
+	targetToggler,
+	targetContainer,
+	currentContainer,
+	currentToggler,
+	container2,
+	toggler2
+) => {
+	targetToggler.addEventListener(click, function () {
+		if (
+			!targetContainer.classList.contains(flexActive) &&
+			currentContainer.classList.contains(flexActive)
+		) {
+			toggleClass(targetContainer, flexActive);
+			toggleClass(currentContainer, flexActive);
+			toggleClass(targetToggler, flexInactive);
+			toggleClass(currentToggler, flexInactive);
+		} else if (
+			!targetContainer.classList.contains(flexActive) &&
+			container2.classList.contains(flexActive)
+		) {
+			toggleClass(targetContainer, flexActive);
+			toggleClass(container2, flexActive);
+			toggleClass(targetToggler, flexInactive);
+			toggleClass(toggler2, flexInactive);
+		}
+	});
+};
+
+toggleProjectContainers(
+	cardsToggle,
+	cardsContainer,
+	panelContainer,
+	panelToggle,
+	gridContainer,
+	gridToggle
+);
+
+toggleProjectContainers(
+	gridToggle,
+	gridContainer,
+	panelContainer,
+	panelToggle,
+	cardsContainer,
+	cardsToggle
+);
+
+toggleProjectContainers(
+	panelToggle,
+	panelContainer,
+	cardsContainer,
+	cardsToggle,
+	gridContainer,
+	gridToggle
+);
 
 //??Project Panel Vars and Functions
 
@@ -311,4 +387,62 @@ panelProjectsDisplay(
 	tribute.title,
 	tribute.description,
 	tribute.href
+);
+
+const gridButtons = getByClass('grid-btns');
+let gridTitle = getById('grid-title');
+let gridDescription = getById('grid-project-description');
+const gridLink = getById('grid-link');
+
+textContent(gridTitle, defaults.gridTitle);
+textContent(gridDescription, defaults.description);
+
+const gridProjectToggle = (toggler, projectTitle, description, href) => {
+	toggler.addEventListener(click, function () {
+		textContent(gridTitle, projectTitle);
+		textContent(gridDescription, description);
+		gridLink.style.display = 'flex';
+		gridLink.href = href;
+	});
+};
+
+gridProjectToggle(
+	gridButtons[0],
+	google.title,
+	google.description,
+	google.href
+);
+
+gridProjectToggle(
+	gridButtons[1],
+	tribute.title,
+	tribute.description,
+	tribute.href
+);
+
+gridProjectToggle(
+	gridButtons[2],
+	calTube.title,
+	calTube.description,
+	calTube.href
+);
+gridProjectToggle(gridButtons[3], saas.title, saas.description, saas.href);
+gridProjectToggle(
+	gridButtons[4],
+	responsive.title,
+	responsive.description,
+	responsive.href
+);
+gridProjectToggle(
+	gridButtons[5],
+	pokemon.title,
+	pokemon.description,
+	pokemon.href
+);
+gridProjectToggle(gridButtons[6], favz.title, favz.description, favz.href);
+gridProjectToggle(
+	gridButtons[7],
+	logins.title,
+	logins.description,
+	logins.href
 );
