@@ -81,7 +81,7 @@
 	}*/
 }
 
-@media (max-width: 481px) {
+@media (max-width: 500px) {
 	html {
 		padding: 0;
 	}
@@ -119,15 +119,14 @@
 		width: 100%;
 	}
 	.image-container .img-wrapper {
-		width: 35%;
+		width: 70%;
 	}
 	.image-container .img-wrapper {
 		box-shadow: 1px 1px 15px 1px var(--cream-light);
 	}
-	.social-media-container {
-		margin: -60px 0 60px 0;
-	}
-	.social-media-container .fa-brands {
-		font-size: 30px;
+
+	.social-media-container .fa-brands,
+	.social-media-container .fa-regular {
+		font-size: 50px;
 	}
 }

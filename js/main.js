@@ -50,6 +50,9 @@ const [aboutToggleMobile, contactToggleMobile, aboutToggle, contactToggle] =
 
 const menuToggler = getById('menu-toggler');
 const mainMobileMenu = getById('main-mobile-menu');
+const aboutIcon = getById('about-icon');
+const flexActive = 'flex-active';
+const flexInactive = 'flex-inactive';
 
 menuToggler.addEventListener(click, function () {
 	if (!mainMobileMenu.classList.contains('flexActive')) {
@@ -80,12 +83,19 @@ const toggleContactIcons = (toggler) => {
 			) {
 				toggleClass(icons, activeIcons);
 			} else if (
-				mainMobileMenu.classList.contains('flexActive') &&
+				mainMobileMenu.classList.contains(flexActive) &&
 				!icons.classList.contains(activeIcons) &&
 				!aboutContainer.classList.contains(flexActive)
 			) {
 				toggleClass(icons, activeIcons);
 				toggleClass(mainMobileMenu, flexActive);
+			} else if (
+				icons.classList.contains(activeIcons) &&
+				mainMobileMenu.classList.contains(flexActive) &&
+				!aboutContainer.classList.contains(flexActive)
+			) {
+				toggleClass(mainMobileMenu, flexActive);
+				toggleClass(icons, activeIcons);
 			} else if (
 				!icons.classList.contains(activeIcons) &&
 				aboutContainer.classList.contains(flexActive) &&
@@ -94,6 +104,7 @@ const toggleContactIcons = (toggler) => {
 				toggleClass(icons, activeIcons);
 				toggleClass(aboutContainer, flexActive);
 				toggleClass(introContainer, flexInactive);
+				textContent(aboutToggle, 'About Me');
 				profileImage.src = about.mainImg;
 			} else if (
 				!icons.classList.contains(activeIcons) &&
@@ -105,9 +116,16 @@ const toggleContactIcons = (toggler) => {
 				toggleClass(aboutContainer, flexActive);
 				toggleClass(introContainer, flexInactive);
 				profileImage.src = about.mainImg;
+				toggleClass(aboutIcon, 'fa-house');
+				toggleClass(aboutIcon, 'fa-user');
+
+				aboutToggleMobile.childNodes.forEach((node) => {
+					if (node.nodeType === Node.TEXT_NODE) {
+						node.textContent = ' About Me';
+					}
+				});
 			} else {
 				toggleClass(icons, activeIcons);
-				toggleClass(mainMobileMenu, flexActive);
 			}
 	});
 
@@ -129,10 +147,6 @@ const profileImage = getById('main-profile-img');
 const aboutContainer = getById('about-text-container');
 const introContainer = getById('intro-container');
 const aboutDescription = getById('about-description');
-const aboutIcon = getById('about-icon');
-const flexActive = 'flex-active';
-const flexInactive = 'flex-inactive';
-const newIcon = createElement('i');
 
 const toggleAboutContainer = (toggler) => {
 	toggler.addEventListener(click, function () {
