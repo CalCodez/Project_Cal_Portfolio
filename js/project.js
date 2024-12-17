@@ -194,25 +194,15 @@ const panelContainer = getById('project-panel-container');
 const cardsContainer = getById('project-card-container');
 const gridContainer = getById('project-grid-container');
 
-cardsToggle.addEventListener(click, function () {
-	if (
-		!cardsContainer.classList.contains(flexActive) &&
-		panelContainer.classList.contains(flexActive)
-	) {
-		toggleClass(cardsContainer, flexActive);
-		toggleClass(panelContainer, flexActive);
-		toggleClass(panelToggle, flexInactive);
-		toggleClass(cardsToggle, flexInactive);
-	} else if (
-		!cardsContainer.classList.contains(flexActive) &&
-		gridContainer.classList.contains(flexActive)
-	) {
-		toggleClass(gridContainer, flexActive);
-		toggleClass(cardsContainer, flexActive);
-		toggleClass(cardsToggle, flexInactive);
-		toggleClass(gridToggle, flexInactive);
-	}
-});
+const displayButtonContainer = select('.display-button-container');
+//restrict panel and grid selection for responsive
+if (window.innerWidth < 1024) {
+	displayButtonContainer.style.display = 'none';
+	panelContainer.style.display = 'none';
+	cardsContainer.style.display = 'flex';
+}
+
+console.log(window.innerWidth);
 
 const toggleProjectContainers = (
 	targetToggler,
