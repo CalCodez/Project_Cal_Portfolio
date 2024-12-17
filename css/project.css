@@ -822,6 +822,57 @@
 	letter-spacing: 1.5;
 }
 
+.popup-container {
+	width: 380px;
+	height: 380px;
+	background: conic-gradient(
+		var(--cream-main),
+		var(--cream-dark),
+		var(--cream-main),
+		var(--cream-dark),
+		var(--cream-main)
+	);
+	position: absolute;
+	z-index: 99;
+	place-content: center;
+	place-items: center;
+	display: none;
+	border: 5px ridge var(--cranberry-main);
+}
+
+.popup-container img {
+	width: 80%;
+	height: 80%;
+	border: 5px ridge var(--cranberry-dark);
+}
+
+.popup-container2 {
+	width: 380px;
+	height: 380px;
+	background: conic-gradient(
+		var(--cream-main),
+		var(--cream-dark),
+		var(--cream-main),
+		var(--cream-dark),
+		var(--cream-main)
+	);
+	position: absolute;
+	z-index: 99;
+	place-content: center;
+	place-items: center;
+	display: none;
+	border: 5px ridge var(--cranberry-main);
+}
+
+.popup-container2 p {
+	color: var(--cranberry-dark);
+	width: 100%;
+	font-size: 1.2rem;
+	text-align: center;
+	letter-spacing: 3;
+	font-weight: 600;
+}
+
 .flex-active {
 	display: flex;
 }

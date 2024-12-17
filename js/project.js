@@ -2,8 +2,8 @@ const getByClass = (arg) => document.getElementsByClassName(arg);
 const getById = (arg) => document.getElementById(arg);
 const selectAll = (arg) => document.querySelectorAll(arg);
 const select = (arg) => document.querySelector(arg);
-const append = (parent, child) => parent.appendChild(child);
-const remove = (parent, child) => parent.removeChild(child);
+const appendChild = (parent, child) => parent.appendChild(child);
+const removeChild = (parent, child) => parent.removeChild(child);
 const toggleClass = (arg1, arg2) => arg1.classList.toggle(arg2);
 const addClass = (arg1, arg2) => arg1.classList.add(arg2);
 const removeClass = (arg1, arg2) => arg1.classList.remove(arg2);
@@ -13,6 +13,8 @@ const createElement = (arg) => document.createElement(arg);
 
 const click = 'click';
 const keyUp = 'keyup';
+const flexActive = 'flex-active';
+const flexInactive = 'flex-inactive';
 
 const projectData = {
 	calTube: {
@@ -117,13 +119,16 @@ const {
 	defaults,
 } = projectData;
 
-const snapChatData = {
-	image: '',
-	class: '',
+const snapEmailData = {
+	snap: {
+		src: './assets/snapcode/Snapchat-206999597.jpg',
+		alt: 'CooCalmCollect Snap Code',
+	},
+
+	email: 'WWW.CALCODEZ@OUTLOOK.COM',
 };
 
-const flexActive = 'flex-active';
-const flexInactive = 'flex-inactive';
+const { snap, email } = snapEmailData;
 
 const projectMenuToggler = getById('project-menu-toggler');
 const projectMobileMenu = getById('project-mobile-menu');
@@ -201,8 +206,6 @@ if (window.innerWidth < 1024) {
 	panelContainer.style.display = 'none';
 	cardsContainer.style.display = 'flex';
 }
-
-console.log(window.innerWidth);
 
 const toggleProjectContainers = (
 	targetToggler,
@@ -443,4 +446,72 @@ gridProjectToggle(
 	logins.title,
 	logins.description,
 	logins.href
+);
+
+const snapChatToggle = getById('project-snapchat-toggle');
+const emailToggle = getById('project-email-toggle');
+const snapChatContainer = getById('popup-container');
+const emailContainer = getById('popup-container2');
+const snapImg = createElement('img');
+const emailText = createElement('p');
+snapImg.src = snap.src;
+textContent(emailText, email);
+
+const snapEmailContainerToggle = (
+	toggler,
+	targetContainer,
+	checkContainer,
+	targetArg,
+	checkArg
+) =>
+	toggler.addEventListener(click, function () {
+		if (
+			!targetContainer.classList.contains(flexActive) &&
+			!checkContainer.classList.contains(flexActive)
+		) {
+			toggleClass(projectContactMenu, flexActive);
+			toggleClass(targetContainer, flexActive);
+			appendChild(targetContainer, targetArg);
+		} else if (
+			!targetContainer.classList.contains(flexActive) &&
+			checkContainer.classList.contains(flexActive)
+		) {
+			toggleClass(projectContactMenu, flexActive);
+			removeChild(checkContainer, checkArg);
+			toggleClass(checkContainer, flexActive);
+			toggleClass(targetContainer, flexActive);
+			appendChild(targetContainer, targetArg);
+		}
+
+		targetContainer.addEventListener(click, function () {
+			if (targetContainer.classList.contains(flexActive)) {
+				removeChild(targetContainer, targetArg);
+				toggleClass(targetContainer, flexActive);
+			}
+		});
+
+		document.addEventListener(keyUp, function (event) {
+			if (
+				event.key === 'Escape' &&
+				targetContainer.classList.contains(flexActive)
+			) {
+				removeChild(targetContainer, targetArg);
+				toggleClass(targetContainer, flexActive);
+			}
+		});
+	});
+
+snapEmailContainerToggle(
+	snapChatToggle,
+	snapChatContainer,
+	emailContainer,
+	snapImg,
+	emailText
+);
+snapEmailContainerToggle(
+	emailToggle,
+	emailContainer,
+	snapChatContainer,
+	emailText,
+	snapImg
 );
