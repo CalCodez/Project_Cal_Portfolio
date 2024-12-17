@@ -404,6 +404,14 @@ const gridProjectToggle = (toggler, projectTitle, description, href) => {
 		gridLink.style.display = 'flex';
 		gridLink.href = href;
 	});
+
+	document.addEventListener(keyUp, function (event) {
+		if (event.key === 'Escape') {
+			textContent(gridTitle, defaults.gridTitle);
+			textContent(gridDescription, defaults.gridDescription);
+			gridLink.style.display = 'none';
+		}
+	});
 };
 
 gridProjectToggle(

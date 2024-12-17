@@ -530,8 +530,9 @@
 
 .grid-rows {
 	width: 90%;
-	height: 200px;
+	height: 300px;
 	padding: 8px;
+	outline: var(--ol);
 }
 
 .project-squares {
@@ -540,7 +541,7 @@
 	justify-content: space-around;
 	flex-direction: column;
 	padding: 5px;
-	background-color: var(--cranberry-dark-transparent);
+	background-color: var(--cranberry-dark);
 	border: 2px groove var(--gold);
 }
 
