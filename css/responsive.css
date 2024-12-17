@@ -87,8 +87,11 @@
 	}
 
 	.main-portfolio-container {
-		height: 100vh;
-		padding-bottom: 80px;
+		height: fit-content;
+	}
+
+	.portfolio-body-container {
+		height: fit-content;
 	}
 
 	.nav-container {
@@ -128,5 +131,10 @@
 	.social-media-container .fa-brands,
 	.social-media-container .fa-regular {
 		font-size: 50px;
+	}
+
+	.about-text-container {
+		height: fit-content;
+		margin-top: 10px;
 	}
 }
