@@ -448,12 +448,24 @@ gridProjectToggle(
 	logins.href
 );
 
-const snapChatToggle = getById('project-snapchat-toggle');
-const emailToggle = getById('project-email-toggle');
 const snapChatContainer = getById('popup-container');
 const emailContainer = getById('popup-container2');
 const snapImg = createElement('img');
 const emailText = createElement('p');
+
+const snapAndEmailToggles = {
+	main: {
+		snapChat: getById('project-snapchat-toggle'),
+		email: getById('project-email-toggle'),
+	},
+	footer: {
+		snapChat: getById('footer-snapChat-toggle'),
+		email: getById('footer-email-toggle'),
+	},
+};
+
+const { main, footer } = snapAndEmailToggles;
+
 snapImg.src = snap.src;
 textContent(emailText, email);
 
@@ -467,7 +479,15 @@ const snapEmailContainerToggle = (
 	toggler.addEventListener(click, function () {
 		if (
 			!targetContainer.classList.contains(flexActive) &&
-			!checkContainer.classList.contains(flexActive)
+			!checkContainer.classList.contains(flexActive) &&
+			!projectContactMenu.classList.contains(flexActive)
+		) {
+			toggleClass(targetContainer, flexActive);
+			appendChild(targetContainer, targetArg);
+		} else if (
+			!targetContainer.classList.contains(flexActive) &&
+			!checkContainer.classList.contains(flexActive) &&
+			projectContactMenu.classList.contains(flexActive)
 		) {
 			toggleClass(projectContactMenu, flexActive);
 			toggleClass(targetContainer, flexActive);
@@ -502,16 +522,59 @@ const snapEmailContainerToggle = (
 	});
 
 snapEmailContainerToggle(
-	snapChatToggle,
+	main.snapChat,
 	snapChatContainer,
 	emailContainer,
 	snapImg,
 	emailText
 );
+
 snapEmailContainerToggle(
-	emailToggle,
+	footer.snapChat,
+	snapChatContainer,
+	emailContainer,
+	snapImg,
+	emailText
+);
+
+snapEmailContainerToggle(
+	main.email,
 	emailContainer,
 	snapChatContainer,
 	emailText,
 	snapImg
 );
+
+snapEmailContainerToggle(
+	footer.email,
+	emailContainer,
+	snapChatContainer,
+	emailText,
+	snapImg
+);
+
+const resourceToggle = getById('resource-toggle');
+const resourceContainer = getById('popup-container3');
+
+resourceToggle.addEventListener(click, function () {
+	if (!resourceContainer.classList.contains(flexActive)) {
+		toggleClass(resourceContainer, flexActive);
+	} else {
+		toggleClass(resourceContainer, flexActive);
+	}
+
+	resourceContainer.addEventListener(click, function () {
+		if (resourceContainer.classList.contains(flexActive)) {
+			toggleClass(resourceContainer, flexActive);
+		}
+	});
+
+	document.addEventListener(keyUp, function (event) {
+		if (
+			event.key === 'Escape' &&
+			resourceContainer.classList.contains(flexActive)
+		) {
+			toggleClass(resourceContainer, flexActive);
+		}
+	});
+});

@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <div class="project-body-container">
+    <div id="project-body" class="project-body-container">
       <i id="project-menu-toggler" class="fa-solid fa-bars"></i>
       <div id="project-mobile-menu" class="project-mobile-menu ">
         <li><a href="./index.html"><i class="fa-solid fa-house"></i> Home</a></li>
@@ -43,7 +43,7 @@
           <li><a class="project-contact-toggles" href="#">Contact</a></li>
           <li><a href="https://medium.com/@calvincortezcolbert" target="_blank">Medium</a></li>
           <li><a href="#devslopes">Training</a></li>
-          <li><a data-open="resources"="https://medium.com/@calvincortezcolbert">Resources</a></li>
+          <li><a id="resource-toggle" href="#">Resources</a></li>
         </div>
       </div>
       <div class="project-logo-container">
@@ -623,61 +623,44 @@
 
 
 
+      <footer>
 
-      <div id="popup-container" class="popUp-container  container"></div>
-      <div id="popup-container2" class="popUp-container2  container"></div>
+        <div class="container footer-contact-container">
+
+          <a class="content" href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+          <a class="content" href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a class="content" href="#"><i class="fa-brands fa-threads"></i> Threads</a>
+          <a id="footer-snapChat-toggle" class="content" href="#project-body"><i class="fa-brands fa-snapchat"></i>
+            SnapChat</a>
+          <a id="footer-email-toggle" class="content" href="#project-body"><i class="fa-regular fa-envelope"></i>
+            Email Me</a>
+
+
+        </div>
+
+
+      </footer>
+
+
+
+      <div id="popup-container" class="popup-container  container">
+      </div>
+      <div id="popup-container2" class="popup-container2  container"></div>
+      <div id="popup-container3" class="popup-container3 container">
+        <p>Project Images And Icons</p>
+
+        <a href="https://www.flaticon.com" target="_blank">FlatIcons</a>
+        <a href="#">FontAwesome</a>
+      </div>
 
 
 
 
 
     </div>
-
     <!-- ++Resources Modal -->
-    <!--<div class="full-site-modal page-block modal resource-modal" id="resources" data-animation="zoomInOut"
-      data-close="page-block">
-      <div class="modal-content-wrapper resoure-modal-conent-wrapper">
-        <div class="resource-modal-banner-container">
-          PROJECT RESOURCES
-        </div>
-        <div class="resource-modal-nav-container">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./project.html">Projects</a></li>
-          <li><a href="https://medium.com/@calvincortezcolbert">Medium</a></li>
 
-        </div>
-        <div class="resource-container">
-          <div class="resource-image-container">
-            <img src="./assets/Logo_Images/fontawesome.png" alt="fontawesome-logo">
-          </div>
-          <div class="resource-text-container">
-            <div class="resource-text-wrapper">
-              <p>Source For All Icons In This Project is Fontawesome</p>
-            </div>
-            <div class="resource-btn-container">
-              <a class="btn" href="https://fontawesome.com/">Fontawesome</a>
-            </div>
-          </div>
-        </div>
-        <div class="resource-container">
-          <div class="resource-text-container">
-            <div class="resource-text-wrapper">
-              <p>Image Icons Sorce "Flaticon icons
-                created by
-                Freepik -
-                Flaticon""</p>
-            </div>
-            <div class="resource-btn-container">
-              <a class="btn" href="https://www.flaticon.com/free-icons/flaticon" title="flaticon icons">Flaticon</a>
 
-            </div>
-          </div>
-          <div class="resource-image-container flaticon-image">
-            <img src="./assets/Logo_Images/flaticon.png" alt="flaticon-logo">
-          </div>
-        </div>
-      </div>
-    </div>-->
 
     <script src="./js/project.js"></script>
     <script src="./js/project_static.js"></script>
