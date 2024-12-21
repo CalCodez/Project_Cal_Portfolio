@@ -839,6 +839,9 @@
 	place-items: center;
 	display: none;
 	border: 5px ridge var(--cranberry-main);
+	flex-direction: column;
+	row-gap: 20px;
+	opacity: 0.8;
 }
 
 .popup-container img {
@@ -847,62 +850,17 @@
 	border: 5px ridge var(--cranberry-dark);
 }
 
-.popup-container2 {
-	width: 380px;
-	height: 380px;
-	background: conic-gradient(
-		var(--cream-main),
-		var(--cream-dark),
-		var(--cream-main),
-		var(--cream-dark),
-		var(--cream-main)
-	);
-	position: absolute;
-	z-index: 99;
-	place-content: center;
-	place-items: center;
-	display: none;
-	border: 5px ridge var(--cranberry-main);
-}
-
-.popup-container2 p {
-	color: var(--cranberry-dark);
-	width: 100%;
-	font-size: 1.2rem;
-	text-align: center;
-	letter-spacing: 3;
-	font-weight: 600;
-}
-
-.popup-container3 {
-	width: 380px;
-	height: 380px;
-	background: conic-gradient(
-		var(--cream-dark),
-		var(--cream-main),
-		var(--cream-dark),
-		var(--cream-main)
-	);
-	position: absolute;
-	z-index: 99;
-	place-content: center;
-	place-items: center;
-	display: none;
-	border: 5px ridge var(--cranberry-main);
-	flex-direction: column;
-	color: var(--cranberry-dark);
-	row-gap: 20px;
-}
-
-.popup-container3 p {
+.popup-container p {
 	width: 100%;
 	font-size: 1.2rem;
 	text-align: center;
 	font-weight: 600;
 	text-shadow: 1px 1px 1px #000;
+	color: var(--cranberry-dark);
+	width: 90%;
 }
 
-.popup-container3 a {
+.popup-container a {
 	width: 80%;
 	text-align: center;
 	font-weight: 800;
@@ -910,7 +868,7 @@
 	text-shadow: 1px 1px 5px #000;
 }
 
-.popup-container3 a:hover {
+.popup-container a:hover {
 	transform: scale(1.1);
 	text-shadow: 1px 1px 1px #000;
 }

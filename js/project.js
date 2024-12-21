@@ -119,17 +119,6 @@ const {
 	defaults,
 } = projectData;
 
-const snapEmailData = {
-	snap: {
-		src: './assets/snapcode/Snapchat-206999597.jpg',
-		alt: 'CooCalmCollect Snap Code',
-	},
-
-	email: 'WWW.CALCODEZ@OUTLOOK.COM',
-};
-
-const { snap, email } = snapEmailData;
-
 const projectMenuToggler = getById('project-menu-toggler');
 const projectMobileMenu = getById('project-mobile-menu');
 
@@ -150,6 +139,12 @@ projectMenuToggler.addEventListener(click, function () {
 	} else {
 		toggleClass(projectMobileMenu, flexActive);
 	}
+
+	projectMobileMenu.addEventListener(click, function () {
+		if (projectMobileMenu.classList.contains(flexActive)) {
+			toggleClass(projectMobileMenu, flexActive);
+		}
+	});
 
 	document.addEventListener(keyUp, function (event) {
 		if (
@@ -178,6 +173,13 @@ const toggleProjectContactMenu = (toggler) => {
 			toggleClass(projectContactMenu, flexActive);
 		}
 	});
+
+	projectContactMenu.addEventListener(click, function () {
+		if (projectContactMenu.classList.contains(flexActive)) {
+			toggleClass(projectContactMenu, flexActive);
+		}
+	});
+
 	document.addEventListener(keyUp, function (event) {
 		if (
 			event.key === 'Escape' &&
@@ -448,52 +450,39 @@ gridProjectToggle(
 	logins.href
 );
 
-const snapChatContainer = getById('popup-container');
-const emailContainer = getById('popup-container2');
-const snapImg = createElement('img');
-const emailText = createElement('p');
-
-const snapAndEmailToggles = {
-	main: {
-		snapChat: getById('project-snapchat-toggle'),
-		email: getById('project-email-toggle'),
+const snapEmailData = {
+	snap: {
+		src: './assets/snapcode/Snapchat-206999597.jpg',
+		alt: 'CooCalmCollect Snap Code',
 	},
-	footer: {
-		snapChat: getById('footer-snapChat-toggle'),
-		email: getById('footer-email-toggle'),
+
+	email: 'WWW.CALCODEZ@OUTLOOK.COM',
+
+	resource: {
+		text: 'Project Image And Icons',
+		flatIcons: 'https://www.flaticon.com ',
+		fontAwesome: 'https://www.flaticon.com',
+		target: '_blank',
 	},
 };
 
-const { main, footer } = snapAndEmailToggles;
+const { snap, email, resource } = snapEmailData;
+
+const popUpContainer = getById('popup-container');
+const snapImg = createElement('img');
+const emailText = createElement('p');
+const anchor1 = createElement('a');
+const anchor2 = createElement('a');
+const resourceText = createElement('p');
+
+anchor1.href = resource.flatIcons;
+anchor2.href = resource.fontAwesome;
 
 snapImg.src = snap.src;
 textContent(emailText, email);
+textContent(resourceText, resource.text);
 
-const resourceToggle = getById('resource-toggle');
-const resourceContainer = getById('popup-container3');
-
-resourceToggle.addEventListener(click, function () {
-	if (!resourceContainer.classList.contains(flexActive)) {
-		toggleClass(resourceContainer, flexActive);
-	} else {
-		toggleClass(resourceContainer, flexActive);
-	}
-
-	resourceContainer.addEventListener(click, function () {
-		if (resourceContainer.classList.contains(flexActive)) {
-			toggleClass(resourceContainer, flexActive);
-		}
-	});
-
-	document.addEventListener(keyUp, function (event) {
-		if (
-			event.key === 'Escape' &&
-			resourceContainer.classList.contains(flexActive)
-		) {
-			toggleClass(resourceContainer, flexActive);
-		}
-	});
-});
+const resourceArg = [resourceText, anchor1, anchor2];
 
 const snapchatToggles = [
 	getById('project-snapchat-toggle'),
@@ -505,82 +494,25 @@ const emailToggles = [
 	getById('footer-email-toggle'),
 ];
 
-const newFunction = (
-	array,
-	targetContainer,
-	checkContainer,
-	targetArg,
-	checkArg
-) => {
+const resourceToggles = [
+	getById('resource-toggle-mobile'),
+	getById('resource-toggle-main'),
+];
+
+const test = (array, mainContainer, array2) => {
 	for (let toggler of array)
 		toggler.addEventListener(click, function () {
-			if (
-				!targetContainer.classList.contains(flexActive) &&
-				!checkContainer.classList.contains(flexActive) &&
-				!projectContactMenu.classList.contains(flexActive)
-			) {
-				toggleClass(targetContainer, flexActive);
-				appendChild(targetContainer, targetArg);
-			} else if (
-				!targetContainer.classList.contains(flexActive) &&
-				!checkContainer.classList.contains(flexActive) &&
-				projectContactMenu.classList.contains(flexActive)
-			) {
-				toggleClass(projectContactMenu, flexActive);
-				toggleClass(targetContainer, flexActive);
-				appendChild(targetContainer, targetArg);
-			} else if (
-				!targetContainer.classList.contains(flexActive) &&
-				checkContainer.classList.contains(flexActive) &&
-				!projectContactMenu.classList.contains(flexActive)
-			) {
-				removeChild(checkContainer, checkArg);
-				toggleClass(checkContainer, flexActive);
-				toggleClass(targetContainer, flexActive);
-				appendChild(targetContainer, targetArg);
-			} else if (
-				!targetContainer.classList.contains(flexActive) &&
-				checkContainer.classList.contains(flexActive) &&
-				projectContactMenu.classList.contains(flexActive)
-			) {
-				toggleClass(projectContactMenu, flexActive);
-				removeChild(checkContainer, checkArg);
-				toggleClass(checkContainer, flexActive);
-				toggleClass(targetContainer, flexActive);
-				appendChild(targetContainer, targetArg);
+			if (!mainContainer.classList.contains(flexActive)) {
+				toggleClass(mainContainer, flexActive);
+				appendChild(mainContainer, array2);
+			} else {
+				removeChild(mainContainer, childArg);
+				toggleClass(mainContainer, flexActive);
 			}
-
-			targetContainer.addEventListener(click, function () {
-				if (targetContainer.classList.contains(flexActive)) {
-					removeChild(targetContainer, targetArg);
-					toggleClass(targetContainer, flexActive);
-				}
-			});
-
-			document.addEventListener(keyUp, function (event) {
-				if (
-					event.key === 'Escape' &&
-					targetContainer.classList.contains(flexActive)
-				) {
-					removeChild(targetContainer, targetArg);
-					toggleClass(targetContainer, flexActive);
-				}
-			});
 		});
 };
 
-newFunction(
-	snapchatToggles,
-	snapChatContainer,
-	emailContainer,
-	snapImg,
-	emailText
-);
+//test(snapchatToggles, popUpContainer, snapImg);
+//test(emailToggles, popUpContainer, emailText);
 
-newFunction(
-	emailToggles,
-	emailContainer,
-	snapChatContainer,
-	emailText,
-	snapImg
-);
+test(resourceToggles, popUpContainer, resourceArg);
