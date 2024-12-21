@@ -469,20 +469,12 @@ const snapEmailData = {
 const { snap, email, resource } = snapEmailData;
 
 const popUpContainer = getById('popup-container');
+const resourceContainer = getById('resource-container');
 const snapImg = createElement('img');
 const emailText = createElement('p');
-const anchor1 = createElement('a');
-const anchor2 = createElement('a');
-const resourceText = createElement('p');
-
-anchor1.href = resource.flatIcons;
-anchor2.href = resource.fontAwesome;
 
 snapImg.src = snap.src;
 textContent(emailText, email);
-textContent(resourceText, resource.text);
-
-const resourceArg = [resourceText, anchor1, anchor2];
 
 const snapchatToggles = [
 	getById('project-snapchat-toggle'),
@@ -499,12 +491,13 @@ const resourceToggles = [
 	getById('resource-toggle-main'),
 ];
 
-const test = (array, mainContainer, array2) => {
+const test = (array, mainContainer, childArg) => {
 	for (let toggler of array)
 		toggler.addEventListener(click, function () {
 			if (!mainContainer.classList.contains(flexActive)) {
 				toggleClass(mainContainer, flexActive);
-				appendChild(mainContainer, array2);
+
+				appendChild(mainContainer, childArg);
 			} else {
 				removeChild(mainContainer, childArg);
 				toggleClass(mainContainer, flexActive);
@@ -512,7 +505,7 @@ const test = (array, mainContainer, array2) => {
 		});
 };
 
-//test(snapchatToggles, popUpContainer, snapImg);
-//test(emailToggles, popUpContainer, emailText);
+test(snapchatToggles, popUpContainer, snapImg);
+test(emailToggles, popUpContainer, emailText);
 
-test(resourceToggles, popUpContainer, resourceArg);
+test(resourceToggles, popUpContainer, resourceContainer);

@@ -823,7 +823,8 @@
 	letter-spacing: 1.5;
 }
 
-.popup-container {
+.popup-container,
+.resource-container {
 	width: 380px;
 	height: 380px;
 	background: conic-gradient(
@@ -850,7 +851,8 @@
 	border: 5px ridge var(--cranberry-dark);
 }
 
-.popup-container p {
+.popup-container p,
+.resource-container p {
 	width: 100%;
 	font-size: 1.2rem;
 	text-align: center;
@@ -860,7 +862,7 @@
 	width: 90%;
 }
 
-.popup-container a {
+.resource-container a {
 	width: 80%;
 	text-align: center;
 	font-weight: 800;
@@ -868,7 +870,7 @@
 	text-shadow: 1px 1px 5px #000;
 }
 
-.popup-container a:hover {
+.resource-container a:hover {
 	transform: scale(1.1);
 	text-shadow: 1px 1px 1px #000;
 }
