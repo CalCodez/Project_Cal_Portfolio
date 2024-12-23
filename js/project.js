@@ -139,21 +139,6 @@ projectMenuToggler.addEventListener(click, function () {
 	} else {
 		toggleClass(projectMobileMenu, flexActive);
 	}
-
-	projectMobileMenu.addEventListener(click, function () {
-		if (projectMobileMenu.classList.contains(flexActive)) {
-			toggleClass(projectMobileMenu, flexActive);
-		}
-	});
-
-	document.addEventListener(keyUp, function (event) {
-		if (
-			event.key === 'Escape' &&
-			projectMobileMenu.classList.contains(flexActive)
-		) {
-			removeClass(projectMobileMenu, flexActive);
-		}
-	});
 });
 
 const toggleProjectContactMenu = (toggler) => {
@@ -170,21 +155,6 @@ const toggleProjectContactMenu = (toggler) => {
 			toggleClass(projectMobileMenu, flexActive);
 			toggleClass(projectContactMenu, flexActive);
 		} else {
-			toggleClass(projectContactMenu, flexActive);
-		}
-	});
-
-	projectContactMenu.addEventListener(click, function () {
-		if (projectContactMenu.classList.contains(flexActive)) {
-			toggleClass(projectContactMenu, flexActive);
-		}
-	});
-
-	document.addEventListener(keyUp, function (event) {
-		if (
-			event.key === 'Escape' &&
-			projectContactMenu.classList.contains(flexActive)
-		) {
 			toggleClass(projectContactMenu, flexActive);
 		}
 	});
@@ -450,6 +420,8 @@ gridProjectToggle(
 	logins.href
 );
 
+//**Snapchat, Email, Resource Containers Vars and Function */
+
 const snapEmailData = {
 	snap: {
 		src: './assets/snapcode/Snapchat-206999597.jpg',
@@ -457,144 +429,152 @@ const snapEmailData = {
 	},
 
 	email: 'WWW.CALCODEZ@OUTLOOK.COM',
-
-	resource: {
-		text: 'Project Image And Icons',
-		flatIcons: 'https://www.flaticon.com ',
-		fontAwesome: 'https://www.flaticon.com',
-		target: '_blank',
-	},
 };
 
-const { snap, email, resource } = snapEmailData;
+const { snap, email } = snapEmailData;
 
-const snapChatContainer = getById('popup-container');
-const emailContainer = getById('popup-container2');
+const snapChatContainer = getById('snapchat-container');
 const snapImg = createElement('img');
-const emailText = createElement('p');
-
-const snapAndEmailToggles = {
-	main: {
-		snapChat: getById('project-snapchat-toggle'),
-		email: getById('project-email-toggle'),
-	},
-	footer: {
-		snapChat: getById('footer-snapChat-toggle'),
-		email: getById('footer-email-toggle'),
-	},
-};
-
-const { main, footer } = snapAndEmailToggles;
-
 snapImg.src = snap.src;
+
+const emailContainer = getById('email-container');
+const emailText = createElement('p');
 textContent(emailText, email);
 
-const snapEmailContainerToggle = (
-	toggler,
+const resourceContainer = getById('resource-container');
+
+const snpChatToggles = [
+	getById('project-snapchat-toggle'),
+	getById('footer-snapChat-toggle'),
+];
+const emailToggles = [
+	getById('project-email-toggle'),
+	getById('footer-email-toggle'),
+];
+
+const resourceToggle = [
+	getById('resource-toggle-main'),
+	getById('resource-toggle-mobile'),
+];
+
+const snapAndEmailContainerToggle = (
+	array,
 	targetContainer,
 	checkContainer,
-	targetArg,
-	checkArg
-) =>
-	toggler.addEventListener(click, function () {
-		if (
-			!targetContainer.classList.contains(flexActive) &&
-			!checkContainer.classList.contains(flexActive) &&
-			!projectContactMenu.classList.contains(flexActive)
-		) {
-			toggleClass(targetContainer, flexActive);
-			appendChild(targetContainer, targetArg);
-		} else if (
-			!targetContainer.classList.contains(flexActive) &&
-			!checkContainer.classList.contains(flexActive) &&
-			projectContactMenu.classList.contains(flexActive)
-		) {
-			toggleClass(projectContactMenu, flexActive);
-			toggleClass(targetContainer, flexActive);
-			appendChild(targetContainer, targetArg);
-		} else if (
-			!targetContainer.classList.contains(flexActive) &&
-			checkContainer.classList.contains(flexActive)
-		) {
-			toggleClass(projectContactMenu, flexActive);
-			removeChild(checkContainer, checkArg);
-			toggleClass(checkContainer, flexActive);
-			toggleClass(targetContainer, flexActive);
-			appendChild(targetContainer, targetArg);
-		}
-
-		targetContainer.addEventListener(click, function () {
-			if (targetContainer.classList.contains(flexActive)) {
-				removeChild(targetContainer, targetArg);
-				toggleClass(targetContainer, flexActive);
-			}
-		});
-
-		document.addEventListener(keyUp, function (event) {
+	staticContainer,
+	targetArgs,
+	checkArgs
+) => {
+	for (let toggler of array)
+		toggler.addEventListener(click, function () {
 			if (
-				event.key === 'Escape' &&
-				targetContainer.classList.contains(flexActive)
+				!targetContainer.classList.contains(flexActive) &&
+				!checkContainer.classList.contains(flexActive) &&
+				!staticContainer.classList.contains(flexActive)
 			) {
-				removeChild(targetContainer, targetArg);
+				toggleClass(targetContainer, flexActive);
+				appendChild(targetContainer, targetArgs);
+			} else if (
+				!targetContainer.classList.contains(flexActive) &&
+				checkContainer.classList.contains(flexActive) &&
+				!staticContainer.classList.contains(flexActive)
+			) {
+				toggleClass(checkContainer, flexActive);
+				removeChild(checkContainer, checkArgs);
+				toggleClass(targetContainer, flexActive);
+				appendChild(targetContainer, targetArgs);
+			} else if (
+				!targetContainer.classList.contains(flexActive) &&
+				!checkContainer.classList.contains(flexActive) &&
+				staticContainer.classList.contains(flexActive)
+			) {
+				toggleClass(staticContainer, flexActive);
+				toggleClass(targetContainer, flexActive);
+				appendChild(targetContainer, targetArgs);
+			} else {
 				toggleClass(targetContainer, flexActive);
 			}
 		});
-	});
 
-snapEmailContainerToggle(
-	main.snapChat,
-	snapChatContainer,
-	emailContainer,
-	snapImg,
-	emailText
-);
-
-snapEmailContainerToggle(
-	footer.snapChat,
-	snapChatContainer,
-	emailContainer,
-	snapImg,
-	emailText
-);
-
-snapEmailContainerToggle(
-	main.email,
-	emailContainer,
-	snapChatContainer,
-	emailText,
-	snapImg
-);
-
-snapEmailContainerToggle(
-	footer.email,
-	emailContainer,
-	snapChatContainer,
-	emailText,
-	snapImg
-);
-
-const resourceToggle = getById('resource-toggle-main');
-const resourceContainer = getById('popup-container3');
-
-resourceToggle.addEventListener(click, function () {
-	if (!resourceContainer.classList.contains(flexActive)) {
-		toggleClass(resourceContainer, flexActive);
-	} else {
-		toggleClass(resourceContainer, flexActive);
-	}
-
-	resourceContainer.addEventListener(click, function () {
-		if (resourceContainer.classList.contains(flexActive)) {
-			toggleClass(resourceContainer, flexActive);
+	targetContainer.addEventListener(click, function () {
+		if (targetContainer.classList.contains(flexActive)) {
+			toggleClass(targetContainer, flexActive);
+			removeChild(targetContainer, targetArgs);
 		}
 	});
 
 	document.addEventListener(keyUp, function (event) {
-		if (
-			event.key === 'Escape' &&
-			resourceContainer.classList.contains(flexActive)
-		) {
-			toggleClass(resourceContainer, flexActive);
+		if (event.key === 'Escape') {
+			removeChild(targetContainer, targetArgs);
+			toggleClass(targetContainer, flexActive);
 		}
 	});
-});
+};
+
+snapAndEmailContainerToggle(
+	snpChatToggles,
+	snapChatContainer,
+	emailContainer,
+	resourceContainer,
+	snapImg,
+	emailText
+);
+snapAndEmailContainerToggle(
+	emailToggles,
+	emailContainer,
+	snapChatContainer,
+	resourceContainer,
+	emailText,
+	snapImg
+);
+
+// Resource Container Toggle Function
+
+for (let toggle of resourceToggle)
+	toggle.addEventListener(click, function () {
+		if (
+			!resourceContainer.classList.contains(flexActive) &&
+			!snapChatContainer.classList.contains(flexActive) &&
+			!emailContainer.classList.contains(flexActive)
+		) {
+			toggleClass(resourceContainer, flexActive);
+		} else if (
+			!resourceContainer.classList.contains(flexActive) &&
+			snapChatContainer.classList.contains(flexActive) &&
+			!emailContainer.classList.contains(flexActive)
+		) {
+			toggleClass(snapChatContainer, flexActive);
+			removeChild(snapChatContainer, snapImg);
+			toggleClass(resourceContainer, flexActive);
+		} else if (
+			!resourceContainer.classList.contains(flexActive) &&
+			!snapChatContainer.classList.contains(flexActive) &&
+			emailContainer.classList.contains(flexActive)
+		) {
+			toggleClass(emailContainer, flexActive);
+			removeChild(emailContainer, emailText);
+			toggleClass(resourceContainer, flexActive);
+		} else toggleClass(resourceContainer, flexActive);
+	});
+
+// Close Open Menus
+
+const openMenus = [projectMobileMenu, projectContactMenu, resourceContainer];
+
+const closeMenu = (array) => {
+	for (let menu of array) {
+		menu.addEventListener(click, function () {
+			if (menu.classList.contains(flexActive)) {
+				toggleClass(menu, flexActive);
+			}
+		});
+
+		document.addEventListener(keyUp, function (event) {
+			if (event.key == 'Escape' && menu.classList.contains(flexActive)) {
+				toggleClass(menu, flexActive);
+			}
+		});
+	}
+};
+
+closeMenu(openMenus);
