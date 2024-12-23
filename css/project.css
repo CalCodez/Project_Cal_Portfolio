@@ -949,6 +949,7 @@ footer {
 	width: 240px;
 	text-shadow: 1px 1px 5px #000;
 	font-weight: 600;
+	height: 80px;
 }
 
 .footer-contact-container a:hover {
