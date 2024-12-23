@@ -95,7 +95,7 @@ li:hover {
 	font-size: 30px;
 	position: absolute;
 	right: 20px;
-	z-index: 3;
+	z-index: 1000;
 	color: var(--cream-light);
 	cursor: pointer;
 }

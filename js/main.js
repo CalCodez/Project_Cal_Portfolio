@@ -60,6 +60,13 @@ menuToggler.addEventListener(click, function () {
 	} else {
 		toggleClass(mainMobileMenu, flexActive);
 	}
+
+	mainMobileMenu.addEventListener(click, function () {
+		if (mainMobileMenu.classList.contains(flexActive)) {
+			toggleClass(mainMobileMenu, flexActive);
+		}
+	});
+
 	document.addEventListener('keyup', function (event) {
 		if (
 			event.key === 'Escape' &&
