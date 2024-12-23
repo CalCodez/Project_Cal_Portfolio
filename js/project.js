@@ -468,44 +468,133 @@ const snapEmailData = {
 
 const { snap, email, resource } = snapEmailData;
 
-const popUpContainer = getById('popup-container');
-const resourceContainer = getById('resource-container');
+const snapChatContainer = getById('popup-container');
+const emailContainer = getById('popup-container2');
 const snapImg = createElement('img');
 const emailText = createElement('p');
+
+const snapAndEmailToggles = {
+	main: {
+		snapChat: getById('project-snapchat-toggle'),
+		email: getById('project-email-toggle'),
+	},
+	footer: {
+		snapChat: getById('footer-snapChat-toggle'),
+		email: getById('footer-email-toggle'),
+	},
+};
+
+const { main, footer } = snapAndEmailToggles;
 
 snapImg.src = snap.src;
 textContent(emailText, email);
 
-const snapchatToggles = [
-	getById('project-snapchat-toggle'),
-	getById('footer-snapChat-toggle'),
-];
+const snapEmailContainerToggle = (
+	toggler,
+	targetContainer,
+	checkContainer,
+	targetArg,
+	checkArg
+) =>
+	toggler.addEventListener(click, function () {
+		if (
+			!targetContainer.classList.contains(flexActive) &&
+			!checkContainer.classList.contains(flexActive) &&
+			!projectContactMenu.classList.contains(flexActive)
+		) {
+			toggleClass(targetContainer, flexActive);
+			appendChild(targetContainer, targetArg);
+		} else if (
+			!targetContainer.classList.contains(flexActive) &&
+			!checkContainer.classList.contains(flexActive) &&
+			projectContactMenu.classList.contains(flexActive)
+		) {
+			toggleClass(projectContactMenu, flexActive);
+			toggleClass(targetContainer, flexActive);
+			appendChild(targetContainer, targetArg);
+		} else if (
+			!targetContainer.classList.contains(flexActive) &&
+			checkContainer.classList.contains(flexActive)
+		) {
+			toggleClass(projectContactMenu, flexActive);
+			removeChild(checkContainer, checkArg);
+			toggleClass(checkContainer, flexActive);
+			toggleClass(targetContainer, flexActive);
+			appendChild(targetContainer, targetArg);
+		}
 
-const emailToggles = [
-	getById('project-email-toggle'),
-	getById('footer-email-toggle'),
-];
-
-const resourceToggles = [
-	getById('resource-toggle-mobile'),
-	getById('resource-toggle-main'),
-];
-
-const test = (array, mainContainer, childArg) => {
-	for (let toggler of array)
-		toggler.addEventListener(click, function () {
-			if (!mainContainer.classList.contains(flexActive)) {
-				toggleClass(mainContainer, flexActive);
-
-				appendChild(mainContainer, childArg);
-			} else {
-				removeChild(mainContainer, childArg);
-				toggleClass(mainContainer, flexActive);
+		targetContainer.addEventListener(click, function () {
+			if (targetContainer.classList.contains(flexActive)) {
+				removeChild(targetContainer, targetArg);
+				toggleClass(targetContainer, flexActive);
 			}
 		});
-};
 
-test(snapchatToggles, popUpContainer, snapImg);
-test(emailToggles, popUpContainer, emailText);
+		document.addEventListener(keyUp, function (event) {
+			if (
+				event.key === 'Escape' &&
+				targetContainer.classList.contains(flexActive)
+			) {
+				removeChild(targetContainer, targetArg);
+				toggleClass(targetContainer, flexActive);
+			}
+		});
+	});
 
-test(resourceToggles, popUpContainer, resourceContainer);
+snapEmailContainerToggle(
+	main.snapChat,
+	snapChatContainer,
+	emailContainer,
+	snapImg,
+	emailText
+);
+
+snapEmailContainerToggle(
+	footer.snapChat,
+	snapChatContainer,
+	emailContainer,
+	snapImg,
+	emailText
+);
+
+snapEmailContainerToggle(
+	main.email,
+	emailContainer,
+	snapChatContainer,
+	emailText,
+	snapImg
+);
+
+snapEmailContainerToggle(
+	footer.email,
+	emailContainer,
+	snapChatContainer,
+	emailText,
+	snapImg
+);
+
+const resourceToggle = getById('resource-toggle');
+const resourceContainer = getById('popup-container3');
+
+resourceToggle.addEventListener(click, function () {
+	if (!resourceContainer.classList.contains(flexActive)) {
+		toggleClass(resourceContainer, flexActive);
+	} else {
+		toggleClass(resourceContainer, flexActive);
+	}
+
+	resourceContainer.addEventListener(click, function () {
+		if (resourceContainer.classList.contains(flexActive)) {
+			toggleClass(resourceContainer, flexActive);
+		}
+	});
+
+	document.addEventListener(keyUp, function (event) {
+		if (
+			event.key === 'Escape' &&
+			resourceContainer.classList.contains(flexActive)
+		) {
+			toggleClass(resourceContainer, flexActive);
+		}
+	});
+});
