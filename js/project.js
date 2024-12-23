@@ -573,7 +573,7 @@ snapEmailContainerToggle(
 	snapImg
 );
 
-const resourceToggle = getById('resource-toggle');
+const resourceToggle = getById('resource-toggle-main');
 const resourceContainer = getById('popup-container3');
 
 resourceToggle.addEventListener(click, function () {
