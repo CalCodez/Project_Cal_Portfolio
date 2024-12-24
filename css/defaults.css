@@ -95,8 +95,8 @@ li:hover {
 	font-size: 30px;
 	position: absolute;
 	right: 20px;
-	z-index: 1000;
-	color: var(--cream-light);
+	z-index: 99;
+	color: var(--cream-main);
 	cursor: pointer;
 }
 
@@ -110,14 +110,13 @@ li:hover {
 	height: 300px;
 	background-color: var(--cranberry-dark-transparent);
 	position: absolute;
-	z-index: 1;
+	z-index: 98;
 	border: 3px ridge var(--gold);
 	flex-direction: column;
 	display: none;
 	justify-content: space-evenly;
 	right: 10px;
 	top: 10px;
-	z-index: 2;
 }
 
 .mobile-menu li,

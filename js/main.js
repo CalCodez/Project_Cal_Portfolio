@@ -218,8 +218,8 @@ const popupToggles = getByClass('popupToggle');
 
 const [snapChatToggle, emailToggle] = popupToggles;
 
-const popUpContainer = getById('popup-container');
-const popUpContainer2 = getById('popup-container2');
+const snapChatContainer = getById('snapchat-container');
+const emailContainer = getById('email-container');
 const snapCode = createElement('img');
 snapCode.src = snap.src;
 snapCode.alt = snap.alt;
@@ -253,5 +253,5 @@ const snapAndEmailToggle = (toggler, parent, child) => {
 	});
 };
 
-snapAndEmailToggle(snapChatToggle, popUpContainer, snapCode);
-snapAndEmailToggle(emailToggle, popUpContainer2, email);
+snapAndEmailToggle(snapChatToggle, snapChatContainer, snapCode);
+snapAndEmailToggle(emailToggle, emailContainer, email);

@@ -146,6 +146,16 @@
 		padding: 0;
 	}
 
+	#project-menu-toggler {
+		right: 8px;
+		top: 8px;
+	}
+
+	.project-mobile-menu {
+		top: 2px;
+		right: 2px;
+	}
+
 	.project-body-container {
 		box-sizing: border-box;
 		padding: 0;
