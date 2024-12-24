@@ -16,6 +16,7 @@ const keyUp = 'keyup';
 const flexActive = 'flex-active';
 const flexInactive = 'flex-inactive';
 
+//Project Data Object
 const projectData = {
 	calTube: {
 		title: 'CalTube',
@@ -45,6 +46,7 @@ const projectData = {
                 removing
                 their favorite cards to the favorites section`,
 		href: '/projects/Js_Project3_ApiWebsite/index.html',
+		target: '_blank',
 	},
 	google: {
 		title: 'Google',
@@ -106,7 +108,7 @@ const projectData = {
 		gridDescription: 'Choose a Project To Get The Details',
 	},
 };
-
+//Project Data Object Destructuring
 const {
 	saas,
 	calTube,
@@ -119,12 +121,13 @@ const {
 	defaults,
 } = projectData;
 
+//Project Menu, Contact, Mobile Menu Vars
 const projectMenuToggler = getById('project-menu-toggler');
 const projectMobileMenu = getById('project-mobile-menu');
-
 const projectContactToggles = getByClass('project-contact-toggles');
 const projectContactMenu = getById('project-contact-menu');
 
+//Project Menu Function
 projectMenuToggler.addEventListener(click, function () {
 	if (
 		!projectMobileMenu.classList.contains(flexActive) &&
@@ -141,6 +144,7 @@ projectMenuToggler.addEventListener(click, function () {
 	}
 });
 
+//Project Contact Menu Function
 const toggleProjectContactMenu = (toggler) => {
 	toggler.addEventListener(click, function () {
 		if (
@@ -162,8 +166,7 @@ const toggleProjectContactMenu = (toggler) => {
 toggleProjectContactMenu(projectContactToggles[0]);
 toggleProjectContactMenu(projectContactToggles[1]);
 
-//``Toggle Project Display Containers Var and Function */
-
+//Toggle Project Display Containers Var and Function
 const panelToggle = getById('panel-toggle');
 const cardsToggle = getById('cards-toggle');
 const gridToggle = getById('grid-toggle');
@@ -172,13 +175,15 @@ const cardsContainer = getById('project-card-container');
 const gridContainer = getById('project-grid-container');
 
 const displayButtonContainer = select('.display-button-container');
-//restrict panel and grid selection for responsive
+
+//NOTE CODE restrict panel and grid selection for responsive
 if (window.innerWidth < 1024) {
 	displayButtonContainer.style.display = 'none';
 	panelContainer.style.display = 'none';
 	cardsContainer.style.display = 'flex';
 }
 
+//Change Project Display Containers Function
 const toggleProjectContainers = (
 	targetToggler,
 	targetContainer,
@@ -235,12 +240,7 @@ toggleProjectContainers(
 	gridToggle
 );
 
-//??Project Panel Vars and Functions
-
-//**Update date the text align for the panel-project-description from center to justify in the function */
-//**adjust the font size to the panel-project-description (differ from default and project description) */
-//** change the font family (differ from default and project description) */
-
+//Project Panel Vars and Functions
 const projectButtons = getByClass('project-btns');
 const projectNameDisplay = getById('project-name-display');
 const panelProjectImage = getById('panel-project-image');
@@ -258,22 +258,20 @@ const [
 	tributeBtn,
 ] = projectButtons;
 
-const alignText = (arg, arg2) => (arg.style.textAlign = arg2);
-const fontAdjust = (arg1, arg2) => (arg1.style.fontFamily = arg2);
-const fontSize = (arg1, arg2) => (arg1.style.fontSize = arg2);
-
-const panelProjectsDisplay = (toggler, src, title, description, href) => {
+//Project Panel Display Function
+const panelProjectsDisplay = (toggler, obj) => {
 	const fontSegoe = 'Segoe UI';
 	const alignJustify = 'justify';
 	const fontLumanosimo = 'Lumanosimo';
 	const alignCenter = 'center';
 
 	toggler.addEventListener(click, function () {
-		panelProjectImage.src = src;
-		textContent(projectNameDisplay, title);
-		textContent(panelProjectDescription, description);
+		panelProjectImage.src = obj.src;
+		textContent(projectNameDisplay, obj.title);
+		textContent(panelProjectDescription, obj.description);
 		panelProjectLink.style.display = 'flex';
-		panelProjectLink.href = href;
+		panelProjectLink.href = obj.href;
+		panelProjectLink.target = '_blank';
 
 		panelProjectDescription.style.fontFamily = fontSegoe;
 		panelProjectDescription.style.fontSize = '1rem';
@@ -293,66 +291,14 @@ const panelProjectsDisplay = (toggler, src, title, description, href) => {
 		}
 	});
 };
-
-panelProjectsDisplay(
-	calTubeBtn,
-	calTube.src,
-	calTube.title,
-	calTube.description,
-	calTube.href
-);
-
-panelProjectsDisplay(
-	saasBtn,
-	saas.src,
-	saas.title,
-	saas.description,
-	saas.href
-);
-panelProjectsDisplay(
-	pokemonBtn,
-	pokemon.src,
-	pokemon.title,
-	pokemon.description,
-	pokemon.href
-);
-panelProjectsDisplay(
-	googleBtn,
-	google.src,
-	google.title,
-	google.description,
-	google.href
-);
-panelProjectsDisplay(
-	favzBtn,
-	favz.src,
-	favz.title,
-	favz.description,
-	favz.href
-);
-panelProjectsDisplay(
-	loginsBtn,
-	logins.src,
-	logins.title,
-	logins.description,
-	logins.href
-);
-
-panelProjectsDisplay(
-	responsiveBtn,
-	responsive.src,
-	responsive.title,
-	responsive.description,
-	responsive.href
-);
-
-panelProjectsDisplay(
-	tributeBtn,
-	tribute.src,
-	tribute.title,
-	tribute.description,
-	tribute.href
-);
+panelProjectsDisplay(calTubeBtn, calTube);
+panelProjectsDisplay(saasBtn, saas);
+panelProjectsDisplay(pokemonBtn, pokemon);
+panelProjectsDisplay(googleBtn, google);
+panelProjectsDisplay(favzBtn, favz);
+panelProjectsDisplay(loginsBtn, logins);
+panelProjectsDisplay(responsiveBtn, responsive);
+panelProjectsDisplay(tributeBtn, tribute);
 
 const gridButtons = getByClass('grid-btns');
 let gridTitle = getById('grid-title');
@@ -362,12 +308,14 @@ const gridLink = getById('grid-link');
 textContent(gridTitle, defaults.gridTitle);
 textContent(gridDescription, defaults.description);
 
-const gridProjectToggle = (toggler, projectTitle, description, href) => {
+//Grid Project Toggle Function
+const gridProjectToggle = (toggler, obj) => {
 	toggler.addEventListener(click, function () {
-		textContent(gridTitle, projectTitle);
-		textContent(gridDescription, description);
+		textContent(gridTitle, obj.title);
+		textContent(gridDescription, obj.description);
 		gridLink.style.display = 'flex';
-		gridLink.href = href;
+		gridLink.href = obj.href;
+		gridLink.target = '_blank';
 	});
 
 	document.addEventListener(keyUp, function (event) {
@@ -379,49 +327,30 @@ const gridProjectToggle = (toggler, projectTitle, description, href) => {
 	});
 };
 
-gridProjectToggle(
-	gridButtons[0],
-	google.title,
-	google.description,
-	google.href
-);
+gridProjectToggle(gridButtons[0], google);
+gridProjectToggle(gridButtons[1], tribute);
+gridProjectToggle(gridButtons[2], calTube);
+gridProjectToggle(gridButtons[3], saas);
+gridProjectToggle(gridButtons[4], responsive);
+gridProjectToggle(gridButtons[5], pokemon);
+gridProjectToggle(gridButtons[6], favz);
+gridProjectToggle(gridButtons[7], logins);
 
-gridProjectToggle(
-	gridButtons[1],
-	tribute.title,
-	tribute.description,
-	tribute.href
-);
-
-gridProjectToggle(
-	gridButtons[2],
-	calTube.title,
-	calTube.description,
-	calTube.href
-);
-gridProjectToggle(gridButtons[3], saas.title, saas.description, saas.href);
-gridProjectToggle(
-	gridButtons[4],
-	responsive.title,
-	responsive.description,
-	responsive.href
-);
-gridProjectToggle(
-	gridButtons[5],
-	pokemon.title,
-	pokemon.description,
-	pokemon.href
-);
-gridProjectToggle(gridButtons[6], favz.title, favz.description, favz.href);
-gridProjectToggle(
-	gridButtons[7],
-	logins.title,
-	logins.description,
-	logins.href
-);
+//Static Grid Image Assignments
+const grid = getByClass('grid-project-img');
+const gridImgAssign = (img, src) => (img.src = src);
+gridImgAssign(grid[0], google.src);
+gridImgAssign(grid[1], tribute.src);
+gridImgAssign(grid[2], calTube.src);
+gridImgAssign(grid[3], saas.src);
+gridImgAssign(grid[4], responsive.src);
+gridImgAssign(grid[5], pokemon.src);
+gridImgAssign(grid[6], favz.src);
+gridImgAssign(grid[7], logins.src);
 
 //**Snapchat, Email, Resource Containers Vars and Function */
 
+//Snapchat and Email Data Object
 const snapEmailData = {
 	snap: {
 		src: './assets/snapcode/Snapchat-206999597.jpg',
@@ -430,7 +359,7 @@ const snapEmailData = {
 
 	email: 'WWW.CALCODEZ@OUTLOOK.COM',
 };
-
+//Snapchat and Email Data Object Destructuring
 const { snap, email } = snapEmailData;
 
 const snapChatContainer = getById('snapchat-container');
@@ -457,6 +386,7 @@ const resourceToggle = [
 	getById('resource-toggle-mobile'),
 ];
 
+//Snapchat and Email Container Toggle Function
 const snapAndEmailContainerToggle = (
 	array,
 	targetContainer,
@@ -562,16 +492,16 @@ for (let toggle of resourceToggle)
 const openMenus = [projectMobileMenu, projectContactMenu, resourceContainer];
 
 const closeMenu = (array) => {
-	for (let menu of array) {
-		menu.addEventListener(click, function () {
-			if (menu.classList.contains(flexActive)) {
-				toggleClass(menu, flexActive);
+	for (let menus of array) {
+		menus.addEventListener(click, function () {
+			if (menus.classList.contains(flexActive)) {
+				toggleClass(menus, flexActive);
 			}
 		});
 
 		document.addEventListener(keyUp, function (event) {
-			if (event.key == 'Escape' && menu.classList.contains(flexActive)) {
-				toggleClass(menu, flexActive);
+			if (event.key == 'Escape' && menus.classList.contains(flexActive)) {
+				toggleClass(menus, flexActive);
 			}
 		});
 	}

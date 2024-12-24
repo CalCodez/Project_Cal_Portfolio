@@ -13,6 +13,7 @@ const createElement = (arg) => document.createElement(arg);
 
 const click = 'click';
 
+//SnapChat and About Object
 const snapAndAbout = {
 	snap: {
 		src: './assets/snapcode/Snapchat-206999597.jpg',
@@ -42,18 +43,22 @@ const snapAndAbout = {
 	},
 };
 
+//Snapchat and about object destructuring
 const { snap, about } = snapAndAbout;
 
+//About Container and Contact Icons Toggles Vars
 const navTogglers = getByClass('nav-toggle');
 const [aboutToggleMobile, contactToggleMobile, aboutToggle, contactToggle] =
 	navTogglers;
 
+//Mobile Menu Vars
 const menuToggler = getById('menu-toggler');
 const mainMobileMenu = getById('main-mobile-menu');
 const aboutIcon = getById('about-icon');
 const flexActive = 'flex-active';
 const flexInactive = 'flex-inactive';
 
+//Main Mobile Menu Function
 menuToggler.addEventListener(click, function () {
 	if (!mainMobileMenu.classList.contains('flexActive')) {
 		toggleClass(mainMobileMenu, flexActive);
@@ -77,8 +82,10 @@ menuToggler.addEventListener(click, function () {
 	});
 });
 
+//Contact Icons Var
 const contactIcons = getByClass('contact-icons');
 
+//Contact Icons Function
 const toggleContactIcons = (toggler) => {
 	const activeIcons = 'contact-icons-active';
 	toggler.addEventListener(click, function () {
@@ -147,13 +154,15 @@ const toggleContactIcons = (toggler) => {
 };
 
 toggleContactIcons(contactToggleMobile);
-
 toggleContactIcons(contactToggle);
 
+//About Container Vars
 const profileImage = getById('main-profile-img');
 const aboutContainer = getById('about-text-container');
 const introContainer = getById('intro-container');
 const aboutDescription = getById('about-description');
+
+//About Container Function
 
 const toggleAboutContainer = (toggler) => {
 	toggler.addEventListener(click, function () {
@@ -215,9 +224,7 @@ toggleAboutContainer(aboutToggle);
 
 //??Snapchat and Email Vars and Function
 const popupToggles = getByClass('popupToggle');
-
 const [snapChatToggle, emailToggle] = popupToggles;
-
 const snapChatContainer = getById('snapchat-container');
 const emailContainer = getById('email-container');
 const snapCode = createElement('img');
