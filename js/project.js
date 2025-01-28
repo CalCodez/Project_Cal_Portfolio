@@ -333,7 +333,7 @@ moreProjectsToggler.addEventListener(click, function () {
 		close.addEventListener(click, function () {
 			if (moreProjectsContainer.classList.contains('more-active')) {
 				toggleClass(moreProjectsContainer, 'more-active');
-				toggleClass(close, 'more-button-active');
+				toggleClass(close, 'more-buttons-active');
 			}
 		});
 	}
