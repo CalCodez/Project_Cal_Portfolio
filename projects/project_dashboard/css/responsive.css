@@ -1,5 +1,6 @@
-@media (max-width: 768px) {
-	html {
+@media (max-width: 1145px) {
+	html,
+	body {
 		overflow-x: hidden;
 	}
 	.main-toggle-container {
@@ -9,6 +10,9 @@
 	#mobile-menu-toggler {
 		visibility: visible;
 	}
+}
+
+@media (max-width: 768px) {
 	.status-bar {
 		box-shadow: 1px -1px 3px 1px var(--red-dark);
 		border: 1px 1px outset var(--black);
