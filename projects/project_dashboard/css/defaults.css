@@ -88,6 +88,11 @@ body {
 	transform: scale(1.1);
 }
 
+.exit-home {
+	height: 30px;
+	padding: 3px;
+}
+
 #mobile-menu-toggler {
 	position: absolute;
 	right: 10px;
@@ -115,7 +120,11 @@ body {
 
 .mobile-menu-container span {
 	width: 100px;
-	height: 30px;
+	height: 25px;
+}
+
+.mobile-menu-container .exit-home {
+	width: 100px;
 }
 
 .create-form-container {
