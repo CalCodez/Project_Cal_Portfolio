@@ -59,16 +59,13 @@ const projectData = {
                 understanding basic HTML, CSS, and link functionality.`,
 		href: '/projects/Project_Google_Page/index.html',
 	},
-	favz: {
-		title: 'My Favz',
-		src: '/assets/project_card_images/My_Favz.png',
-		alt: 'My Favz',
-		description: `A beginner project displaying a list of things I favor and don't favor, with each topic providing 3 key
-              reasons for its
-              inclusion. This project helped me learn HTML tables displayed on the homepage. User-interactive: click the
-              topics to
-              jump to the pages.`,
-		href: '/projects/Project-My_Favz/index.html',
+	dashboard: {
+		title: 'Planner Dashborad',
+		src: '/assets/project_card_images/Dashborad.png',
+		alt: 'project planner',
+		description: `A simple Javascript driven planner project. Create reminders, notes, and the program will sort and
+                store them in a parent category container.`,
+		href: '/projects/project_dashboard/indexPlanner.html',
 	},
 	logins: {
 		title: 'Logins',
@@ -100,6 +97,18 @@ const projectData = {
 		href: '/projects/Project_Aaliyah/index.html',
 	},
 
+	favz: {
+		title: 'My Favz',
+		src: '/assets/project_card_images/My_Favz.png',
+		alt: 'My Favz',
+		description: `A beginner project displaying a list of things I favor and don't favor, with each topic providing 3 key
+              reasons for its
+              inclusion. This project helped me learn HTML tables displayed on the homepage. User-interactive: click the
+              topics to
+              jump to the pages.`,
+		href: '/projects/Project-My_Favz/index.html',
+	},
+
 	defaults: {
 		title: 'Cal Codez',
 		image: './assets/Logo_Images/CalCodez2.png',
@@ -114,10 +123,11 @@ const {
 	calTube,
 	pokemon,
 	responsive,
-	favz,
+	dashboard,
 	logins,
 	tribute,
 	google,
+	favz,
 	defaults,
 } = projectData;
 
@@ -252,10 +262,11 @@ const [
 	saasBtn,
 	pokemonBtn,
 	googleBtn,
-	favzBtn,
+	dashboardBtn,
 	loginsBtn,
 	responsiveBtn,
 	tributeBtn,
+	favzBtn,
 ] = projectButtons;
 
 //Project Panel Display Function
@@ -295,10 +306,38 @@ panelProjectsDisplay(calTubeBtn, calTube);
 panelProjectsDisplay(saasBtn, saas);
 panelProjectsDisplay(pokemonBtn, pokemon);
 panelProjectsDisplay(googleBtn, google);
-panelProjectsDisplay(favzBtn, favz);
+panelProjectsDisplay(dashboardBtn, dashboard);
 panelProjectsDisplay(loginsBtn, logins);
 panelProjectsDisplay(responsiveBtn, responsive);
 panelProjectsDisplay(tributeBtn, tribute);
+panelProjectsDisplay(favzBtn, favz);
+
+const moreProjectsToggler = getById('more-projects-toggle');
+const moreProjectsContainer = getById('more-projects-container');
+const moreButtons = getByClass('more-buttons');
+
+moreProjectsToggler.addEventListener(click, function () {
+	if (!moreProjectsContainer.classList.contains('more-active')) {
+		toggleClass(moreProjectsContainer, 'more-active');
+		for (let showButtons of moreButtons) {
+			toggleClass(showButtons, 'more-buttons-active');
+		}
+	} else {
+		toggleClass(moreProjectsContainer, 'more-active');
+		for (let hideButtons of moreButtons) {
+			toggleClass(hideButtons, 'more-buttons-active');
+		}
+	}
+
+	for (let close of moreButtons) {
+		close.addEventListener(click, function () {
+			if (moreProjectsContainer.classList.contains('more-active')) {
+				toggleClass(moreProjectsContainer, 'more-active');
+				toggleClass(close, 'more-button-active');
+			}
+		});
+	}
+});
 
 const gridButtons = getByClass('grid-btns');
 let gridTitle = getById('grid-title');

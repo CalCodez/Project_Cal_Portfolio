@@ -246,6 +246,12 @@
 	column-gap: 10%;
 	border: 5px inset var(--cream-dark);
 	display: none;
+	position: relative;
+}
+
+.more-projects-container span i {
+	font-size: 1.3rem;
+	color: var(--cranberry-dark);
 }
 
 .panel-control-container {
@@ -257,6 +263,53 @@
 	border-radius: 10px;
 	box-shadow: -2px 2px 20px 2px #000;
 }
+
+.more-projects-container {
+	width: 0;
+	height: 320px;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+}
+
+.more-projects-container.more-active {
+	width: 320px;
+	height: 320px;
+	border: 5px outset var(--cranberry-dark-transparent);
+	margin-top: -15px;
+	box-shadow: 2px 2px 2px 2px #000;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	background: linear-gradient(
+		150deg,
+		var(--cranberry-dark-transparent),
+		var(--cranberry-dark),
+		var(--cream-main),
+		var(--cranberry-dark),
+		var(--cranberry-dark-transparent)
+	);
+	transition: all ease-in-out 0.5s;
+}
+
+.more-projects-container span {
+	width: 20px;
+	height: 80px;
+	position: absolute;
+	background-color: var(--cranberry-dark);
+	top: 30%;
+	left: -10px;
+	writing-mode: vertical-lr;
+	text-orientation: upright;
+	cursor: pointer;
+	font-weight: 600;
+	color: var(--gold);
+	letter-spacing: 5;
+	border: 3px outset var(--gold);
+	text-shadow: 2px 2px 2px var(--true-black);
+}
+
 .project-control-labels {
 	color: var(--cream-dark);
 	width: 100%;
@@ -285,7 +338,8 @@
 	);
 }
 
-.project-buttons-container button {
+.project-buttons-container button,
+.more-projects-container button {
 	width: 80px;
 	height: 10px;
 	background-color: var(--cranberry-dark);
@@ -302,6 +356,17 @@
 	font-size: 1rem;
 	text-shadow: 3px 3px 3px #000;
 	box-shadow: 2px 1px 10px 1px #000;
+	cursor: pointer;
+}
+
+.more-projects-container .more-buttons {
+	visibility: hidden;
+}
+
+.more-projects-container .more-buttons.more-buttons-active {
+	visibility: visible;
+	transition: all ease-in 0.1s;
+	transition-delay: 0.3s;
 }
 
 .project-title-display-container {
