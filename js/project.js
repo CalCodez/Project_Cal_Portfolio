@@ -60,8 +60,8 @@ const projectData = {
 		href: '/projects/Project_Google_Page/index.html',
 	},
 	dashboard: {
-		title: 'Planner Dashborad',
-		src: '/assets/project_card_images/Dashborad.png',
+		title: 'Planner Dashboard',
+		src: '/assets/project_card_images/dashBoard.png',
 		alt: 'project planner',
 		description: `A simple Javascript driven planner project. Create reminders, notes, and the program will sort and
                 store them in a parent category container.`,
@@ -116,6 +116,12 @@ const projectData = {
 		gridTitle: 'Click Project Details',
 		gridDescription: 'Choose a Project To Get The Details',
 	},
+
+	gridPlaceHolder: {
+		title: `More To Come`,
+		src: '/assets/Logo_Images/CalCodez2.png',
+		description: `MORE TO COME`,
+	},
 };
 //Project Data Object Destructuring
 const {
@@ -129,6 +135,7 @@ const {
 	google,
 	favz,
 	defaults,
+	gridPlaceHolder,
 } = projectData;
 
 //Project Menu, Contact, Mobile Menu Vars
@@ -366,6 +373,8 @@ const gridProjectToggle = (toggler, obj) => {
 	});
 };
 
+console.log(gridButtons);
+
 gridProjectToggle(gridButtons[0], google);
 gridProjectToggle(gridButtons[1], tribute);
 gridProjectToggle(gridButtons[2], calTube);
@@ -374,6 +383,10 @@ gridProjectToggle(gridButtons[4], responsive);
 gridProjectToggle(gridButtons[5], pokemon);
 gridProjectToggle(gridButtons[6], favz);
 gridProjectToggle(gridButtons[7], logins);
+gridProjectToggle(gridButtons[8], dashboard);
+gridProjectToggle(gridButtons[9], gridPlaceHolder);
+gridProjectToggle(gridButtons[10], gridPlaceHolder);
+gridProjectToggle(gridButtons[11], gridPlaceHolder);
 
 //Static Grid Image Assignments
 const grid = getByClass('grid-project-img');
@@ -386,6 +399,10 @@ gridImgAssign(grid[4], responsive.src);
 gridImgAssign(grid[5], pokemon.src);
 gridImgAssign(grid[6], favz.src);
 gridImgAssign(grid[7], logins.src);
+gridImgAssign(grid[8], dashboard.src);
+gridImgAssign(grid[9], gridPlaceHolder.src);
+gridImgAssign(grid[10], gridPlaceHolder.src);
+gridImgAssign(grid[11], gridPlaceHolder.src);
 
 //**Snapchat, Email, Resource Containers Vars and Function */
 
