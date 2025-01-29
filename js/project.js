@@ -347,6 +347,18 @@ moreProjectsToggler.addEventListener(click, function () {
 });
 
 const gridButtons = getByClass('grid-btns');
+const [
+	gridGoogle,
+	gridTribute,
+	gridCalTube,
+	gridSaas,
+	gridResponsive,
+	gridPokemon,
+	gridFavz,
+	gridLogins,
+	gridDashboard,
+	...gridRest
+] = gridButtons;
 let gridTitle = getById('grid-title');
 let gridDescription = getById('grid-project-description');
 const gridLink = getById('grid-link');
@@ -357,11 +369,24 @@ textContent(gridDescription, defaults.description);
 //Grid Project Toggle Function
 const gridProjectToggle = (toggler, obj) => {
 	toggler.addEventListener(click, function () {
-		textContent(gridTitle, obj.title);
-		textContent(gridDescription, obj.description);
-		gridLink.style.display = 'flex';
-		gridLink.href = obj.href;
-		gridLink.target = '_blank';
+		if (obj === gridPlaceHolder) {
+			textContent(gridTitle, obj.title);
+			textContent(gridDescription, obj.description);
+		} else {
+			textContent(gridTitle, obj.title);
+			textContent(gridDescription, obj.description);
+			gridLink.style.display = 'flex';
+			gridLink.href = obj.href;
+			gridLink.target = '_blank';
+		}
+
+		for (let btn of gridRest) {
+			btn.addEventListener(click, function () {
+				textContent(gridTitle, gridPlaceHolder.title);
+				textContent(gridDescription, gridPlaceHolder.description);
+				gridLink.style.display = 'none';
+			});
+		}
 	});
 
 	document.addEventListener(keyUp, function (event) {
@@ -373,17 +398,15 @@ const gridProjectToggle = (toggler, obj) => {
 	});
 };
 
-console.log(gridButtons);
-
-gridProjectToggle(gridButtons[0], google);
-gridProjectToggle(gridButtons[1], tribute);
-gridProjectToggle(gridButtons[2], calTube);
-gridProjectToggle(gridButtons[3], saas);
-gridProjectToggle(gridButtons[4], responsive);
-gridProjectToggle(gridButtons[5], pokemon);
-gridProjectToggle(gridButtons[6], favz);
-gridProjectToggle(gridButtons[7], logins);
-gridProjectToggle(gridButtons[8], dashboard);
+gridProjectToggle(gridGoogle, google);
+gridProjectToggle(gridTribute, tribute);
+gridProjectToggle(gridCalTube, calTube);
+gridProjectToggle(gridSaas, saas);
+gridProjectToggle(gridResponsive, responsive);
+gridProjectToggle(gridPokemon, pokemon);
+gridProjectToggle(gridFavz, favz);
+gridProjectToggle(gridLogins, logins);
+gridProjectToggle(gridDashboard, dashboard);
 gridProjectToggle(gridButtons[9], gridPlaceHolder);
 gridProjectToggle(gridButtons[10], gridPlaceHolder);
 gridProjectToggle(gridButtons[11], gridPlaceHolder);
