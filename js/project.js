@@ -379,7 +379,6 @@ const gridProjectToggle = (toggler, obj) => {
 			gridLink.href = obj.href;
 			gridLink.target = '_blank';
 		}
-
 		for (let btn of gridRest) {
 			btn.addEventListener(click, function () {
 				textContent(gridTitle, gridPlaceHolder.title);
