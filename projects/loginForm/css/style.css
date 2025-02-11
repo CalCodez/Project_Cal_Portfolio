@@ -18,6 +18,10 @@
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+a {
+	color: var(--contrast-light);
+}
+
 .container {
 	display: flex;
 	box-sizing: border-box;
@@ -234,9 +238,11 @@ body {
 .alt-login-container .fa-brands {
 	border: 1px solid var(--black);
 	padding: 5px;
+	cursor: pointer;
 }
 
-.fa-brands:hover {
+.fa-brands:hover,
+.exit-link:hover {
 	transform: scale(1.2);
 }
 
