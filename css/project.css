@@ -102,11 +102,12 @@
 	place-content: center;
 	width: 100%;
 	background: conic-gradient(
-		var(--gold-dark),
-		var(--gold-light),
-		var(--gold-dark),
-		var(--gold-light),
-		var(--gold-dark)
+		var(--cream-main),
+		var(--cream-dark),
+		var(--cream-main),
+		var(--cream-dark),
+		var(--cream-main),
+		var(--cream-dark)
 	);
 	padding: 60px 0;
 
