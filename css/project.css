@@ -101,13 +101,12 @@
 	margin: 50px 0 100px 0;
 	place-content: center;
 	width: 100%;
-	background: linear-gradient(
-		160deg,
-		var(--cranberry-dark-transparent),
-		var(--cranberry-dark-transparent),
-		var(--cranberry-dark),
-		var(--cranberry-dark-transparent),
-		var(--cranberry-dark-transparent)
+	background: conic-gradient(
+		var(--gold-dark),
+		var(--gold-light),
+		var(--gold-dark),
+		var(--gold-light),
+		var(--gold-dark)
 	);
 	padding: 60px 0;
 
@@ -116,11 +115,13 @@
 .project-image-wrapper {
 	display: flex;
 	height: 300px;
-
+	border: 5px solid var(--cranberry-dark);
 	place-content: center;
 	place-items: center;
 	width: 300px;
 	box-sizing: content-box;
+	border-radius: 50%;
+	box-shadow: 2px 2px 30px 2px var(--true-black);
 }
 
 .project-image-wrapper img {
@@ -152,9 +153,10 @@
 	width: auto;
 	box-sizing: border-box;
 	text-shadow: 2px 2px 2px #000;
+	color: var(--cranberry-dark);
 }
 .project-info-info-container {
-	color: var(--cream-main);
+	color: var(--cranberry-dark);
 	display: flex;
 	flex-wrap: wrap;
 	font-size: 0.9rem;
@@ -163,7 +165,7 @@
 	width: auto;
 	word-wrap: break-word;
 	line-height: 1.5;
-	text-shadow: 2px 2px 2px #000;
+	text-shadow: 1px 1px 1px #000;
 }
 
 /* ?? Project Display Buttons*/
