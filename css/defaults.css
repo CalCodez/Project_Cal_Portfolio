@@ -34,16 +34,10 @@ body {
 	background-color: #7a1717;
 	display: flex;
 	height: auto;
-	padding-top: 50px;
 	place-content: center;
 	position: relative;
 
-	background-image: linear-gradient(
-		180deg,
-		#7a1717 0%,
-		var(--gold-dark) 50%,
-		#7a1717 100%
-	);
+	background-image: linear-gradient(180deg, #7a1717 0%, var(--gold-dark) 50%, #7a1717 100%);
 
 	width: 100%;
 	max-width: 1300px;
