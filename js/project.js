@@ -109,6 +109,14 @@ const projectData = {
 		href: '/projects/Project-My_Favz/index.html',
 	},
 
+	loginForm: {
+		title: 'Login Form',
+		src: '/assets/project_card_images/logIn_form.png',
+		alt: 'Login Form',
+		description: `A Simple Login form design inspired by "RCCODEX" on Instagram`,
+		href: '/projects/loginForm/login.html',
+	},
+
 	defaults: {
 		title: 'Cal Codez',
 		image: './assets/Logo_Images/CalCodez2.png',
@@ -134,6 +142,7 @@ const {
 	tribute,
 	google,
 	favz,
+	loginForm,
 	defaults,
 	gridPlaceHolder,
 } = projectData;
@@ -270,9 +279,10 @@ const [
 	pokemonBtn,
 	googleBtn,
 	dashboardBtn,
-	loginsBtn,
+	loginFormBtn,
 	responsiveBtn,
 	tributeBtn,
+	loginsBtn,
 	favzBtn,
 ] = projectButtons;
 
@@ -318,6 +328,7 @@ panelProjectsDisplay(loginsBtn, logins);
 panelProjectsDisplay(responsiveBtn, responsive);
 panelProjectsDisplay(tributeBtn, tribute);
 panelProjectsDisplay(favzBtn, favz);
+panelProjectsDisplay(loginFormBtn, loginForm);
 
 const moreProjectsToggler = getById('more-projects-toggle');
 const moreProjectsContainer = getById('more-projects-container');
@@ -327,12 +338,12 @@ moreProjectsToggler.addEventListener(click, function () {
 	if (!moreProjectsContainer.classList.contains('more-active')) {
 		toggleClass(moreProjectsContainer, 'more-active');
 		for (let showButtons of moreButtons) {
-			toggleClass(showButtons, 'more-buttons-active');
+			addClass(showButtons, 'more-buttons-active');
 		}
 	} else {
 		toggleClass(moreProjectsContainer, 'more-active');
 		for (let hideButtons of moreButtons) {
-			toggleClass(hideButtons, 'more-buttons-active');
+			removeClass(hideButtons, 'more-buttons-active');
 		}
 	}
 
@@ -340,7 +351,9 @@ moreProjectsToggler.addEventListener(click, function () {
 		close.addEventListener(click, function () {
 			if (moreProjectsContainer.classList.contains('more-active')) {
 				toggleClass(moreProjectsContainer, 'more-active');
-				toggleClass(close, 'more-buttons-active');
+				for (let allBtns of moreButtons) {
+					removeClass(allBtns, 'more-buttons-active');
+				}
 			}
 		});
 	}
@@ -357,6 +370,7 @@ const [
 	gridFavz,
 	gridLogins,
 	gridDashboard,
+	gridLoginForm,
 	...gridRest
 ] = gridButtons;
 let gridTitle = getById('grid-title');
@@ -406,7 +420,7 @@ gridProjectToggle(gridPokemon, pokemon);
 gridProjectToggle(gridFavz, favz);
 gridProjectToggle(gridLogins, logins);
 gridProjectToggle(gridDashboard, dashboard);
-gridProjectToggle(gridButtons[9], gridPlaceHolder);
+gridProjectToggle(gridLoginForm, loginForm);
 gridProjectToggle(gridButtons[10], gridPlaceHolder);
 gridProjectToggle(gridButtons[11], gridPlaceHolder);
 
@@ -422,7 +436,7 @@ gridImgAssign(grid[5], pokemon.src);
 gridImgAssign(grid[6], favz.src);
 gridImgAssign(grid[7], logins.src);
 gridImgAssign(grid[8], dashboard.src);
-gridImgAssign(grid[9], gridPlaceHolder.src);
+gridImgAssign(grid[9], loginForm.src);
 gridImgAssign(grid[10], gridPlaceHolder.src);
 gridImgAssign(grid[11], gridPlaceHolder.src);
 
@@ -450,19 +464,10 @@ textContent(emailText, email);
 
 const resourceContainer = getById('resource-container');
 
-const snpChatToggles = [
-	getById('project-snapchat-toggle'),
-	getById('footer-snapChat-toggle'),
-];
-const emailToggles = [
-	getById('project-email-toggle'),
-	getById('footer-email-toggle'),
-];
+const snpChatToggles = [getById('project-snapchat-toggle'), getById('footer-snapChat-toggle')];
+const emailToggles = [getById('project-email-toggle'), getById('footer-email-toggle')];
 
-const resourceToggle = [
-	getById('resource-toggle-main'),
-	getById('resource-toggle-mobile'),
-];
+const resourceToggle = [getById('resource-toggle-main'), getById('resource-toggle-mobile')];
 
 //Snapchat and Email Container Toggle Function
 const snapAndEmailContainerToggle = (

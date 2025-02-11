@@ -366,7 +366,7 @@
 .more-projects-container .more-buttons.more-buttons-active {
 	visibility: visible;
 	transition: visibility ease-in 0.1s;
-	transition-delay: 0.3s;
+	transition-delay: 0.6s;
 }
 
 .project-title-display-container {

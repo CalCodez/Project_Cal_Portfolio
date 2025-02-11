@@ -1,742 +1,777 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.cdnfonts.com/css/greenwood-rs?styles=1399" rel="stylesheet" />
-    <link href="https://fonts.cdnfonts.com/css/lumanosimo?styles=170790" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel='stylesheet'
-      href='https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <link rel="stylesheet" href="./css/defaults.css" />
-    <link rel="stylesheet" href="./css/project.css" />
-    <link rel="stylesheet" href="./css/project-responsive.css">
-    <link rel="stylesheet" href="./css/animation.css" />
-    <title>Calvin Cortez Colbert</title>
-  </head>
-
-  <body>
-    <div id="project-body" class="project-body-container">
-      <i id="project-menu-toggler" class="fa-solid fa-bars"></i>
-      <div id="project-mobile-menu" class="project-mobile-menu ">
-        <li><a href="./index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-        <li><a class="project-contact-toggles" href="#"><i class="fa-solid fa-user"></i> Contact</a></li>
-        <li><a href="https://medium.com/@calvincortezcolbert" target="_blank"><i class=" fa-solid fa-newspaper"></i>
-            Medium</a></li>
-        <li><a id="resource-toggle-mobile" href="#"><i class="fa-solid fa-project-diagram"></i> Resources</a></li>
-        <li><a href="#devslopes"><i class="fa-solid fa-code"></i> Training</a></li>
-      </div>
-
-      <div id="project-contact-menu" class="mobile-menu  container">
-        <li><a href="https://www.facebook.com/CalvinCortezColbert" target="_blank"><i class="fa-brands fa-facebook"></i>
-            Facebook</a></li>
-        <li><a href="https://www.instagram.com/calvincortezcolbert/" target="_blank"><i
-              class="fa-brands fa-instagram"></i> Instagram</a></li>
-        <li><a href="https://www.threads.net/@calvincortezcolbert" target="_blank"><i class="fa-brands fa-threads"></i>
-            Threads</a></li>
-        <li><a id="project-snapchat-toggle" href="#"><i class="fa-brands fa-snapchat"></i> Snapchat</a></li>
-        <li><a id="project-email-toggle" href="#"><i class="fa-regular fa-envelope"></i> Email Me</a></li>
-      </div>
-
-      <div id="mainMenu" class="sticky-menu mainMenu">
-        <div class="project-navbar-container">
-          <li><a href="./index.html">Home</a></li>
-          <li><a class="project-contact-toggles" href="#">Contact</a></li>
-          <li><a href="https://medium.com/@calvincortezcolbert" target="_blank">Medium</a></li>
-          <li><a href="#devslopes">Training</a></li>
-          <li><a id="resource-toggle-main" href="#">Resources</a></li>
-        </div>
-      </div>
-      <div class="project-logo-container">
-        <img id="logo-animation" src="./assets/Logo_Images/CalCodezTransparent2.svg" alt="CalCodez Logo" />
-        <div class="lang-logo-handler html">
-          <img src="./assets/Logo_Images/html.png" alt />
-        </div>
-        <div class="lang-logo-handler css">
-          <img src="./assets/Logo_Images/css.png" alt />
-        </div>
-        <div class="lang-logo-handler git">
-          <img src="./assets/Logo_Images/github3.png" alt />
-        </div>
-        <div class="lang-logo-handler js">
-          <img src="./assets/Logo_Images/java-script.png" alt />
-        </div>
-        <div class="lang-logo-handler react">
-          <img src="./assets/Logo_Images/react.png" alt />
-        </div>
-        <div class="project-coding-container"></div>
-      </div>
-
-      <div class="project-image-container container">
-        <div class="project-image-wrapper">
-          <img src="assets/Calvin/Calvin_Two.jpg" alt />
-        </div>
-
-        <div class="project-info-container">
-          <div class="project-info-header-container">
-            <h5 class="styled-header">Projects</h5>
-          </div>
-
-          <div class="project-info-info-container">
-            <p>
-              "Many of my current projects are assignments from my training at Devslopes Academy. These include a
-              YouTube-inspired
-              project, a fully featured SaaS website landing page, a Pokémon card collection, and more. Check out each
-              project below
-              by clicking the 'view' button."
-
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="display-button-container container">
-        <h3>Select Project View</h3>
-        <div class="display-button-wrapper container">
-          <button id="panel-toggle" class="project-container-toggles flex-inactive">Panel</button>
-          <button id="cards-toggle" class="project-container-toggles">Cards</button>
-          <button id="grid-toggle" class="project-container-toggles">Grid</button>
-        </div>
-      </div>
-
-
-      <div id="projectDisplayContainer" class="display-container container">
-        <!-- ^^PANEL^^  -->
-        <div id="project-panel-container" class="project-panel-container container flex-active ">
-
-
-          <div class="container panel-control-container">
-            <h3 class="project-control-labels">Project Panel</h3>
-            <div class=" project-buttons-container container">
-              <button class="project-btns">CalTube</button>
-              <button class="project-btns">SaaS</button>
-              <button class="project-btns">Pokemon</button>
-              <button class="project-btns">Google</button>
-              <button class="project-btns">Dashboard</button>
-              <button class="project-btns">Logins</button>
-              <button class="project-btns">Responsive</button>
-              <button class="project-btns">Tribute</button>
-            </div>
-            <div class=" project-title-display-container">
-              <h3 id="project-name-display" class="project-control-labels">Cal Codez</h3>
-            </div>
-          </div>
-          <div class="container panel-display">
-            <div class="container panel-img-display-container">
-              <img id="panel-project-image" src="./assets/Logo_Images/CalCodez2.png" alt="Cal Codez Portfolio">
-            </div>
-            <div class="container panel-description-container">
-              <p id="panel-project-description">
-                Select Project From Project Panel
-              </p>
-            </div>
-            <div class="container panel-link-container">
-              <a id="panel-project-link" class="panel-project-link content" href="#">View</a>
-            </div>
-          </div>
-
-          <div id="more-projects-container" class="more-projects-container container">
-            <span id="more-projects-toggle" class="content ">
-              MORE
-            </span>
-
-            <button class="project-btns more-buttons  ">My Favz</button>
-
-
-
-          </div>
-
-
-        </div>
-
-        <!-- ^^CARDS^^-->
-        <div id="project-card-container" class="project-card-container ">
-          <!-- !! My Tube -->
-          <div class="project-card-wrapper">
-            <div class="project-title-container">
-              <h4 class="styled-header"><ruby>
-                  CalTube <rt>Project MyTube</rt>
-                </ruby></h4>
-              <div class="project-description-container">
-                "Youtube-inspired clone featuring a selection of my favorite artists and videos. This project showcases
-                female, male,
-                and group artists, along with artist pages that include a sub collection of videos from similar
-                artists."
-              </div>
-            </div>
-            <div class="flip-card-container">
-              <div class="project-card-preview-container">
-                <img id="caltube" src="/assets/project_card_images/Caltube.png" alt="Caltube youtube clone">
-              </div>
-              <!-- ``Project Card -->
-              <div class="project-card">
-                <div class="project-card-inner">
-                  <div class="project-card-front ">
-                    <i class="fa-regular fa-eye"></i>
-                  </div>
-                  <div class="project-card-back">
-
-                    <a class="btn" href="/projects/my_tube/Project_My_Tube/main.html"><i class="fa-solid fa-eye">
-                        View</i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- !! SaaS -->
-          <div class="project-card-wrapper">
-            <div class="project-title-container">
-              <h4 class="styled-header"><ruby>
-                  SaaS <rt>Project SaaS</rt>
-                </ruby></h4>
-              <div class="project-description-container">
-                "A fully featured website landing page. This was my first project that tested all my skills in HTML and
-                CSS. I learned
-                to apply elements using advanced HTML, CSS positioning, forms, inputs, and sizing to achieve a
-                professional-looking
-                website."
-              </div>
-            </div>
-            <div class="flip-card-container">
-              <div class="project-card-preview-container">
-                <img id="saas" src="/assets/project_card_images/SaaS.png" alt="SaaS landing page">
-              </div>
-              <!-- ``Project Card -->
-              <div class="project-card">
-                <div class="project-card-inner">
-                  <div class="project-card-front ">
-                    <i class="fa-regular fa-eye"></i>
-                  </div>
-                  <div class="project-card-back">
-
-                    <a class="btn" href="/projects/Saas_Project/index.html"><i class="fa-solid fa-eye">
-                        View</i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <a href="/projects/project_dashboard/indexPlanner.html"></a>
-
-          <!-- !!DashBoard -->
-          <div class="project-card-wrapper">
-            <div class="project-title-container">
-              <h4 class="styled-header header-smaller"><ruby>
-                  DashBoard <rt>Project Planner</rt>
-                </ruby></h4>
-              <div class="project-description-container">
-                "A simple Javascript driven planner project. Create reminders, notes, and the program will sort and
-                store them in a parent category container."
-              </div>
-            </div>
-            <div class="flip-card-container">
-              <div class="project-card-preview-container">
-                <img id="pokemon" src="/assets/project_card_images/dashBoard.png" alt="Dashboard">
-              </div>
-              <!-- ``Project Card -->
-              <div class="project-card">
-                <div class="project-card-inner">
-                  <div class="project-card-front ">
-                    <i class="fa-regular fa-eye"></i>
-                  </div>
-                  <div class="project-card-back">
-
-                    <a class="btn" href="/projects/project_dashboard/indexPlanner.html"><i class="fa-solid fa-eye">
-                        View</i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-
-
-          <!-- !! Pokemon Card Collection -->
-          <div class="project-card-wrapper">
-            <div class="project-title-container">
-              <h4 class="styled-header header-smaller"><ruby>
-                  Pokemon Cards <rt>Project API Website</rt>
-                </ruby></h4>
-              <div class="project-description-container">
-                "A Pokémon card collection project. This project allows users to collect and release Pokémon by adding
-                and
-                removing
-                their favorite cards. The favorites section displays the total number of cards currently in their
-                collection. The
-                project also tallies common skills among the displayed Pokémon."
-              </div>
-            </div>
-            <div class="flip-card-container">
-              <div class="project-card-preview-container">
-                <img id="pokemon" src="/assets/project_card_images/Pokemon.png" alt="pokemon cards">
-              </div>
-              <!-- ``Project Card -->
-              <div class="project-card">
-                <div class="project-card-inner">
-                  <div class="project-card-front ">
-                    <i class="fa-regular fa-eye"></i>
-                  </div>
-                  <div class="project-card-back">
-
-                    <a class="btn" href="/projects/Js_Project3_ApiWebsite/index.html"><i class="fa-solid fa-eye">
-                        View</i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- !! Google Page -->
-          <div class="project-card-wrapper">
-            <div class="project-title-container">
-              <h4 class="styled-header header-smaller"><ruby>
-                  Google Page <rt>Project Google Page</rt>
-                </ruby></h4>
-              <div class="project-description-container">
-                A simple Google homepage clone built by studying an example, with functional links. The project involved
-                replicating the
-                layout, styling, and search bar, ensuring an accurate visual match. It’s a straightforward demonstration
-                of
-                understanding basic HTML, CSS, and link functionality.
-              </div>
-            </div>
-            <div class="flip-card-container">
-              <div class="project-card-preview-container">
-                <img id="google" src="/assets/project_card_images/Google.png" alt="Google Landing Homepage">
-              </div>
-              <!-- ``Project Card -->
-              <div class="project-card">
-                <div class="project-card-inner">
-                  <div class="project-card-front ">
-                    <i class="fa-regular fa-eye"></i>
-                  </div>
-                  <div class="project-card-back">
-
-                    <a class="btn" href="/projects/Project_Google_Page/index.html"><i class="fa-solid fa-eye">
-                        View</i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- !!My Favz -->
-          <div class="project-card-wrapper">
-            <div class="project-title-container">
-              <h4 class="styled-header header-smaller"><ruby>
-                  My Favz <rt>Project My Favs</rt>
-                </ruby></h4>
-              <div class="project-description-container">
-                "A beginner project displaying a list of things I favor and don't favor, with each topic providing 3 key
-                reasons for its
-                inclusion. This project helped me learn HTML tables displayed on the homepage. User-interactive: click
-                the
-                topics to
-                jump to the pages."
-              </div>
-            </div>
-            <div class="flip-card-container">
-              <div class="project-card-preview-container">
-                <img id="myfavz" src="/assets/project_card_images/My_Favz.png" alt="My Favz">
-              </div>
-              <!-- ``Project Card -->
-              <div class="project-card">
-                <div class="project-card-inner">
-                  <div class="project-card-front ">
-                    <i class="fa-regular fa-eye"></i>
-                  </div>
-                  <div class="project-card-back">
-
-                    <a class="btn" href="/projects/Project-My_Favz/index.html"><i class="fa-solid fa-eye">
-                        View</i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- !!Social Media-->
-          <div class="project-card-wrapper">
-            <div class="project-title-container">
-              <h4 class="styled-header header-smaller"><ruby>
-                  Social Media<rt>Project Social Media Login</rt>
-                </ruby></h4>
-              <div class="project-description-container">
-                A social media login page clone project. I successfully created login pages for various platforms,
-                optimized for
-                desktop, tablet, and mobile. The displayed login page adapts based on the device used, showcasing
-                responsive design
-                skills across different screen sizes.
-              </div>
-            </div>
-            <div class="flip-card-container">
-              <div class="project-card-preview-container">
-                <img id="socialmedia" src="/assets/project_card_images/Social_Media.png" alt="Social Media Logins">
-              </div>
-              <!-- ``Project Card -->
-              <div class="project-card">
-                <div class="project-card-inner">
-                  <div class="project-card-front ">
-                    <i class="fa-regular fa-eye"></i>
-                  </div>
-                  <div class="project-card-back">
-
-                    <a class="btn" href="/projects/Project_social_pages/index.html"><i class="fa-solid fa-eye">
-                        View</i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- !!Responsive Website-->
-          <div class="project-card-wrapper">
-            <div class="project-title-container">
-              <h4 class="styled-header header-smaller"><ruby>
-                  Landing Page<rt>Project Responsive Website</rt>
-                </ruby></h4>
-              <div class="project-description-container">
-                "My first mobile-responsive project. I learned to style website elements to make them automatically
-                responsive for all
-                device types."
-              </div>
-            </div>
-            <div class="flip-card-container">
-              <div class="project-card-preview-container">
-                <img id="responsivewebsite" src="/assets/project_card_images/Responsive_website.png"
-                  alt="Responsive Website">
-              </div>
-
-              <!-- ``Project Card -->
-              <div class="project-card">
-                <div class="project-card-inner">
-                  <div class="project-card-front ">
-                    <i class="fa-regular fa-eye"></i>
-                  </div>
-                  <div class="project-card-back">
-
-                    <a class="btn" href="/projects/Project_responsive_website/index.html"><i class="fa-solid fa-eye">
-                        View</i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- !!Tribute Page Website-->
-          <div class="project-card-wrapper">
-            <div class="project-title-container">
-              <h4 class="styled-header header-smaller"><ruby>
-                  Aaliyah<rt>Project Tribute Page</rt>
-                </ruby></h4>
-              <div class="project-description-container">
-                A tribute project dedicated to the late Aaliyah. This project features a detailed biography, a curated
-                collection of her
-                music and videos, and a page highlighting the movies she starred in. Each section pays homage to her
-                impactful career
-                and lasting legacy in entertainment.
-              </div>
-            </div>
-            <div class="flip-card-container">
-              <div class="project-card-preview-container">
-                <img id="aaliyah" src="/assets/project_card_images/Aaliyah_tribute.png" alt="Aaliyah Tribute Project">
-              </div>
-              <!-- ``Project Card -->
-              <div class="project-card">
-                <div class="project-card-inner">
-                  <div class="project-card-front ">
-                    <i class="fa-regular fa-eye"></i>
-                  </div>
-                  <div class="project-card-back">
-
-                    <a class="btn" href="/projects/Project_Aaliyah/index.html"><i class="fa-solid fa-eye">
-                        View</i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ^^Grid^^ -->
-        <div id="project-grid-container" class="container project-grid-container">
-
-          <div class=" container grid-rows top-row">
-            <div class="content project-squares">
-              <img class="grid-project-img" src="#" alt="calcodez project image">
-              <div class="content square-btn-container">
-                <button class="grid-btns">Details</button>
-              </div>
-            </div>
-            <div class="content project-squares">
-              <img class="grid-project-img" src="#" alt="calcodez project image">
-              <div class="content square-btn-container">
-                <button class="grid-btns">Details</button>
-              </div>
-            </div>
-            <div class="content project-squares">
-              <img class="grid-project-img" src="#" alt="calcodez project image">
-              <div class="content square-btn-container">
-                <button class="grid-btns">Details</button>
-              </div>
-            </div>
-            <div class="content project-squares">
-              <img class="grid-project-img" src="#" alt="calcodez project image">
-              <div class="content square-btn-container">
-                <button class="grid-btns">Details</button>
-              </div>
-            </div>
-
-          </div>
-
-          <div class=" container grid-rows middle-row">
-            <div class="content project-squares">
-              <img class="grid-project-img" src="#" alt="calcodez project image">
-              <div class="content square-btn-container">
-                <button class="grid-btns">Details</button>
-              </div>
-            </div>
-            <div class="grid-description-container">
-
-              <h3 id="grid-title">
-
-              </h3>
-              <p id="grid-project-description">
-              </p>
-            </div>
-            <div class="content project-squares">
-              <img class="grid-project-img" src="#" alt="calcodez project image">
-              <div class="content square-btn-container">
-                <button class="grid-btns">Details</button>
-              </div>
-            </div>
-          </div>
-          <div class=" container grid-rows inner-row">
-            <div class="content project-squares">
-              <img class="grid-project-img" src="#" alt="calcodez project image">
-              <div class="content square-btn-container">
-                <button class="grid-btns">Details</button>
-              </div>
-            </div>
-            <div class="container grid-link-container">
-              <a class="content" id="grid-link" href="#">View</a>
-            </div>
-            <div class="content project-squares">
-              <img class="grid-project-img" src="#" alt="calcodez project image">
-              <div class="content square-btn-container">
-                <button class="grid-btns">Details</button>
-              </div>
-            </div>
-          </div>
-          <div class=" container grid-rows bottom-row">
-            <div class="content project-squares">
-              <img class="grid-project-img" src="#" alt="calcodez project image">
-              <div class="content square-btn-container">
-                <button class="grid-btns">Details</button>
-              </div>
-            </div>
-            <div class="content project-squares">
-              <img class="grid-project-img" src="#" alt="calcodez project image">
-              <div class="content square-btn-container">
-                <button class="grid-btns">Details</button>
-              </div>
-            </div>
-            <div class="content project-squares">
-              <img class="grid-project-img" src="#" alt="calcodez project image">
-              <div class="content square-btn-container">
-                <button class="grid-btns">Details</button>
-              </div>
-            </div>
-            <div class="content project-squares">
-              <img class="grid-project-img" src="#" alt="calcodez project image">
-              <div class="content square-btn-container">
-                <button class="grid-btns">Details</button>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- **Devslopes Section -->
-      <section class="devslopes-section" id="devslopes">
-        <div class="devslopes-body-container">
-          <div class="devslopes-header-container">
-            <div class="devslopes-logo-container">
-              <img src="./assets/Logo_Images/devslope-logo.jpg" alt="devslopes-logo">
-            </div>
-            <div class="devslopes-name-container container">
-              <h4>Devslopes</h4>
-              <div class="devslopes-btn-container">
-                <a class="btn" href="https://www.devslopes.com/" target="_blank">Devslopes</a>
-              </div>
-
-            </div>
-          </div>
-          <div class="devslopes-card-container ">
-            <div class="devslopes-card dev-html container">
-              <div class="project-card content">
-                <div class="devslopes-project-card-inner container">
-                  <div class="project-card-front container">
-                    <img src="./assets/Logo_Images/html.png" alt="Flaticon html logo">
-                  </div>
-                  <div class="project-card-back container">
-                    <li class="titled-li">HTML</li>
-                    <li>Bolierplate</li>
-                    <li>Styled Elements</li>
-                    <li>Buttons</li>
-                    <li>Forms and Inputs</li>
-                    <li>And More</li>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="devslopes-card dev-css container">
-              <div class="project-card container">
-                <div class="devslopes-project-card-inner container">
-                  <div class="project-card-front container">
-                    <img src="./assets/Logo_Images/css.png" alt="Flaticon css logo">
-                  </div>
-                  <div class="project-card-back container">
-                    <li class="titled-li">CSS</li>
-                    <li>Selectors</li>
-                    <li>Animations</li>
-                    <li>FlexBox</li>
-                    <li>FlexGrid</li>
-                    <li>And More</li>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="devslopes-card dev-git container ">
-              <div class="project-card container">
-                <div class="devslopes-project-card-inner">
-                  <div class="project-card-front">
-                    <img src="./assets/Logo_Images/github3.png" alt="Flaticon git logo">
-                  </div>
-                  <div class="project-card-back container">
-                    <li class="titled-li">GIT</li>
-                    <li>Config</li>
-                    <li>Pull</li>
-                    <li>Commit</li>
-                    <li>Push</li>
-                    <li>And More</li>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="devslopes-card dev-js container">
-              <div class="project-card">
-                <div class="devslopes-project-card-inner container">
-                  <div class="project-card-front container">
-                    <img src="./assets/Logo_Images/java-script.png" alt="Flaticon javascript logo">
-                  </div>
-                  <div class="project-card-back container">
-                    <li class="titled-li">JS</li>
-
-                    <li>Data Types</li>
-                    <li>Functions</li>
-                    <li>Call Backs</li>
-                    <li>Promises</li>
-                    <li>And More</li>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="devslopes-card dev-react container ">
-              <div class="project-card">
-                <div class="devslopes-project-card-inner container">
-                  <div class="project-card-front">
-                    <img src="./assets/Logo_Images/react.png" alt="Flaticon react logo">
-                  </div>
-                  <div class="project-card-back container" id="react-card-back">
-                    <li class="titled-li">REACT</li>
-                    <li>Stateless</li>
-                    <li>Functional Componets</li>
-                    <li>Class Componets</li>
-                    <li>Conditional Rendering </li>
-                    <li>And More</li>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class=" devslopes-marquee-container">
-            <marquee behavior="scroll" direction="left">
-              Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit
-              www.Devslopes.com |
-              Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit
-              www.Devslopes.com |
-              Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit
-              www.Devslopes.com
-              Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit
-              www.Devslopes.com |
-              Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit
-              www.Devslopes.com |
-              Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit
-              www.Devslopes.com
-            </marquee>
-          </div>
-        </div>
-      </section>
-
-
-
-      <footer>
-
-        <div class="container footer-contact-container">
-
-          <a class="content" href="https://www.facebook.com/CalvinCortezColbert" target="_blank"><i
-              class="fa-brands fa-facebook"></i> Facebook</a>
-          <a class="content" href="https://www.instagram.com/calvincortezcolbert/" target="_blank"><i
-              class="fa-brands fa-instagram"></i> Instagram</a>
-          <a class="content" href="https://www.threads.net/@calvincortezcolbert" target="_blank"><i
-              class="fa-brands fa-threads"></i> Threads</a>
-          <a id="footer-snapChat-toggle" class="content" href="#project-body"><i class="fa-brands fa-snapchat"></i>
-            SnapChat</a>
-          <a id="footer-email-toggle" class="content" href="#project-body"><i class="fa-regular fa-envelope"></i>
-            Email Me</a>
-
-
-        </div>
-
-
-      </footer>
-
-
-
-      <div id="snapchat-container" class="snapchat-container  container">
-      </div>
-      <div id="email-container" class="email-container  container"></div>
-      <div id="resource-container" class="resource-container container">
-        <p>Project Images And Icons</p>
-
-        <a href="https://www.flaticon.com" target="_blank">FlatIcons</a>
-        <a href="#">FontAwesome</a>
-      </div>
-
-
-
-
-
-    </div>
-
-
-
-    <script src="./js/project.js"></script>
-  </body>
-
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://fonts.cdnfonts.com/css/greenwood-rs?styles=1399" rel="stylesheet" />
+		<link href="https://fonts.cdnfonts.com/css/lumanosimo?styles=170790" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+		<link rel="stylesheet" href="./css/defaults.css" />
+		<link rel="stylesheet" href="./css/project.css" />
+		<link rel="stylesheet" href="./css/project-responsive.css" />
+		<link rel="stylesheet" href="./css/animation.css" />
+		<title>Calvin Cortez Colbert</title>
+	</head>
+
+	<body>
+		<div id="project-body" class="project-body-container">
+			<i id="project-menu-toggler" class="fa-solid fa-bars"></i>
+			<div id="project-mobile-menu" class="project-mobile-menu">
+				<li>
+					<a href="./index.html"><i class="fa-solid fa-house"></i> Home</a>
+				</li>
+				<li>
+					<a class="project-contact-toggles" href="#"><i class="fa-solid fa-user"></i> Contact</a>
+				</li>
+				<li>
+					<a href="https://medium.com/@calvincortezcolbert" target="_blank"
+						><i class="fa-solid fa-newspaper"></i> Medium</a
+					>
+				</li>
+				<li>
+					<a id="resource-toggle-mobile" href="#"
+						><i class="fa-solid fa-project-diagram"></i> Resources</a
+					>
+				</li>
+				<li>
+					<a href="#devslopes"><i class="fa-solid fa-code"></i> Training</a>
+				</li>
+			</div>
+
+			<div id="project-contact-menu" class="mobile-menu container">
+				<li>
+					<a href="https://www.facebook.com/CalvinCortezColbert" target="_blank"
+						><i class="fa-brands fa-facebook"></i> Facebook</a
+					>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/calvincortezcolbert/" target="_blank"
+						><i class="fa-brands fa-instagram"></i> Instagram</a
+					>
+				</li>
+				<li>
+					<a href="https://www.threads.net/@calvincortezcolbert" target="_blank"
+						><i class="fa-brands fa-threads"></i> Threads</a
+					>
+				</li>
+				<li>
+					<a id="project-snapchat-toggle" href="#"
+						><i class="fa-brands fa-snapchat"></i> Snapchat</a
+					>
+				</li>
+				<li>
+					<a id="project-email-toggle" href="#"><i class="fa-regular fa-envelope"></i> Email Me</a>
+				</li>
+			</div>
+
+			<div id="mainMenu" class="sticky-menu mainMenu">
+				<div class="project-navbar-container">
+					<li><a href="./index.html">Home</a></li>
+					<li><a class="project-contact-toggles" href="#">Contact</a></li>
+					<li><a href="https://medium.com/@calvincortezcolbert" target="_blank">Medium</a></li>
+					<li><a href="#devslopes">Training</a></li>
+					<li><a id="resource-toggle-main" href="#">Resources</a></li>
+				</div>
+			</div>
+			<div class="project-logo-container">
+				<img
+					id="logo-animation"
+					src="./assets/Logo_Images/CalCodezTransparent2.svg"
+					alt="CalCodez Logo" />
+				<div class="lang-logo-handler html">
+					<img src="./assets/Logo_Images/html.png" alt />
+				</div>
+				<div class="lang-logo-handler css">
+					<img src="./assets/Logo_Images/css.png" alt />
+				</div>
+				<div class="lang-logo-handler git">
+					<img src="./assets/Logo_Images/github3.png" alt />
+				</div>
+				<div class="lang-logo-handler js">
+					<img src="./assets/Logo_Images/java-script.png" alt />
+				</div>
+				<div class="lang-logo-handler react">
+					<img src="./assets/Logo_Images/react.png" alt />
+				</div>
+				<div class="project-coding-container"></div>
+			</div>
+
+			<div class="project-image-container container">
+				<div class="project-image-wrapper">
+					<img src="assets/Calvin/Calvin_Two.jpg" alt />
+				</div>
+
+				<div class="project-info-container">
+					<div class="project-info-header-container">
+						<h5 class="styled-header">Projects</h5>
+					</div>
+
+					<div class="project-info-info-container">
+						<p>
+							"Many of my current projects are assignments from my training at Devslopes Academy.
+							These include a YouTube-inspired project, a fully featured SaaS website landing page,
+							a Pokémon card collection, and more. Check out each project below by clicking the
+							'view' button."
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="display-button-container container">
+				<h3>Select Project View</h3>
+				<div class="display-button-wrapper container">
+					<button id="panel-toggle" class="project-container-toggles flex-inactive">Panel</button>
+					<button id="cards-toggle" class="project-container-toggles">Cards</button>
+					<button id="grid-toggle" class="project-container-toggles">Grid</button>
+				</div>
+			</div>
+
+			<div id="projectDisplayContainer" class="display-container container">
+				<!-- ^^PANEL^^  -->
+				<div id="project-panel-container" class="project-panel-container container flex-active">
+					<div class="container panel-control-container">
+						<h3 class="project-control-labels">Project Panel</h3>
+						<div class="project-buttons-container container">
+							<button class="project-btns">CalTube</button>
+							<button class="project-btns">SaaS</button>
+							<button class="project-btns">Pokemon</button>
+							<button class="project-btns">Google</button>
+							<button class="project-btns">Dashboard</button>
+							<button class="project-btns">Login_Form</button>
+							<button class="project-btns">Responsive</button>
+							<button class="project-btns">Tribute</button>
+						</div>
+						<div class="project-title-display-container">
+							<h3 id="project-name-display" class="project-control-labels">Cal Codez</h3>
+						</div>
+					</div>
+					<div class="container panel-display">
+						<div class="container panel-img-display-container">
+							<img
+								id="panel-project-image"
+								src="./assets/Logo_Images/CalCodez2.png"
+								alt="Cal Codez Portfolio" />
+						</div>
+						<div class="container panel-description-container">
+							<p id="panel-project-description">Select Project From Project Panel</p>
+						</div>
+						<div class="container panel-link-container">
+							<a id="panel-project-link" class="panel-project-link content" href="#">View</a>
+						</div>
+					</div>
+
+					<div id="more-projects-container" class="more-projects-container container">
+						<span id="more-projects-toggle" class="content"> MORE </span>
+
+						<button class="project-btns more-buttons">My Favz</button>
+						<button class="project-btns more-buttons">Logins</button>
+					</div>
+				</div>
+
+				<!-- ^^CARDS^^-->
+				<div id="project-card-container" class="project-card-container">
+					<!-- !! My Tube -->
+					<div class="project-card-wrapper">
+						<div class="project-title-container">
+							<h4 class="styled-header">
+								<ruby> CalTube <rt>Project MyTube</rt> </ruby>
+							</h4>
+							<div class="project-description-container">
+								"Youtube-inspired clone featuring a selection of my favorite artists and videos.
+								This project showcases female, male, and group artists, along with artist pages that
+								include a sub collection of videos from similar artists."
+							</div>
+						</div>
+						<div class="flip-card-container">
+							<div class="project-card-preview-container">
+								<img
+									id="caltube"
+									src="/assets/project_card_images/Caltube.png"
+									alt="Caltube youtube clone" />
+							</div>
+							<!-- ``Project Card -->
+							<div class="project-card">
+								<div class="project-card-inner">
+									<div class="project-card-front">
+										<i class="fa-regular fa-eye"></i>
+									</div>
+									<div class="project-card-back">
+										<a class="btn" href="/projects/my_tube/Project_My_Tube/main.html"
+											><i class="fa-solid fa-eye"> View</i></a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- !! SaaS -->
+					<div class="project-card-wrapper">
+						<div class="project-title-container">
+							<h4 class="styled-header">
+								<ruby> SaaS <rt>Project SaaS</rt> </ruby>
+							</h4>
+							<div class="project-description-container">
+								"A fully featured website landing page. This was my first project that tested all my
+								skills in HTML and CSS. I learned to apply elements using advanced HTML, CSS
+								positioning, forms, inputs, and sizing to achieve a professional-looking website."
+							</div>
+						</div>
+						<div class="flip-card-container">
+							<div class="project-card-preview-container">
+								<img id="saas" src="/assets/project_card_images/SaaS.png" alt="SaaS landing page" />
+							</div>
+							<!-- ``Project Card -->
+							<div class="project-card">
+								<div class="project-card-inner">
+									<div class="project-card-front">
+										<i class="fa-regular fa-eye"></i>
+									</div>
+									<div class="project-card-back">
+										<a class="btn" href="/projects/Saas_Project/index.html"
+											><i class="fa-solid fa-eye"> View</i></a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<a href="/projects/project_dashboard/indexPlanner.html"></a>
+
+					<!-- !!DashBoard -->
+					<div class="project-card-wrapper">
+						<div class="project-title-container">
+							<h4 class="styled-header header-smaller">
+								<ruby> DashBoard <rt>Project Planner</rt> </ruby>
+							</h4>
+							<div class="project-description-container">
+								"A simple Javascript driven planner project. Create reminders, notes, and the
+								program will sort and store them in a parent category container."
+							</div>
+						</div>
+						<div class="flip-card-container">
+							<div class="project-card-preview-container">
+								<img id="pokemon" src="/assets/project_card_images/dashBoard.png" alt="Dashboard" />
+							</div>
+							<!-- ``Project Card -->
+							<div class="project-card">
+								<div class="project-card-inner">
+									<div class="project-card-front">
+										<i class="fa-regular fa-eye"></i>
+									</div>
+									<div class="project-card-back">
+										<a class="btn" href="/projects/project_dashboard/indexPlanner.html"
+											><i class="fa-solid fa-eye"> View</i></a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- !! Pokemon Card Collection -->
+					<div class="project-card-wrapper">
+						<div class="project-title-container">
+							<h4 class="styled-header header-smaller">
+								<ruby> Pokemon Cards <rt>Project API Website</rt> </ruby>
+							</h4>
+							<div class="project-description-container">
+								"A Pokémon card collection project. This project allows users to collect and release
+								Pokémon by adding and removing their favorite cards. The favorites section displays
+								the total number of cards currently in their collection. The project also tallies
+								common skills among the displayed Pokémon."
+							</div>
+						</div>
+						<div class="flip-card-container">
+							<div class="project-card-preview-container">
+								<img
+									id="pokemon"
+									src="/assets/project_card_images/Pokemon.png"
+									alt="pokemon cards" />
+							</div>
+							<!-- ``Project Card -->
+							<div class="project-card">
+								<div class="project-card-inner">
+									<div class="project-card-front">
+										<i class="fa-regular fa-eye"></i>
+									</div>
+									<div class="project-card-back">
+										<a class="btn" href="/projects/Js_Project3_ApiWebsite/index.html"
+											><i class="fa-solid fa-eye"> View</i></a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<a href="/projects/loginForm/login.html"></a>
+
+					<!-- !!Login Form -->
+					<div class="project-card-wrapper">
+						<div class="project-title-container">
+							<h4 class="styled-header">
+								<ruby> Login Form <rt>Project Login Form</rt> </ruby>
+							</h4>
+							<div class="project-description-container">
+								"A Simple Login form design inspired by "RCCODEX" on Instagram"
+							</div>
+						</div>
+						<div class="flip-card-container">
+							<div class="project-card-preview-container">
+								<img
+									id="loginForm"
+									src="/assets/project_card_images/logIn_form.png"
+									alt="Login In Form" />
+							</div>
+							<!-- ``Project Card -->
+							<div class="project-card">
+								<div class="project-card-inner">
+									<div class="project-card-front">
+										<i class="fa-regular fa-eye"></i>
+									</div>
+									<div class="project-card-back">
+										<a class="btn" href="/projects/loginForm/login.html"
+											><i class="fa-solid fa-eye"> View</i></a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- !! Google Page -->
+					<div class="project-card-wrapper">
+						<div class="project-title-container">
+							<h4 class="styled-header header-smaller">
+								<ruby> Google Page <rt>Project Google Page</rt> </ruby>
+							</h4>
+							<div class="project-description-container">
+								A simple Google homepage clone built by studying an example, with functional links.
+								The project involved replicating the layout, styling, and search bar, ensuring an
+								accurate visual match. It’s a straightforward demonstration of understanding basic
+								HTML, CSS, and link functionality.
+							</div>
+						</div>
+						<div class="flip-card-container">
+							<div class="project-card-preview-container">
+								<img
+									id="google"
+									src="/assets/project_card_images/Google.png"
+									alt="Google Landing Homepage" />
+							</div>
+							<!-- ``Project Card -->
+							<div class="project-card">
+								<div class="project-card-inner">
+									<div class="project-card-front">
+										<i class="fa-regular fa-eye"></i>
+									</div>
+									<div class="project-card-back">
+										<a class="btn" href="/projects/Project_Google_Page/index.html"
+											><i class="fa-solid fa-eye"> View</i></a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- !!My Favz -->
+					<div class="project-card-wrapper">
+						<div class="project-title-container">
+							<h4 class="styled-header header-smaller">
+								<ruby> My Favz <rt>Project My Favs</rt> </ruby>
+							</h4>
+							<div class="project-description-container">
+								"A beginner project displaying a list of things I favor and don't favor, with each
+								topic providing 3 key reasons for its inclusion. This project helped me learn HTML
+								tables displayed on the homepage. User-interactive: click the topics to jump to the
+								pages."
+							</div>
+						</div>
+						<div class="flip-card-container">
+							<div class="project-card-preview-container">
+								<img id="myfavz" src="/assets/project_card_images/My_Favz.png" alt="My Favz" />
+							</div>
+							<!-- ``Project Card -->
+							<div class="project-card">
+								<div class="project-card-inner">
+									<div class="project-card-front">
+										<i class="fa-regular fa-eye"></i>
+									</div>
+									<div class="project-card-back">
+										<a class="btn" href="/projects/Project-My_Favz/index.html"
+											><i class="fa-solid fa-eye"> View</i></a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- !!Social Media-->
+					<div class="project-card-wrapper">
+						<div class="project-title-container">
+							<h4 class="styled-header header-smaller">
+								<ruby> Social Media<rt>Project Social Media Login</rt> </ruby>
+							</h4>
+							<div class="project-description-container">
+								A social media login page clone project. I successfully created login pages for
+								various platforms, optimized for desktop, tablet, and mobile. The displayed login
+								page adapts based on the device used, showcasing responsive design skills across
+								different screen sizes.
+							</div>
+						</div>
+						<div class="flip-card-container">
+							<div class="project-card-preview-container">
+								<img
+									id="socialmedia"
+									src="/assets/project_card_images/Social_Media.png"
+									alt="Social Media Logins" />
+							</div>
+							<!-- ``Project Card -->
+							<div class="project-card">
+								<div class="project-card-inner">
+									<div class="project-card-front">
+										<i class="fa-regular fa-eye"></i>
+									</div>
+									<div class="project-card-back">
+										<a class="btn" href="/projects/Project_social_pages/index.html"
+											><i class="fa-solid fa-eye"> View</i></a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- !!Responsive Website-->
+					<div class="project-card-wrapper">
+						<div class="project-title-container">
+							<h4 class="styled-header header-smaller">
+								<ruby> Landing Page<rt>Project Responsive Website</rt> </ruby>
+							</h4>
+							<div class="project-description-container">
+								"My first mobile-responsive project. I learned to style website elements to make
+								them automatically responsive for all device types."
+							</div>
+						</div>
+						<div class="flip-card-container">
+							<div class="project-card-preview-container">
+								<img
+									id="responsivewebsite"
+									src="/assets/project_card_images/Responsive_website.png"
+									alt="Responsive Website" />
+							</div>
+
+							<!-- ``Project Card -->
+							<div class="project-card">
+								<div class="project-card-inner">
+									<div class="project-card-front">
+										<i class="fa-regular fa-eye"></i>
+									</div>
+									<div class="project-card-back">
+										<a class="btn" href="/projects/Project_responsive_website/index.html"
+											><i class="fa-solid fa-eye"> View</i></a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- !!Tribute Page Website-->
+					<div class="project-card-wrapper">
+						<div class="project-title-container">
+							<h4 class="styled-header header-smaller">
+								<ruby> Aaliyah<rt>Project Tribute Page</rt> </ruby>
+							</h4>
+							<div class="project-description-container">
+								A tribute project dedicated to the late Aaliyah. This project features a detailed
+								biography, a curated collection of her music and videos, and a page highlighting the
+								movies she starred in. Each section pays homage to her impactful career and lasting
+								legacy in entertainment.
+							</div>
+						</div>
+						<div class="flip-card-container">
+							<div class="project-card-preview-container">
+								<img
+									id="aaliyah"
+									src="/assets/project_card_images/Aaliyah_tribute.png"
+									alt="Aaliyah Tribute Project" />
+							</div>
+							<!-- ``Project Card -->
+							<div class="project-card">
+								<div class="project-card-inner">
+									<div class="project-card-front">
+										<i class="fa-regular fa-eye"></i>
+									</div>
+									<div class="project-card-back">
+										<a class="btn" href="/projects/Project_Aaliyah/index.html"
+											><i class="fa-solid fa-eye"> View</i></a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ^^Grid^^ -->
+				<div id="project-grid-container" class="container project-grid-container">
+					<div class="container grid-rows top-row">
+						<div class="content project-squares">
+							<img class="grid-project-img" src="#" alt="calcodez project image" />
+							<div class="content square-btn-container">
+								<button class="grid-btns">Details</button>
+							</div>
+						</div>
+						<div class="content project-squares">
+							<img class="grid-project-img" src="#" alt="calcodez project image" />
+							<div class="content square-btn-container">
+								<button class="grid-btns">Details</button>
+							</div>
+						</div>
+						<div class="content project-squares">
+							<img class="grid-project-img" src="#" alt="calcodez project image" />
+							<div class="content square-btn-container">
+								<button class="grid-btns">Details</button>
+							</div>
+						</div>
+						<div class="content project-squares">
+							<img class="grid-project-img" src="#" alt="calcodez project image" />
+							<div class="content square-btn-container">
+								<button class="grid-btns">Details</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="container grid-rows middle-row">
+						<div class="content project-squares">
+							<img class="grid-project-img" src="#" alt="calcodez project image" />
+							<div class="content square-btn-container">
+								<button class="grid-btns">Details</button>
+							</div>
+						</div>
+						<div class="grid-description-container">
+							<h3 id="grid-title"></h3>
+							<p id="grid-project-description"></p>
+						</div>
+						<div class="content project-squares">
+							<img class="grid-project-img" src="#" alt="calcodez project image" />
+							<div class="content square-btn-container">
+								<button class="grid-btns">Details</button>
+							</div>
+						</div>
+					</div>
+					<div class="container grid-rows inner-row">
+						<div class="content project-squares">
+							<img class="grid-project-img" src="#" alt="calcodez project image" />
+							<div class="content square-btn-container">
+								<button class="grid-btns">Details</button>
+							</div>
+						</div>
+						<div class="container grid-link-container">
+							<a class="content" id="grid-link" href="#">View</a>
+						</div>
+						<div class="content project-squares">
+							<img class="grid-project-img" src="#" alt="calcodez project image" />
+							<div class="content square-btn-container">
+								<button class="grid-btns">Details</button>
+							</div>
+						</div>
+					</div>
+					<div class="container grid-rows bottom-row">
+						<div class="content project-squares">
+							<img class="grid-project-img" src="#" alt="calcodez project image" />
+							<div class="content square-btn-container">
+								<button class="grid-btns">Details</button>
+							</div>
+						</div>
+						<div class="content project-squares">
+							<img class="grid-project-img" src="#" alt="calcodez project image" />
+							<div class="content square-btn-container">
+								<button class="grid-btns">Details</button>
+							</div>
+						</div>
+						<div class="content project-squares">
+							<img class="grid-project-img" src="#" alt="calcodez project image" />
+							<div class="content square-btn-container">
+								<button class="grid-btns">Details</button>
+							</div>
+						</div>
+						<div class="content project-squares">
+							<img class="grid-project-img" src="#" alt="calcodez project image" />
+							<div class="content square-btn-container">
+								<button class="grid-btns">Details</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- **Devslopes Section -->
+			<section class="devslopes-section" id="devslopes">
+				<div class="devslopes-body-container">
+					<div class="devslopes-header-container">
+						<div class="devslopes-logo-container">
+							<img src="./assets/Logo_Images/devslope-logo.jpg" alt="devslopes-logo" />
+						</div>
+						<div class="devslopes-name-container container">
+							<h4>Devslopes</h4>
+							<div class="devslopes-btn-container">
+								<a class="btn" href="https://www.devslopes.com/" target="_blank">Devslopes</a>
+							</div>
+						</div>
+					</div>
+					<div class="devslopes-card-container">
+						<div class="devslopes-card dev-html container">
+							<div class="project-card content">
+								<div class="devslopes-project-card-inner container">
+									<div class="project-card-front container">
+										<img src="./assets/Logo_Images/html.png" alt="Flaticon html logo" />
+									</div>
+									<div class="project-card-back container">
+										<li class="titled-li">HTML</li>
+										<li>Bolierplate</li>
+										<li>Styled Elements</li>
+										<li>Buttons</li>
+										<li>Forms and Inputs</li>
+										<li>And More</li>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="devslopes-card dev-css container">
+							<div class="project-card container">
+								<div class="devslopes-project-card-inner container">
+									<div class="project-card-front container">
+										<img src="./assets/Logo_Images/css.png" alt="Flaticon css logo" />
+									</div>
+									<div class="project-card-back container">
+										<li class="titled-li">CSS</li>
+										<li>Selectors</li>
+										<li>Animations</li>
+										<li>FlexBox</li>
+										<li>FlexGrid</li>
+										<li>And More</li>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="devslopes-card dev-git container">
+							<div class="project-card container">
+								<div class="devslopes-project-card-inner">
+									<div class="project-card-front">
+										<img src="./assets/Logo_Images/github3.png" alt="Flaticon git logo" />
+									</div>
+									<div class="project-card-back container">
+										<li class="titled-li">GIT</li>
+										<li>Config</li>
+										<li>Pull</li>
+										<li>Commit</li>
+										<li>Push</li>
+										<li>And More</li>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="devslopes-card dev-js container">
+							<div class="project-card">
+								<div class="devslopes-project-card-inner container">
+									<div class="project-card-front container">
+										<img
+											src="./assets/Logo_Images/java-script.png"
+											alt="Flaticon javascript logo" />
+									</div>
+									<div class="project-card-back container">
+										<li class="titled-li">JS</li>
+
+										<li>Data Types</li>
+										<li>Functions</li>
+										<li>Call Backs</li>
+										<li>Promises</li>
+										<li>And More</li>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="devslopes-card dev-react container">
+							<div class="project-card">
+								<div class="devslopes-project-card-inner container">
+									<div class="project-card-front">
+										<img src="./assets/Logo_Images/react.png" alt="Flaticon react logo" />
+									</div>
+									<div class="project-card-back container" id="react-card-back">
+										<li class="titled-li">REACT</li>
+										<li>Stateless</li>
+										<li>Functional Componets</li>
+										<li>Class Componets</li>
+										<li>Conditional Rendering</li>
+										<li>And More</li>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="devslopes-marquee-container">
+						<marquee behavior="scroll" direction="left">
+							Visit www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit
+							www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit
+							www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit
+							www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com Visit
+							www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit
+							www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit
+							www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com | Visit
+							www.Devslopes.com | Visit www.Devslopes.com | Visit www.Devslopes.com
+						</marquee>
+					</div>
+				</div>
+			</section>
+
+			<footer>
+				<div class="container footer-contact-container">
+					<a class="content" href="https://www.facebook.com/CalvinCortezColbert" target="_blank"
+						><i class="fa-brands fa-facebook"></i> Facebook</a
+					>
+					<a class="content" href="https://www.instagram.com/calvincortezcolbert/" target="_blank"
+						><i class="fa-brands fa-instagram"></i> Instagram</a
+					>
+					<a class="content" href="https://www.threads.net/@calvincortezcolbert" target="_blank"
+						><i class="fa-brands fa-threads"></i> Threads</a
+					>
+					<a id="footer-snapChat-toggle" class="content" href="#project-body"
+						><i class="fa-brands fa-snapchat"></i> SnapChat</a
+					>
+					<a id="footer-email-toggle" class="content" href="#project-body"
+						><i class="fa-regular fa-envelope"></i> Email Me</a
+					>
+				</div>
+			</footer>
+
+			<div id="snapchat-container" class="snapchat-container container"></div>
+			<div id="email-container" class="email-container container"></div>
+			<div id="resource-container" class="resource-container container">
+				<p>Project Images And Icons</p>
+
+				<a href="https://www.flaticon.com" target="_blank">FlatIcons</a>
+				<a href="#">FontAwesome</a>
+			</div>
+		</div>
+
+		<script src="./js/project.js"></script>
+	</body>
 </html>
