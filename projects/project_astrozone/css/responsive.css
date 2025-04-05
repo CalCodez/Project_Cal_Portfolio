@@ -208,9 +208,6 @@
 	.astro-gallery-section {
 		height: 50vh;
 	}
-	* {
-		outline: var(--ol);
-	}
 
 	.backsplash-container {
 		height: 100%;
