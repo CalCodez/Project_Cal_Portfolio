@@ -96,6 +96,13 @@ const projectData = {
               impactful career and lasting legacy in entertainment.`,
 		href: '/projects/Project_Aaliyah/index.html',
 	},
+	astroZone: {
+		title: 'Astro Zone',
+		src: '/assets/project_card_images/astroZone.png',
+		alt: 'Astro Zone project',
+		description: `An astrology project based around the 12 sings in the zodiac. It features a zodiac image gallery, a zodiac facts, and a feature to view five famous people for each zodiac sign.`,
+		href: '/projects/project_astroZone/index.html',
+	},
 
 	favz: {
 		title: 'My Favz',
@@ -131,6 +138,7 @@ const projectData = {
 		description: `MORE TO COME`,
 	},
 };
+
 //Project Data Object Destructuring
 const {
 	saas,
@@ -140,6 +148,7 @@ const {
 	dashboard,
 	logins,
 	tribute,
+	astroZone,
 	google,
 	favz,
 	loginForm,
@@ -280,11 +289,14 @@ const [
 	googleBtn,
 	dashboardBtn,
 	loginFormBtn,
-	responsiveBtn,
+	astroZoneBtn,
 	tributeBtn,
 	loginsBtn,
 	favzBtn,
+	responsiveBtn,
 ] = projectButtons;
+
+console.log(projectButtons);
 
 //Project Panel Display Function
 const panelProjectsDisplay = (toggler, obj) => {
@@ -325,10 +337,11 @@ panelProjectsDisplay(pokemonBtn, pokemon);
 panelProjectsDisplay(googleBtn, google);
 panelProjectsDisplay(dashboardBtn, dashboard);
 panelProjectsDisplay(loginsBtn, logins);
-panelProjectsDisplay(responsiveBtn, responsive);
+panelProjectsDisplay(astroZoneBtn, astroZone);
 panelProjectsDisplay(tributeBtn, tribute);
 panelProjectsDisplay(favzBtn, favz);
 panelProjectsDisplay(loginFormBtn, loginForm);
+panelProjectsDisplay(responsiveBtn, responsive);
 
 const moreProjectsToggler = getById('more-projects-toggle');
 const moreProjectsContainer = getById('more-projects-container');
@@ -371,6 +384,7 @@ const [
 	gridLogins,
 	gridDashboard,
 	gridLoginForm,
+	gridAstroZone,
 	...gridRest
 ] = gridButtons;
 let gridTitle = getById('grid-title');
@@ -421,7 +435,7 @@ gridProjectToggle(gridFavz, favz);
 gridProjectToggle(gridLogins, logins);
 gridProjectToggle(gridDashboard, dashboard);
 gridProjectToggle(gridLoginForm, loginForm);
-gridProjectToggle(gridButtons[10], gridPlaceHolder);
+gridProjectToggle(gridAstroZone, astroZone);
 gridProjectToggle(gridButtons[11], gridPlaceHolder);
 
 //Static Grid Image Assignments
@@ -437,7 +451,7 @@ gridImgAssign(grid[6], favz.src);
 gridImgAssign(grid[7], logins.src);
 gridImgAssign(grid[8], dashboard.src);
 gridImgAssign(grid[9], loginForm.src);
-gridImgAssign(grid[10], gridPlaceHolder.src);
+gridImgAssign(grid[10], astroZone.src);
 gridImgAssign(grid[11], gridPlaceHolder.src);
 
 //**Snapchat, Email, Resource Containers Vars and Function */
