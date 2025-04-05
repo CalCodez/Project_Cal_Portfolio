@@ -200,6 +200,9 @@
 }
 
 @media (max-width: 468px) {
+	* {
+		outline: var(--ol);
+	}
 	body {
 		overflow-x: hidden;
 	}
