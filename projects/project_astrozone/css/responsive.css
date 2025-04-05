@@ -133,10 +133,11 @@
 	html {
 		padding: 0;
 		overflow-x: hidden;
+		outline: var(--olB);
 	}
 
-	* {
-		outline: var(--ol);
+	body {
+		outline: var(--olY);
 	}
 
 	.header-container {
