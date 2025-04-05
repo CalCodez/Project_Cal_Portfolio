@@ -171,8 +171,9 @@
 	}
 
 	.reel-control-container {
-		width: 200px;
+		width: fit-content;
 		margin-right: 5px;
+		column-gap: 5px;
 	}
 
 	.astro-stage {
