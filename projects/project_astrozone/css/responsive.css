@@ -135,6 +135,10 @@
 		overflow-x: hidden;
 	}
 
+	* {
+		outline: var(--ol);
+	}
+
 	.header-container {
 		justify-content: center;
 	}
