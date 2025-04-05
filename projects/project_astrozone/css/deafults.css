@@ -73,6 +73,7 @@ body {
 	max-width: 1440px;
 	align-items: center;
 	justify-self: center;
+	box-sizing: border-box;
 }
 
 h1,
