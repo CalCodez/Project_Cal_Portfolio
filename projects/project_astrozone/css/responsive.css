@@ -139,6 +139,10 @@
 		outline: var(--ol);
 	}
 
+	body {
+		outline: var(--olR);
+	}
+
 	.header-container {
 		justify-content: center;
 	}
