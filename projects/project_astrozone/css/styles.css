@@ -146,6 +146,7 @@
 	bottom: 10px;
 	right: 300px;
 	justify-content: space-evenly;
+	outline: var(--ol);
 }
 
 .reel-control-container button {
