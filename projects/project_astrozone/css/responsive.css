@@ -133,9 +133,7 @@
 	html {
 		padding: 0;
 		overflow-x: hidden;
-		outline: var(--olY);
 		width: 100%;
-		justify-self: center;
 	}
 
 	.header-container {
