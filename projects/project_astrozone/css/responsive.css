@@ -1,0 +1,277 @@
+@media (min-width: 768px) and (max-width: 1367px) {
+	.backsplash-container {
+		width: 60%;
+		height: 80%;
+	}
+
+	.backsplash-container > img {
+		object-fit: cover;
+	}
+
+	h2 {
+		font-size: 40px;
+	}
+
+	.famous-header-wrapper {
+		width: 100%;
+	}
+}
+
+@media (max-width: 1025px) {
+	.astro-stage {
+		width: 95vw;
+	}
+	.famous-astros {
+		width: 95vw;
+	}
+
+	.famous-people-wrapper {
+		width: fit-content;
+	}
+}
+
+@media (max-width: 768px) {
+	#menu-toggler {
+		right: 10px;
+	}
+	.fixed-menu {
+		right: 0;
+	}
+
+	.backsplash-container {
+		width: 86%;
+		height: 83%;
+	}
+
+	.reel-wrapper {
+		width: 45%;
+	}
+
+	.card-reel {
+		column-gap: 90px;
+	}
+
+	.astro-stage {
+		width: 95vw;
+		height: fit-content;
+		flex-direction: column;
+		place-items: center;
+		margin-top: 100px;
+	}
+
+	h2 {
+		font-size: 40px;
+	}
+
+	.header-icon-container {
+		height: 60px;
+		width: 60px;
+	}
+
+	.header-icon-container i {
+		font-size: 40px;
+	}
+
+	.astro-stage > div {
+		width: 100%;
+	}
+
+	.astro-stage-left {
+		margin-top: 120px;
+		height: 500px;
+	}
+	.astro-stage-right {
+		height: 500px;
+	}
+
+	.astro-stage-right > div,
+	.astro-stage-left > div {
+		width: 60%;
+	}
+
+	.astro-sign-select-container {
+		width: 80%;
+		height: 60%;
+		position: absolute;
+		top: 20%;
+	}
+
+	.option-container {
+		width: 100px;
+		height: 100px;
+		gap: 5px;
+	}
+
+	.birthstone-container {
+		height: 40%;
+	}
+
+	.month-1-container div:nth-child(3),
+	.month-2-container div:nth-child(3) {
+		width: 20%;
+	}
+
+	.famous-astros {
+		width: 90%;
+		justify-content: center;
+	}
+
+	.famous-header-wrapper {
+		width: 100%;
+		text-align: center;
+	}
+
+	.famous-curtain.curtain-open {
+		width: 100%;
+	}
+	.famous-people-wrapper {
+		width: 100%;
+	}
+}
+
+@media (max-width: 581px) {
+	.header-container {
+		justify-content: center;
+	}
+	.backsplash-container {
+		width: 100%;
+		height: 80%;
+	}
+
+	.reel-wrapper {
+		width: 33%;
+	}
+
+	.reel-wrapper::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 10px;
+		height: 100%;
+		filter: blur(80px);
+		z-index: 3;
+		background: var(--main-bg);
+	}
+
+	.card-reel {
+		column-gap: 100px;
+	}
+	.astro-card {
+		height: 180px;
+		width: 120px;
+	}
+
+	.reel-control-container {
+		width: 200px;
+		margin-right: 5px;
+	}
+
+	.astro-stage {
+		width: 100%;
+		height: fit-content;
+		flex-direction: column;
+		place-items: center;
+		margin-top: 100px;
+	}
+
+	.astro-stage-left > div,
+	.astro-stage-right > div {
+		width: 80%;
+	}
+
+	h2 {
+		font-size: 40px;
+	}
+	.header-icon-container {
+		margin-right: 30px;
+	}
+
+	.famous-curtain-header-container h2 {
+		text-shadow: 1.5px 1.5px 1.5px var(--txt-shadow);
+		width: 98%;
+		text-align: center;
+		font-size: 2rem;
+	}
+
+	.famous-people-wrapper {
+		height: auto;
+	}
+}
+
+@media (max-width: 468px) {
+	.astro-gallery-section {
+		height: 50vh;
+	}
+
+	.backsplash-container {
+		height: 100%;
+	}
+
+	.reel-control-container {
+		margin-right: 50px;
+	}
+
+	h2 {
+		font-size: 25px;
+	}
+
+	.curtain-header-container i {
+		font-size: 2rem;
+	}
+
+	.header-icon-container {
+		width: 50px;
+		height: 50px;
+	}
+	.astro-stage-left,
+	.astro-stage-right {
+		width: 100%;
+	}
+
+	.astro-stage-left > div,
+	.astro-stage-right > div {
+		width: 100%;
+	}
+
+	.famous-people-wrapper {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media (max-width: 381px) {
+	#curtain-header-img {
+		display: none;
+	}
+
+	#curtain-header {
+		width: 100%;
+	}
+
+	.astro-curtain.curtain-up > .curtain-header-container {
+		column-gap: 30px;
+	}
+	.astro-gallery-section {
+		height: 40vh;
+	}
+
+	.backsplash-container > img {
+		object-fit: cover;
+	}
+
+	.reel-wrapper {
+		width: 42%;
+	}
+	.reel-control-container {
+		margin-top: 50px;
+	}
+
+	.famous-astros {
+		width: 100%;
+	}
+
+	.famous-select-container {
+		width: 315px;
+	}
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+
+		<link href="https://fonts.cdnfonts.com/css/raslens-abedossen" rel="stylesheet" />
+
+		<link rel="stylesheet" href="./css/deafults.css" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<link rel="stylesheet" href="./css/responsive.css" />
+		<link rel="stylesheet" href="./css/animation.css" />
+		<title>AstroZone</title>
+	</head>
+
+	<body>
+		<i id="menu-toggler" class="fa-solid fa-bars"></i>
+		<div class="container fixed-menu">
+			<a class="menu-btn" href="#astroFacts">AstroFacts</a>
+			<a class="menu-btn" href="#famousAstros">FamousAstros</a>
+			<a class="menu-btn" href="#astroGallery">AstroGallery</a>
+		</div>
+		<div class="header-container container">
+			<h1>AstroZone</h1>
+		</div>
+
+		<section id="astroGallery" class="astro-gallery-section container">
+			<div id="backSplashContainer" class="backsplash-container contianer"></div>
+
+			<div class="reel-wrapper container">
+				<div id="cardReel" class="card-reel container">
+					<div id="Aries" class="astro-card container">
+						<div class="astro-sign-container">
+							<i class="ti ti-zodiac-aries"></i>
+						</div>
+						<div class="astro-card-name-container">Aries</div>
+					</div>
+
+					<div id="Taurus" class="astro-card container">
+						<div class="astro-sign-container">
+							<i class="ti ti-zodiac-taurus"></i>
+						</div>
+						<div class="astro-card-name-container">Taurus</div>
+					</div>
+
+					<div id="Gemini" class="astro-card container">
+						<div class="astro-sign-container">
+							<i class="ti ti-zodiac-gemini"></i>
+						</div>
+						<div class="astro-card-name-container">Gemini</div>
+					</div>
+					<div id="Cancer" class="astro-card container">
+						<div class="astro-sign-container">
+							<i class="ti ti-zodiac-cancer"></i>
+						</div>
+						<div class="astro-card-name-container">cancer</div>
+					</div>
+
+					<div id="Leo" class="astro-card container">
+						<div class="astro-sign-container">
+							<i class="ti ti-zodiac-leo"></i>
+						</div>
+						<div class="astro-card-name-container">Leo</div>
+					</div>
+
+					<div id="Virgo" class="astro-card container">
+						<div class="astro-sign-container">
+							<i class="ti ti-zodiac-virgo"></i>
+						</div>
+						<div class="astro-card-name-container">Virgo</div>
+					</div>
+
+					<div id="Libra" class="astro-card container">
+						<div class="astro-sign-container">
+							<i class="ti ti-zodiac-libra"></i>
+						</div>
+						<div class="astro-card-name-container">Libra</div>
+					</div>
+					<div id="Scorpio" class="astro-card container">
+						<div class="astro-sign-container">
+							<i class="ti ti-zodiac-scorpio"></i>
+						</div>
+						<div class="astro-card-name-container">Scorpio</div>
+					</div>
+
+					<div id="Sagittarius" class="astro-card container">
+						<div class="astro-sign-container">
+							<i class="ti ti-zodiac-sagittarius"></i>
+						</div>
+						<div class="astro-card-name-container">Sagittarius</div>
+					</div>
+
+					<div id="Capricorn" class="astro-card container">
+						<div class="astro-sign-container">
+							<i class="ti ti-zodiac-capricorn"></i>
+						</div>
+						<div class="astro-card-name-container">Capricorn</div>
+					</div>
+
+					<div id="Aquarius" class="astro-card container">
+						<div class="astro-sign-container">
+							<i class="ti ti-zodiac-aquarius"></i>
+						</div>
+						<div class="astro-card-name-container">Aquarius</div>
+					</div>
+					<div id="Pisces" class="astro-card container">
+						<div class="astro-sign-container">
+							<i class="ti ti-zodiac-pisces"></i>
+						</div>
+						<div class="astro-card-name-container">Pisces</div>
+					</div>
+				</div>
+
+				<div class="reel-control-container container">
+					<button class="reel-control"><i class="fa-solid fa-caret-left"></i></button>
+					<button class="reel-control"><i class="fa-solid fa-caret-right"></i></button>
+				</div>
+			</div>
+		</section>
+
+		<section id="astroFacts" class="astro-stage container">
+			<img class="astro-stage-img" src="#" alt="" />
+			<div class="astro-stage-left container">
+				<span class="sign-date-container container"></span>
+
+				<div class="astro-description-container container">
+					<span class="astro-label">Description</span>
+				</div>
+
+				<div class="sign-symbol-container container">
+					<div class="sign-container container">
+						<div class="container">Sign</div>
+						<div class="container sign-type-container"></div>
+						<div class="container">
+							<i id="sign-type-icon"></i>
+						</div>
+					</div>
+					<div class="symbol-container container">
+						<div class="container">Symbol</div>
+						<div class="container symbol-name-container"></div>
+						<div class="container">
+							<i id="sign-symbol-icon"></i>
+						</div>
+					</div>
+				</div>
+
+				<div class="birthstone-container container">
+					<span class="astro-label birthstone-label">BirthStones</span>
+					<div class="month-1-container container">
+						<div class="container month-1-name"></div>
+						<div class="container month-1-birthstone"></div>
+						<div class="container">
+							<img id="month-1-img" src="" alt="gem stone img" />
+						</div>
+					</div>
+					<div class="month-2-container container">
+						<div class="container month-2-name"></div>
+						<div class="container month-2-birthstone"></div>
+						<div class="container">
+							<img id="month-2-img" alt="gem stone img" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="astro-stage-right container">
+				<div class="astro-color-container container">
+					<span class="astro-label">Color</span>
+					<div class="color-wrapper-container container">
+						<div class="color-name-container container"></div>
+						<div class="color-span-container container">
+							<span class="color-span"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="astro-planet-container container">
+					<span class="astro-label">Planet</span>
+					<div class="planet-wrapper-container container">
+						<div class="planet-name-container container"></div>
+						<div class="planet-img-container container">
+							<img id="planet-img" src="" alt="planet image" />
+						</div>
+					</div>
+				</div>
+
+				<div class="astro-traits-container container">
+					<span class="astro-label"> Traits</span>
+				</div>
+			</div>
+
+			<!-- ++AstroCurtain -->
+
+			<div id="astro-curtain" class="astro-curtain container">
+				<img src="./assets/astro_curtain-background.jpg" alt="" />
+				<div class="curtain-header-container container">
+					<h2 id="curtain-header">Astro Facts</h2>
+					<button id="astro-reset-button" class="astro-header-btn">RESET</button>
+					<i id="header-icon"></i>
+					<div id="header-icon-container" class="header-icon-container container">
+						<img
+							id="curtain-header-img"
+							src="./assets/curtain_header_img.svg"
+							alt="astrology signs wheel" />
+					</div>
+				</div>
+				<div id="curtain-options" class="astro-sign-select-container container"></div>
+			</div>
+		</section>
+
+		<section id="famousAstros" class="famous-astros container">
+			<img src="./assets/famous_astro_background.jpg" alt="astrology background" />
+
+			<div class="famous-curtain container">
+				<div class="famous-curtain-header-container container">
+					<div class="famous-header-wrapper">
+						<h2 id="famous-header">Famous Astros</h2>
+						<button id="famous-curtain-btn">New Sign</button>
+					</div>
+				</div>
+				<div class="famous-select-container container">
+					<span class="famous-select container test-toggle"
+						><i class="ti ti-zodiac-aries"></i> Aries</span
+					>
+					<span class="famous-select container"><i class="ti ti-zodiac-taurus"></i>Taurus</span>
+					<span class="famous-select container"><i class="ti ti-zodiac-gemini"></i>Gemini</span>
+					<span class="famous-select container"><i class="ti ti-zodiac-cancer"></i>Cancer</span>
+					<span class="famous-select container"><i class="ti ti-zodiac-leo"></i>Leo</span>
+					<span class="famous-select container"><i class="ti ti-zodiac-virgo"></i>Virgo</span>
+					<span class="famous-select container"><i class="ti ti-zodiac-libra"></i>Libra</span>
+					<span class="famous-select container"><i class="ti ti-zodiac-scorpio"></i>Scorpio</span>
+					<span class="famous-select container"
+						><i class="ti ti-zodiac-sagittarius"></i>Sagittarius</span
+					>
+					<span class="famous-select container"
+						><i class="ti ti-zodiac-capricorn"></i>Capricorn</span
+					>
+					<span class="famous-select container"><i class="ti ti-zodiac-aquarius"></i>Aquarius</span>
+					<span class="famous-select container"><i class="ti ti-zodiac-pisces"></i>Pisces</span>
+				</div>
+				<div class="famous-curtain-stats-container container">
+					<div class="stats-img-container container">
+						<img
+							id="stats-container-img"
+							src="./assets/astro_stats_imgs/aries2.jpg"
+							alt="Zodiac Signs" />
+					</div>
+					<span class="stats-astro-name-span"></span>
+					<span class="stats-symbol-span"></span>
+				</div>
+			</div>
+
+			<div class="famous-people-wrapper container">
+				<div class="famous-person-container container">
+					<div class="famous-img-container">
+						<img class="famous-img" />
+					</div>
+					<div class="container famous-details">
+						<h4 class="famous-name">Chance The Rapper</h4>
+						<h5 class="famous-birthdate">December 25th</h5>
+						<h6 class="famous-knownFor">Actress, Singer, Dancer</h6>
+					</div>
+				</div>
+				<div class="famous-person-container container">
+					<div class="famous-img-container">
+						<img class="famous-img" />
+					</div>
+					<div class="container famous-details">
+						<h4 class="famous-name">Chance The Rapper</h4>
+						<h5 class="famous-birthdate">December 25th</h5>
+						<h6 class="famous-knownFor">Actress, Singer, Dancer</h6>
+					</div>
+				</div>
+
+				<div class="famous-person-container container">
+					<div class="famous-img-container">
+						<img class="famous-img" />
+					</div>
+					<div class="container famous-details">
+						<h4 class="famous-name">Chance The Rapper</h4>
+						<h5 class="famous-birthdate">December 25th</h5>
+						<h6 class="famous-knownFor">Actress, Singer, Dancer</h6>
+					</div>
+				</div>
+
+				<div class="famous-person-container container">
+					<div class="famous-img-container">
+						<img class="famous-img" />
+					</div>
+					<div class="container famous-details">
+						<h4 class="famous-name">Chance The Rapper</h4>
+						<h5 class="famous-birthdate">December 25th</h5>
+						<h6 class="famous-knownFor">Actress, Singer, Dancer</h6>
+					</div>
+				</div>
+				<div class="famous-person-container container">
+					<div class="famous-img-container">
+						<img class="famous-img" />
+					</div>
+					<div class="container famous-details">
+						<h4 class="famous-name">Chance The Rapper</h4>
+						<h5 class="famous-birthdate">December 25th</h5>
+						<h6 class="famous-knownFor">Actress, Singer, Dancer</h6>
+					</div>
+				</div>
+				<div class="famous-person-container container">
+					<div class="famous-img-container">
+						<img class="famous-img" />
+					</div>
+					<div class="container famous-details">
+						<h4 class="famous-name">Chance The Rapper</h4>
+						<h5 class="famous-birthdate">December 25th</h5>
+						<h6 class="famous-knownFor">Actress, Singer, Dancer</h6>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="./js.js"></script>
+		<script src="./gallery.js"></script>
+	</body>
+</html>

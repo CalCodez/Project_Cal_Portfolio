@@ -1,0 +1,772 @@
+.header-container {
+	width: 100%;
+	height: 80px;
+	justify-content: space-between;
+	position: relative;
+}
+
+#menu-toggler {
+	position: fixed;
+	z-index: 6;
+	font-size: 20px;
+	color: var(--font-color-main);
+	right: 40px;
+	top: 10px;
+	cursor: pointer;
+	font-weight: 600;
+	text-shadow: 1px 1px 1px var(--txt-shadow);
+}
+
+#menu-toggler:hover {
+	transform: scale(1.1);
+}
+
+.menu-btn {
+	width: 120px;
+	height: 30px;
+	background: var(--conic);
+	place-content: center;
+	text-align: center;
+	color: var(--font-color-main);
+	font-size: 1rem;
+	font-weight: 600;
+	border-radius: 10px;
+	border: 2px outset var(--font-color-main);
+	box-shadow: 1px 1px 2px 1px var(--box-shadow);
+	cursor: pointer;
+}
+
+.fixed-menu {
+	width: 200px;
+	height: 220px;
+	flex-direction: column;
+	background: var(--main-bg);
+	justify-content: space-evenly;
+	position: fixed;
+	z-index: 5;
+	display: none;
+	transition: all ease 0.9s;
+	border: 3px ridge var(--font-color-main);
+	right: 30px;
+}
+
+.menu-btn:hover {
+	transform: scale(1.1);
+}
+
+/* ++Astro Gallery */
+.astro-gallery-section {
+	height: 80vh;
+	width: 100%;
+	margin-top: 10px;
+	position: relative;
+	justify-content: flex-start;
+}
+
+.backsplash-container {
+	height: 100%;
+	width: 55%;
+	transition: all ease 1s;
+	background: var(--linear);
+}
+
+.backsplash-container > img {
+	object-fit: fill;
+	width: 100%;
+	height: 100%;
+}
+
+.reel-wrapper {
+	height: fit-content;
+	width: 60%;
+	position: absolute;
+	right: 0;
+	z-index: 2;
+	flex-direction: column;
+	row-gap: 30px;
+}
+
+.reel-wrapper::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 200px;
+	height: 100%;
+	filter: blur(80px);
+	z-index: 3;
+	background: var(--main-bg);
+}
+
+.card-reel {
+	height: 260px;
+	width: 100%;
+	right: 0;
+	justify-content: space-evenly;
+	column-gap: 100px;
+	overflow: hidden;
+	padding-left: 20px;
+}
+
+.astro-card {
+	height: 220px;
+	width: 160px;
+	flex-direction: column;
+	justify-content: space-around;
+	flex-shrink: 0;
+	box-shadow: 3px 3px 12px 3px var(--box-shadow);
+	background: var(--conic);
+}
+
+.astro-sign-container {
+	width: 80%;
+	height: 60%;
+	text-align: center;
+	place-content: center;
+}
+
+.astro-sign-container > i {
+	color: var(--font-color-main);
+	font-size: 4rem;
+}
+
+.astro-card-name-container {
+	width: 100%;
+	height: 20%;
+	text-align: center;
+	place-content: center;
+	color: var(--font-color-main);
+	font-size: 1.5rem;
+}
+
+.reel-control-container {
+	width: 300px;
+	height: 50px;
+	z-index: 2;
+	bottom: 10px;
+	right: 300px;
+	justify-content: space-evenly;
+}
+
+.reel-control-container button {
+	height: 30px;
+	width: 80px;
+	border: 2px outset black;
+	place-content: center;
+	text-align: center;
+	background-color: var(--main-bg);
+	cursor: pointer;
+	border-radius: 8px;
+}
+
+.reel-control-container button .fa-solid {
+	color: var(--box-shadow);
+	font-size: 20px;
+}
+
+/* ++Astro Stage */
+.astro-stage {
+	width: 80%;
+	height: 100vh;
+	margin-top: 100px;
+	position: relative;
+	background: var(--conic);
+	box-shadow: 2px 2px 8px 2px var(--box-shadow);
+	align-items: flex-end;
+	justify-content: space-around;
+}
+
+.astro-stage > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+}
+
+/* ++Facts Stage */
+
+.astro-stage-left,
+.astro-stage-right {
+	height: 83%;
+	width: 320px;
+	flex-direction: column;
+	justify-content: space-around;
+	position: relative;
+	justify-content: space-around;
+	padding-bottom: 15px;
+}
+
+.astro-stage-left {
+	justify-content: space-between;
+}
+
+.sign-date-container {
+	width: 320px;
+	height: 5%;
+	justify-content: flex-start;
+	color: var(--font-color-main);
+	font-size: 1.2rem;
+	font-weight: 600;
+	place-content: center;
+	border: 2px outset var(--main-bg);
+	border-radius: 2px;
+	box-shadow: 1px 1px 8px 1px var(--box-shadow);
+	border-radius: 8px;
+	background-color: var(--main-bg);
+	opacity: 0.9;
+}
+
+.astro-description-container {
+	width: 320px;
+	height: 35%;
+	color: var(--font-color-main);
+	text-align: center;
+	flex-direction: column;
+	justify-content: flex-start;
+	border-radius: 2px;
+	box-shadow: 1px 1px 8px 1px var(--box-shadow);
+	place-content: center;
+	font-weight: 600;
+	background-color: var(--main-bg);
+	opacity: 0.9;
+}
+
+.astro-label {
+	width: 100%;
+	height: 20%;
+	text-align: center;
+	margin-bottom: 10px;
+	place-content: center;
+	color: var(--font-color-main);
+	font-size: 1.2rem;
+	font-weight: 600;
+	background-color: var(--main-bg);
+	text-shadow: 1px 1px 1px var(--txt-shadow);
+}
+
+.birthstone-label {
+	margin-bottom: 0;
+}
+
+.sign-symbol-container {
+	width: 320px;
+	height: 15%;
+	flex-direction: column;
+	justify-content: space-evenly;
+	border-radius: 2px;
+	box-shadow: 1px 1px 8px 1px var(--box-shadow);
+}
+
+.sign-container,
+.symbol-container {
+	width: 95%;
+	height: 40%;
+	justify-content: flex-start;
+	border: 2px inset var(--box-shadow);
+}
+
+.sign-container div:nth-child(1),
+.symbol-container div:nth-child(1) {
+	width: 25%;
+	height: 100%;
+	color: var(--font-color-main);
+	font-size: 1rem;
+	font-weight: 600;
+	background-color: var(--main-bg);
+	text-shadow: 1px 1px 1px var(--txt-shadow);
+}
+
+.sign-container div:nth-child(2),
+.symbol-container div:nth-child(2) {
+	height: 100%;
+	width: 60%;
+	color: var(--font-color-main);
+	font-size: 1rem;
+	font-weight: 600;
+	background-color: var(--main-bg);
+	opacity: 0.9;
+}
+
+.sign-container div:nth-child(3),
+.symbol-container div:nth-child(3) {
+	height: 100%;
+	width: 15%;
+	color: var(--font-color-main);
+	font-size: 1rem;
+	border: 1px solid var(--txt-shadow);
+	background-color: var(--main-bg);
+	opacity: 0.9;
+}
+
+.birthstone-container {
+	height: 30%;
+	width: 320px;
+	flex-direction: column;
+	justify-content: space-between;
+	box-shadow: 1px 1px 8px 1px var(--box-shadow);
+	background-color: var(--main-bg);
+	opacity: 0.9;
+}
+
+.month-1-container,
+.month-2-container {
+	width: 100%;
+	height: 35%;
+	justify-content: flex-start;
+	border: 2px inset var(--box-shadow);
+}
+
+.month-1-container div:nth-child(1),
+.month-2-container div:nth-child(1) {
+	width: 40%;
+	height: 100%;
+	background-color: var(--main-bg);
+	color: var(--font-color-main);
+	font-size: 1.2rem;
+	font-weight: 600;
+	text-shadow: 1px 1px 1px var(--txt-shadow);
+}
+.month-1-container div:nth-child(2),
+.month-2-container div:nth-child(2) {
+	width: 35%;
+	height: 100%;
+	color: var(--font-color-main);
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+.month-1-container div:nth-child(3),
+.month-2-container div:nth-child(3) {
+	width: 25%;
+	height: 100%;
+}
+
+.month-1-container div:nth-child(3) img,
+.month-2-container div:nth-child(3) img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+/*++ AstroStage Right */
+
+.astro-color-container {
+	width: 320px;
+	height: 20%;
+	box-shadow: 1px 1px 8px 1px var(--box-shadow);
+	flex-direction: column;
+	background-color: var(--main-bg);
+	opacity: 0.9;
+}
+
+.color-wrapper-container {
+	height: 80%;
+	width: 100%;
+}
+
+.color-name-container {
+	width: 50%;
+	height: 100%;
+	color: var(--font-color-main);
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+
+.color-span-container {
+	width: 50%;
+	height: 100%;
+}
+
+.color-span {
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+}
+
+.astro-planet-container {
+	width: 320px;
+	height: 30%;
+	box-shadow: 1px 1px 8px 1px var(--box-shadow);
+	flex-direction: column;
+}
+
+.planet-wrapper-container {
+	height: 80%;
+	width: 100%;
+	justify-content: space-around;
+}
+
+.planet-name-container {
+	width: 40%;
+	height: 50%;
+	color: var(--font-color-main);
+	font-size: 1.5rem;
+	font-weight: 600;
+	background-color: var(--main-bg);
+	border-radius: 10px;
+	border: 2px ridge var(--font-color-main);
+}
+
+.planet-img-container {
+	height: 100%;
+	width: 40%;
+}
+
+.planet-img-container img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.astro-traits-container {
+	width: 320px;
+	height: 40%;
+	box-shadow: 1px 1px 8px 1px var(--box-shadow);
+
+	flex-direction: column;
+	justify-content: flex-start;
+	row-gap: 10px;
+	background-color: var(--main-bg);
+	opacity: 0.9;
+}
+
+.astro-traits-container li {
+	color: var(--font-color-main);
+	width: 100%;
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+/* ++AstroCurtain */
+.astro-curtain {
+	width: 100%;
+	height: 100%;
+	background-color: var(--main-bg);
+	position: absolute;
+	top: 0;
+	transition: height ease 0.5s;
+	z-index: 2;
+}
+
+.astro-curtain > img {
+	object-fit: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.astro-curtain.curtain-up {
+	height: 100px;
+	background-color: var(--main-bg);
+	border-bottom-right-radius: 100px;
+	border-bottom-left-radius: 100px;
+	transition: height ease 0.5s;
+	overflow: hidden;
+}
+
+.curtain-header-container {
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+.astro-header-btn {
+	width: 80px;
+	height: 30px;
+	background-color: var(--main-bg);
+	color: var(--font-color-main);
+	text-shadow: 1px 1px 1px var(--txt-shadow);
+	box-shadow: 1px 1px 8px 1px var(--box-shadow);
+	border-radius: 8px;
+	visibility: hidden;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.curtain-header-container i {
+	font-size: 60px;
+	color: var(--font-color-main);
+	visibility: none;
+	text-shadow: 2px 2px 2px var(--txt-shadow);
+}
+
+.header-icon-container {
+	width: 80px;
+	height: 80px;
+	margin-right: 100px;
+	border-radius: 50%;
+	justify-content: space-evenly;
+}
+
+.header-icon-container img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.astro-sign-select-container {
+	width: 320px;
+	height: 80%;
+	position: absolute;
+	bottom: 30px;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 15px;
+}
+
+.option-container {
+	width: 80px;
+	height: 80px;
+	border: 5px outset var(--main-bg);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition-delay: visibility 1s;
+	background: var(--conic);
+	border-radius: 50%;
+	box-shadow: 1px 1px 8px 1px var(--box-shadow);
+}
+
+.option-container:hover {
+	transform: scale(1.2);
+	cursor: pointer;
+}
+
+.icon-container {
+	height: fit-content;
+	width: fit-content;
+	text-align: center;
+	font-size: 30px;
+	color: var(--font-color-main);
+	place-content: center;
+}
+
+.name-container {
+	height: 30px;
+	width: 100%;
+	text-align: center;
+	color: var(--font-color-main);
+	font-size: 15px;
+	place-content: center;
+}
+
+/* ++Famous Astro Section */
+.famous-astros {
+	height: auto;
+	width: 80%;
+	border: 3px outset var(--box-shadow);
+	justify-content: space-between;
+	flex-wrap: wrap;
+	row-gap: 15px;
+	column-gap: 50px;
+	position: relative;
+	margin: 100px 0;
+}
+
+.famous-astros > img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	position: absolute;
+}
+
+.famous-curtain {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	flex-direction: column;
+	transition: width ease 0.9s;
+}
+
+.famous-curtain.curtain-open {
+	width: 300px;
+	transition: width ease 0.5s;
+}
+
+.famous-curtain-header-container {
+	width: 100%;
+	height: 100px;
+	place-content: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: flex-start;
+	z-index: 2;
+}
+
+.famous-header-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	justify-content: space-around;
+	align-items: center;
+	text-align: left;
+}
+
+.famous-curtain-header-container h2 {
+	text-shadow: 1.5px 1.5px 1.5px var(--txt-shadow);
+	margin-left: 0;
+	width: 98%;
+}
+
+#famous-curtain-btn {
+	width: 120px;
+	height: 40px;
+	background: var(--conic);
+	color: var(--font-color-main);
+	font-size: 1em;
+	border-radius: 8px;
+	box-shadow: 2px 2px 8px 1px var(--box-shadow);
+	visibility: hidden;
+	text-transform: uppercase;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+#famous-curtain-btn:hover {
+	transform: scale(1.1);
+	box-shadow: 2px 2px 8px 1px var(--txt-shadow);
+}
+
+.famous-select-container {
+	width: 380px;
+	height: 480px;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	z-index: 2;
+}
+
+.famous-select {
+	width: 150px;
+	height: 40px;
+	background: var(--linear);
+	border-radius: 8px;
+	column-gap: 10px;
+	box-shadow: 1px 1px 4px 1px var(--font-color-main);
+	text-transform: uppercase;
+	font-weight: 600;
+	color: var(--font-color-main);
+	cursor: pointer;
+	border: 4px outset var(--font-color-main);
+}
+
+.famous-select i {
+	font-weight: 600;
+}
+
+.famous-select:hover {
+	transform: scale(1.1);
+}
+
+.famous-astros > div:nth-child(1) {
+	justify-content: space-around;
+}
+
+.famous-curtain-stats-container {
+	height: 480px;
+	width: 300px;
+	flex-direction: column;
+	row-gap: 50px;
+	display: none;
+	justify-content: flex-evenly;
+	position: relative;
+}
+
+.stats-img-container {
+	width: 90%;
+	height: 45%;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 2px 2px 8px 2px var(--box-shadow);
+}
+
+.stats-img-container > img {
+	object-fit: fill;
+	width: 100%;
+	height: 100%;
+}
+
+.stats-astro-name-span,
+.stats-symbol-span {
+	width: 190px;
+	height: 10%;
+	background: var(--linear);
+	border-radius: 8px;
+	border: 5px groove var(--box-shadow);
+	box-shadow: 1px 1px 5px 1px var(--box-shadow);
+	place-content: center;
+	text-align: center;
+	font-weight: 600;
+	font-size: 1.5rem;
+	color: var(--font-color-main);
+	visibility: hidden;
+}
+
+.famous-people-wrapper {
+	height: 480px;
+	width: 60%;
+	min-width: 380px;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 10px;
+	flex-wrap: wrap;
+	display: none;
+}
+
+.famous-person-container {
+	width: 300px;
+	height: 150px;
+	border: 2px inset var(--box-shadow);
+	background: var(--conic);
+	display: none;
+	justify-content: space-evenly;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.famous-img-container {
+	width: 40%;
+	height: 80%;
+	border-radius: 50%;
+	box-shadow: 3px 3px 8px 3px var(--main-bg);
+}
+
+.famous-img-container > img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.famous-details {
+	height: 100%;
+	width: 60%;
+	flex-direction: column;
+	row-gap: 10px;
+}
+
+h4,
+h5,
+h6 {
+	color: var(--font-color-main);
+	width: 100%;
+	text-align: center;
+}
+
+h4 {
+	font-size: large;
+}
+
+.flex-active {
+	display: flex;
+}
+
+.flex-inactive {
+	display: none;
+}
