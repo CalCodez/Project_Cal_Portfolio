@@ -130,6 +130,9 @@
 }
 
 @media (max-width: 581px) {
+	body {
+		overflow-y: hidden;
+	}
 	.header-container {
 		justify-content: center;
 	}
