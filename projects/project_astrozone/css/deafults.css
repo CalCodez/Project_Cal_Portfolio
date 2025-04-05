@@ -63,6 +63,11 @@ html {
 	background-image: url(./assets/main_bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	display: flex;
+	justify-self: center;
+	outline: var(--olY);
+	width: 100%;
+	overflow-x: hidden;
 }
 
 body {
