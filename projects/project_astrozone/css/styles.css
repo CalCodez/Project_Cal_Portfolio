@@ -171,9 +171,10 @@
 	margin-top: 100px;
 	position: relative;
 	background: var(--conic);
-	box-shadow: 2px 2px 8px 2px var(--box-shadow);
+	/*box-shadow: 2px 2px 8px 2px var(--box-shadow);*/
 	align-items: flex-end;
 	justify-content: space-around;
+	border: 3px outset var(--box-shadow);
 }
 
 .astro-stage > img {
