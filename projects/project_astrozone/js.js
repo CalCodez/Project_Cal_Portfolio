@@ -992,7 +992,6 @@ const famousSelect = selectAll('.famous-select');
 const famousHeader = getById('famous-header');
 
 const famousPersonContainer = selectAll('.famous-person-container');
-console.log(famousPersonContainer);
 
 const [
 	ariesSelect,
@@ -1136,5 +1135,3 @@ toggleFamousAstro(sagittariusSelect, sagittarius, sagittariusCelebs);
 toggleFamousAstro(capricornSelect, capricorn, capricornCelebs);
 toggleFamousAstro(aquariusSelect, aquarius, aquariusCelebs);
 toggleFamousAstro(piscesSelect, pisces, piscesCelebs);
-
-console.log(window.innerWidth);
