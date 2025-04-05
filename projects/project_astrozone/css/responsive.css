@@ -130,6 +130,10 @@
 }
 
 @media (max-width: 581px) {
+	html {
+		padding: 0;
+		overflow-x: hidden;
+	}
 	.header-container {
 		justify-content: center;
 	}
@@ -200,11 +204,6 @@
 }
 
 @media (max-width: 468px) {
-	html {
-		overflow-x: hidden;
-		padding: 0;
-	}
-
 	.astro-gallery-section {
 		height: 50vh;
 	}
