@@ -67,6 +67,17 @@ const projectData = {
                 store them in a parent category container.`,
 		href: '/projects/project_dashboard/indexPlanner.html',
 	},
+
+	solarGallery: {
+		title: 'Solar Gallery',
+		src: '/assets/project_card_images/solar_gallery.png',
+		alt: 'solar gallery',
+		description: `A Solar System gallery that includes an image and facts about the 8 official
+								planets in our solar system. As well as our Sun, Moon, and Pluto. Web Design
+								inspired by UIUXMaesto from facebook.`,
+		href: '/projects/project_solar_gallery/index.html',
+	},
+
 	logins: {
 		title: 'Logins',
 		src: '/assets/project_card_images/Social_Media.png',
@@ -146,6 +157,7 @@ const {
 	pokemon,
 	responsive,
 	dashboard,
+	solarGallery,
 	logins,
 	tribute,
 	astroZone,
@@ -290,13 +302,12 @@ const [
 	dashboardBtn,
 	loginFormBtn,
 	astroZoneBtn,
-	tributeBtn,
+	solarGalleryBtn,
 	loginsBtn,
 	favzBtn,
 	responsiveBtn,
+	tributeBtn,
 ] = projectButtons;
-
-console.log(projectButtons);
 
 //Project Panel Display Function
 const panelProjectsDisplay = (toggler, obj) => {
@@ -338,10 +349,11 @@ panelProjectsDisplay(googleBtn, google);
 panelProjectsDisplay(dashboardBtn, dashboard);
 panelProjectsDisplay(loginsBtn, logins);
 panelProjectsDisplay(astroZoneBtn, astroZone);
-panelProjectsDisplay(tributeBtn, tribute);
+panelProjectsDisplay(solarGalleryBtn, solarGallery);
 panelProjectsDisplay(favzBtn, favz);
 panelProjectsDisplay(loginFormBtn, loginForm);
 panelProjectsDisplay(responsiveBtn, responsive);
+panelProjectsDisplay(tributeBtn, tribute);
 
 const moreProjectsToggler = getById('more-projects-toggle');
 const moreProjectsContainer = getById('more-projects-container');
@@ -385,7 +397,7 @@ const [
 	gridDashboard,
 	gridLoginForm,
 	gridAstroZone,
-	...gridRest
+	girdSolarGallery,
 ] = gridButtons;
 let gridTitle = getById('grid-title');
 let gridDescription = getById('grid-project-description');
@@ -436,7 +448,7 @@ gridProjectToggle(gridLogins, logins);
 gridProjectToggle(gridDashboard, dashboard);
 gridProjectToggle(gridLoginForm, loginForm);
 gridProjectToggle(gridAstroZone, astroZone);
-gridProjectToggle(gridButtons[11], gridPlaceHolder);
+gridProjectToggle(girdSolarGallery, solarGallery);
 
 //Static Grid Image Assignments
 const grid = getByClass('grid-project-img');
@@ -452,7 +464,7 @@ gridImgAssign(grid[7], logins.src);
 gridImgAssign(grid[8], dashboard.src);
 gridImgAssign(grid[9], loginForm.src);
 gridImgAssign(grid[10], astroZone.src);
-gridImgAssign(grid[11], gridPlaceHolder.src);
+gridImgAssign(grid[11], solarGallery.src);
 
 //**Snapchat, Email, Resource Containers Vars and Function */
 

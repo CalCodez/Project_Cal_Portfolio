@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://fonts.cdnfonts.com/css/chillight" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<link <link rel="stylesheet" href="./css/defaults.css" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<link rel="stylesheet" href="./css/responsive.css" />
+		<link rel="stylesheet" href="./css/animation.css" />
+		<title>Solar Gallery</title>
+	</head>
+	<body>
+		<img src="./assets/bg_images/main_bg.jpg" alt="solar system background" />
+		<div id="main-wrapper" class="container main-wrapper">
+			<a href="/project.html#projectDisplayContainer" class="exit-project-btn"
+				><i class="fa-solid fa-running"></i> Exit</a
+			>
+			<div class="shuffle-container container">
+				<button class="shuffle-btn">Next</button>
+			</div>
+
+			<button id="parent-exit-btn" class="parent-exit-btn close-parent-container-toggle">
+				Close Group
+			</button>
+
+			<div class="container wrapper-header-container">
+				<h3 id="group-name">Select A Planet Group</h3>
+				<div class="container position-container"></div>
+			</div>
+
+			<div id="entry-select-container" class="parent-select-container container">
+				<div class="parent-toggler container">
+					<div class="parent-img-container container">
+						<img src="./assets/planets/earth.jpg" alt="" />
+					</div>
+					<h6>Rocky Planets</h6>
+				</div>
+
+				<div class="parent-toggler container">
+					<div class="parent-img-container container">
+						<img src="./assets/planets/neptune.jpg" alt="" />
+					</div>
+					<h6>Giants Planets</h6>
+				</div>
+				<div class="parent-toggler container">
+					<div class="parent-img-container container">
+						<img src="./assets/planets/sun.jpg" alt="" />
+					</div>
+					<h6>Galaxy Staples</h6>
+				</div>
+			</div>
+
+			<!-- **Facts Container left -->
+			<div class="facts-container-wrapper container">
+				<div class="container facts-wrapper facts-container-left rock-facts-container">
+					<li class="facts-li">
+						<span class="container">AXIS TILT:</span>
+						<span class="container facts-span">Answer</span>
+					</li>
+
+					<li class="facts-li">
+						<span class="container">POSITION:</span>
+						<span class="container facts-span">Answer</span>
+					</li>
+					<li class="facts-li">
+						<span class="container">ROTATION:</span>
+						<span class="container facts-span">Answer</span>
+					</li>
+					<li class="facts-li">
+						<span class="container">SUN DISTANCE</span>
+						<span class="container facts-span">Answer</span>
+					</li>
+
+					<li class="facts-li">
+						<span class="container">MOON COUNT:</span>
+						<span class="container facts-span">Answer</span>
+					</li>
+
+					<li class="facts-li">
+						<span class="container">SURFACE TEMP:</span>
+						<span class="container facts-span">Answer</span>
+					</li>
+
+					<li class="facts-li">
+						<span class="container">ORBITAL PERIOD</span>
+						<span class="container facts-span">Answer</span>
+					</li>
+
+					<li class="facts-li">
+						<span class="container">EARTH DISTANCE:</span>
+						<span class="container facts-span">Answer</span>
+					</li>
+
+					<li class="facts-li">
+						<span class="container">CIRCUMFERENCE:</span>
+						<span class="container facts-span">Answer</span>
+					</li>
+				</div>
+				<!-- **Facts container Right -->
+				<div class="container facts-wrapper facts-container-right rock-facts-container">
+					<p class="planet-description"></p>
+				</div>
+			</div>
+
+			<!-- ++Rocks Container -->
+			<div id="rocks-parent" class="parent-container container">
+				<div id="mercury" class="container planet-container">
+					<div class="img-container container">
+						<img src="./assets/planets/mercury.jpg" alt="mercury" />
+					</div>
+
+					<h2>MERCURY</h2>
+					<div class="info-container container">
+						<h4>Mercury</h4>
+						<button class="planet-toggler">View More</button>
+					</div>
+				</div>
+
+				<div id="venus" class="container planet-container">
+					<div class="img-container container">
+						<img src="./assets/planets/venus.jpg" alt="venus" />
+					</div>
+					<h2>VENUS</h2>
+					<div class="info-container container">
+						<h4>Venus</h4>
+						<button class="planet-toggler">View More</button>
+					</div>
+				</div>
+
+				<div id="earth" class="container planet-container">
+					<div class="img-container container">
+						<img src="./assets/planets/earth.jpg" alt="earth" />
+					</div>
+					<h2>EARTH</h2>
+					<div class="info-container container">
+						<h4>Earth</h4>
+						<button class="planet-toggler">View More</button>
+					</div>
+				</div>
+
+				<div id="mars" class="container planet-container">
+					<div class="img-container container">
+						<img src="./assets/planets/mars.jpg" alt="mars" />
+					</div>
+					<h2>MARS</h2>
+					<div class="info-container container">
+						<h4>Mars</h4>
+						<button class="planet-toggler">View More</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- ++The Gas Giants -->
+			<div id="giants-parent" class="parent-container container">
+				<div id="jupiter" class="container planet-container">
+					<div class="img-container container">
+						<img src="./assets/planets/jupiter.jpg" alt="jupiter" />
+					</div>
+
+					<h2>JUPITER</h2>
+					<div class="info-container container">
+						<h4>Jupiter</h4>
+						<button class="planet-toggler">View More</button>
+					</div>
+				</div>
+
+				<div id="saturn" class="container planet-container">
+					<div class="img-container saturn-img-container container">
+						<img src="./assets/planets/saturn.jpg" alt="saturn" />
+					</div>
+					<h2>SATURN</h2>
+					<div class="info-container container">
+						<h4>Saturn</h4>
+						<button class="planet-toggler">View More</button>
+					</div>
+				</div>
+
+				<div id="uranus" class="container planet-container">
+					<div class="img-container container">
+						<img src="./assets/planets/uranus.jpg" alt="uranus" />
+					</div>
+					<h2>URANUS</h2>
+					<div class="info-container container">
+						<h4>Uranus</h4>
+						<button class="planet-toggler">View More</button>
+					</div>
+				</div>
+
+				<div id="neptune" class="container planet-container">
+					<div class="img-container container">
+						<img src="./assets/planets/neptune.jpg" alt="neptune" />
+					</div>
+					<h2>NEPTUNE</h2>
+					<div class="info-container container">
+						<h4>Neptune</h4>
+						<button class="planet-toggler">View More</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- ++The Staples Giants -->
+			<div id="staples-parent" class="parent-container container">
+				<div id="pluto" class="container planet-container">
+					<div class="img-container container">
+						<img src="./assets/planets/pluto.jpg" alt="pluto" />
+					</div>
+
+					<h2>PLUTO</h2>
+					<div class="info-container container">
+						<h4>Pluto</h4>
+						<button class="planet-toggler">View More</button>
+					</div>
+				</div>
+
+				<div id="sun" class="container planet-container">
+					<div class="img-container container">
+						<img src="./assets/planets/sun.jpg" alt="sun" />
+					</div>
+					<h2>SUN</h2>
+					<div class="info-container container">
+						<h4>Sun</h4>
+						<button class="planet-toggler">View More</button>
+					</div>
+				</div>
+
+				<div id="moon" class="container planet-container">
+					<div class="img-container container">
+						<img src="./assets/planets/moon.jpg" alt="moon" />
+					</div>
+					<h2>MOON</h2>
+					<div class="info-container container">
+						<h4>Moon</h4>
+						<button class="planet-toggler">View More</button>
+					</div>
+				</div>
+
+				<div id="milkyway" class="container planet-container">
+					<div class="img-container milky-way-img container">
+						<img src="./assets/planets/milky_way.jpg" alt="moon" />
+					</div>
+					<h2>MILKY WAY</h2>
+					<div class="info-container container">
+						<h4>Milky Way</h4>
+						<button class="planet-toggler">View More</button>
+					</div>
+				</div>
+			</div>
+			<span class="name-span"></span>
+			<span class="type-span"></span>
+		</div>
+
+		<script src="./js.js"></script>
+	</body>
+</html>

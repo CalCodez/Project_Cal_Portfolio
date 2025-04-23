@@ -1,0 +1,274 @@
+.main-wrapper {
+	width: 100%;
+	height: 90vh;
+	border: 5px ridge var(--black);
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: var(--black);
+}
+
+.shuffle-container {
+	width: 180px;
+	height: 80px;
+	justify-content: space-between;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	display: none;
+	z-index: 5;
+}
+
+.shuffle-container .shuffle-btn {
+	height: 30px;
+	width: 80px;
+	background-color: var(--black);
+	color: var(--font-color-secondary);
+	box-shadow: 1px 1px 3px 1px var(--font-color-secondary);
+	border-radius: 8px;
+}
+
+.parent-select-container {
+	height: auto;
+	width: fit-content;
+	min-width: 300px;
+	justify-content: space-around;
+	margin-top: 40px;
+	flex-wrap: wrap;
+	column-gap: 20px;
+	/*outline: var(--ol);*/
+}
+
+.parent-toggler {
+	width: 280px;
+	height: 280px;
+	font-weight: 600;
+	font-size: 1.1rem;
+	padding: 10px;
+	box-sizing: border-box;
+	flex: 1;
+	flex-direction: column;
+	cursor: pointer;
+	justify-content: space-between;
+}
+
+.parent-toggler .parent-img-container {
+	height: 210px;
+	width: 210px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.parent-toggler .parent-img-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.parent-toggler h6 {
+	width: 100%;
+	height: 40px;
+	color: var(--font-color-secondary);
+	text-align: center;
+	place-content: flex-end;
+	font-size: 1.3rem;
+	text-shadow: 1px 1px 1px var(--font-color-main);
+	font-family: var(--project-font);
+	letter-spacing: 3px;
+}
+
+.parent-toggler .parent-img-container:hover {
+	transform: scale(1.2);
+}
+
+.wrapper-header-container {
+	width: 100%;
+	height: 80px;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+
+.close-parent-container-toggle {
+	position: absolute;
+	left: 0;
+	z-index: 5;
+	cursor: pointer;
+	top: 20px;
+	width: fit-content;
+	padding: 8px;
+	display: none;
+}
+
+.parent-container {
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.planet-container {
+	width: 25%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex-shrink: 0;
+	transition: width ease-out 0.5s;
+}
+
+.planet-container:hover {
+	background: var(--black);
+}
+
+.img-container {
+	width: 200px;
+	height: 200px;
+	display: none;
+}
+
+.milky-way-img {
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.img-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.info-container {
+	width: 180px;
+	height: 100px;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.planet-container:hover .img-container {
+	display: flex;
+}
+
+.planet-container.open-container {
+	width: 100%;
+	background-color: var(--black);
+	transition: width ease-in 0.5s;
+}
+
+.planet-container.open-container > .img-container {
+	display: flex;
+	width: 380px;
+	height: 380px;
+	position: relative;
+}
+
+.planet-container.open-container > .info-container {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+}
+
+.planet-container.open-container h2 {
+	color: var(--font-color-main);
+	text-shadow: var(--txt-shadow);
+	width: 100%;
+	text-align: center;
+	z-index: 1;
+	font-size: 10rem;
+	position: absolute;
+}
+
+.facts-container-wrapper {
+	justify-content: space-between;
+	width: 80%;
+	z-index: 2;
+	position: absolute;
+	height: auto;
+	flex-wrap: wrap-reverse;
+	display: none;
+}
+
+.facts-wrapper {
+	width: 300px;
+	height: 300px;
+	flex-direction: column;
+	z-index: 2;
+	justify-content: space-evenly;
+	display: none;
+	color: var(--font-color-secondary);
+}
+
+.facts-container-left {
+	left: 10%;
+}
+
+.facts-container-right {
+	right: 10%;
+	line-height: 1.5;
+	text-align: justify;
+}
+
+.facts-container-right .planet-description::first-letter {
+	font-size: 2rem;
+	color: var(--font-color-main);
+	font-family: var(--project-font);
+	text-shadow: 1px 1px 1px var(--txt-shadow);
+	margin-left: 1px;
+	text-shadow: var(--txt-shadow);
+}
+
+.facts-li {
+	width: 100%;
+	height: 30px;
+	border-radius: 10px;
+	place-content: center;
+	margin-left: 5px;
+	justify-content: center;
+	display: flex;
+}
+
+.facts-li > span {
+	height: 100%;
+	border-radius: 8px;
+	justify-content: flex-start;
+}
+
+.facts-li > span:nth-child(1) {
+	width: 40%;
+	font-size: 0.7rem;
+	font-weight: 600;
+	color: lime;
+}
+
+.facts-li > span:nth-child(2) {
+	width: 50%;
+	color: red;
+	font-weight: 600;
+}
+
+.name-span,
+.type-span {
+	width: fit-content;
+	height: fit-content;
+	color: var(--font-color-secondary);
+	position: absolute;
+	font-family: var(--project-font);
+	font-size: 1rem;
+	text-wrap: no-wrap;
+	display: none;
+}
+
+.name-span {
+	bottom: 15%;
+}
+.type-span {
+	bottom: 10%;
+}
+
+.flex-active {
+	display: flex;
+}
+
+.flex-inactive {
+	display: none;
+}

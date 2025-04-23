@@ -57,10 +57,10 @@ a {
 }
 
 html {
+	background-image: url(/projects/project_astrozone/assets/main_bg.jpg);
 	background-color: var(--main-bg);
 	padding: 5px;
 	justify-content: center;
-	background-image: url(/projects/project_astrozone/assets/main_bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
