@@ -135,7 +135,9 @@
 
 	.facts-wrapper {
 		background-color: #00000089;
-		outline: var(--ol);
+	}
+	.facts-container-right {
+		font-size: 0.9rem;
 	}
 
 	.planet-container.open-container > .info-container {
@@ -162,10 +164,6 @@
 @media (max-width: 321px) {
 	.parent-container.open-container {
 		height: 900px;
-	}
-
-	.facts-container-right {
-		font-size: 0.9rem;
 	}
 
 	.shuffle-container {
