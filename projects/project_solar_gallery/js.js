@@ -25,7 +25,7 @@ const groupName = getById('group-name');
 
 const rockGroup = 'The Rocks';
 const giantGroup = 'The Giants';
-const staplesGroup = 'Galaxy Staples';
+const staplesGroup = 'Staples';
 const defaultName = 'Select A Planet Group';
 const planetHeaders = selectAll('h2'); //.open-container h2 (planet name headers)
 const mainWrapper = getById('main-wrapper');
