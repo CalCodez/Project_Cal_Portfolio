@@ -135,6 +135,7 @@
 
 	.facts-wrapper {
 		background-color: #00000089;
+		outline: var(--ol);
 	}
 
 	.planet-container.open-container > .info-container {
@@ -161,10 +162,6 @@
 @media (max-width: 321px) {
 	.parent-container.open-container {
 		height: 900px;
-	}
-
-	.facts-wrapper {
-		outline: var(--ol);
 	}
 
 	.facts-container-right {
