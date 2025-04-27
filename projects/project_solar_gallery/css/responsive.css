@@ -163,6 +163,10 @@
 		height: 900px;
 	}
 
+	.facts-wrapper {
+		outline: var(--ol);
+	}
+
 	.facts-container-right {
 		font-size: 0.9rem;
 	}
