@@ -80,8 +80,9 @@
 	}
 
 	.planet-container {
-		width: 225px;
+		width: 100%;
 		height: 225px;
+		outline: var(--ol);
 	}
 
 	.img-container {
