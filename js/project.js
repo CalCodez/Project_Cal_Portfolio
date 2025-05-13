@@ -112,7 +112,7 @@ const projectData = {
 		src: '/assets/project_card_images/astroZone.png',
 		alt: 'Astro Zone project',
 		description: `An astrology project based around the 12 sings in the zodiac. It features a zodiac image gallery, a zodiac facts, and a feature to view five famous people for each zodiac sign.`,
-		href: '/projects/project_astroZone/index.html',
+		href: './projects/project_astrozone/index.html',
 	},
 
 	favz: {
