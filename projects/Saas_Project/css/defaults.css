@@ -57,7 +57,7 @@ body {
 	width: max-content;
 	place-content: center;
 	flex-shrink: inherit;
-	font-family: "Preahvihear", sans-serif;
+	font-family: 'Preahvihear', sans-serif;
 	font-weight: 200;
 	font-size: 0.875em;
 	line-height: 1.6;
