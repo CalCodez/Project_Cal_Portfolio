@@ -16,12 +16,25 @@ const flexActive = 'flex-active';
 const flexInactive = 'flex-inactive';
 
 const date = new Date();
-function generateTimeStampString() {
-	const timestamp = Date.now();
-	const date = new Date(timestamp);
-	const formattedString = date.toLocaleString();
-	return formattedString;
-}
+
+const dateDisplay = getById('date-container');
+
+const theDate = (display) => {
+	const today = new Date();
+	const region = 'en-US';
+	const options = { weekday: 'long', year: 'numeric', month: 'long', day: '2-digit' };
+
+	setInterval(() => {
+		const time = new Date();
+		textContent(display);
+		textContent(
+			display,
+			`${today.toLocaleDateString(region, options)} ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`,
+		);
+	}, 1000);
+};
+
+theDate(dateDisplay);
 
 //Mobile Menu vars and function
 const mobileMenuToggler = getById('mobile-menu-toggler');
@@ -40,24 +53,15 @@ mobileMenuToggler.addEventListener(click, function () {
 	});
 
 	document.addEventListener(keyup, function (event) {
-		if (
-			event.key == 'Escape' &&
-			mobileMenuContainer.classList.contains(flexActive)
-		) {
+		if (event.key == 'Escape' && mobileMenuContainer.classList.contains(flexActive)) {
 			toggleClass(mobileMenuContainer, flexActive);
 		}
 	});
 });
 
-const dateDisplay = getById('date-container');
-
-dateDisplay.innerText = generateTimeStampString();
-
 const completedEventContainer = getById('completed-events-container');
 const completedItemsContainer = getById('completed-items-container');
-const toggleCompletedEventsContainer = (
-	container = completedEventContainer
-) => {
+const toggleCompletedEventsContainer = (container = completedEventContainer) => {
 	const completedEventsToggler = getById('completed-events-toggler');
 	const menuCaret = getById('menu-caret');
 	const caretOpen = 'fa-caret-left';
@@ -112,10 +116,7 @@ const toggleCreateEvent = (array) => {
 	});
 
 	document.addEventListener(keyup, function (event) {
-		if (
-			event.key == 'Escape' &&
-			eventFormContainer.classList.contains(flexActive)
-		) {
+		if (event.key == 'Escape' && eventFormContainer.classList.contains(flexActive)) {
 			toggleClass(eventFormContainer, flexActive);
 		}
 	});
@@ -161,18 +162,12 @@ const saveToLocalStorage = (key, array) => {
 
 const extractEventData = (eventNode) => {
 	return {
-		type: eventNode.querySelector(`.${generateEvent.type.containerClass}`)
+		type: eventNode.querySelector(`.${generateEvent.type.containerClass}`).textContent,
+		title: eventNode.querySelector(`.${generateEvent.title.containerClass}`).textContent,
+		date: eventNode.querySelector(`.${generateEvent.date.containerClass}`).textContent,
+		description: eventNode.querySelector(`.${generateEvent.description.containerClass}`)
 			.textContent,
-		title: eventNode.querySelector(`.${generateEvent.title.containerClass}`)
-			.textContent,
-		date: eventNode.querySelector(`.${generateEvent.date.containerClass}`)
-			.textContent,
-		description: eventNode.querySelector(
-			`.${generateEvent.description.containerClass}`
-		).textContent,
-		timeStamp: eventNode.querySelector(
-			`.${generateEvent.timeStamp.containerClass}`
-		).textContent,
+		timeStamp: eventNode.querySelector(`.${generateEvent.timeStamp.containerClass}`).textContent,
 	};
 };
 
@@ -227,81 +222,36 @@ const loadFromLocalStorage = (key) => {
 		viewEvent(typeDiv, eventNode);
 
 		completeButton.addEventListener(click, function () {
-			if (
-				completeButton.parentElement.parentElement.parentElement ==
-				toDo.container
-			) {
-				completeEvent(
-					completeButton,
-					toDo.eventCounter,
-					event,
-					toDo,
-					toDo.name
-				);
+			if (completeButton.parentElement.parentElement.parentElement == toDo.container) {
+				completeEvent(completeButton, toDo.eventCounter, event, toDo, toDo.name);
 			} else if (
-				completeButton.parentElement.parentElement.parentElement ==
-				appointment.container
+				completeButton.parentElement.parentElement.parentElement == appointment.container
 			) {
 				completeEvent(
 					completeButton,
 					appointment.eventCounter,
 					event,
 					appointment,
-					appointment.name
+					appointment.name,
 				);
-			} else if (
-				completeButton.parentElement.parentElement.parentElement ==
-				other.container
-			) {
-				completeEvent(
-					completeButton,
-					other.eventCounter,
-					event,
-					other,
-					other.name
-				);
-			} else if (
-				completeButton.parentElement.parentElement.parentElement ==
-				note.container
-			) {
-				completeEvent(
-					completeButton,
-					note.eventCounter,
-					event,
-					note,
-					note.name
-				);
+			} else if (completeButton.parentElement.parentElement.parentElement == other.container) {
+				completeEvent(completeButton, other.eventCounter, event, other, other.name);
+			} else if (completeButton.parentElement.parentElement.parentElement == note.container) {
+				completeEvent(completeButton, note.eventCounter, event, note, note.name);
 			}
 		});
 
 		deleteButton.addEventListener(click, function () {
-			if (
-				deleteButton.parentElement.parentElement.parentElement == toDo.container
-			) {
+			if (deleteButton.parentElement.parentElement.parentElement == toDo.container) {
 				deleteEvent(deleteButton, toDo.eventCounter, event, toDo, toDo.name);
-			} else if (
-				deleteButton.parentElement.parentElement.parentElement ==
-				appointment.container
-			) {
-				deleteEvent(
-					deleteButton,
-					appointment.eventCounter,
-					event,
-					appointment,
-					appointment.name
-				);
-			} else if (
-				deleteButton.parentElement.parentElement.parentElement ==
-				other.container
-			) {
+			} else if (deleteButton.parentElement.parentElement.parentElement == appointment.container) {
+				deleteEvent(deleteButton, appointment.eventCounter, event, appointment, appointment.name);
+			} else if (deleteButton.parentElement.parentElement.parentElement == other.container) {
 				deleteEvent(deleteButton, other.eventCounter, event, other, other.name);
-			} else if (
-				deleteButton.parentElement.parentElement.parentElement == note.container
-			) {
+			} else if (deleteButton.parentElement.parentElement.parentElement == note.container) {
 				deleteEvent(deleteButton, note.eventCounter, event, note, note.name);
 			} else if (
-				deleteButton.parentElement.parentElement.parentElement ==
-				completedItemsContainer
+				deleteButton.parentElement.parentElement.parentElement == completedItemsContainer
 			) {
 				deleteButton.parentElement.parentElement.remove();
 				removeFromLocalStorage('completedItems', 0);
@@ -462,41 +412,13 @@ eventGeneratorButton.addEventListener(click, function () {
 	const eventData = extractEventData(clonedEvent);
 
 	if (generateEvent.type.formInput.value == 'To Do') {
-		appendEvent(
-			toDo,
-			eventBox,
-			eventData,
-			completeButton,
-			deleteButton,
-			eventContainers
-		);
+		appendEvent(toDo, eventBox, eventData, completeButton, deleteButton, eventContainers);
 	} else if (generateEvent.type.formInput.value == 'Appointment') {
-		appendEvent(
-			appointment,
-			eventBox,
-			eventData,
-			completeButton,
-			deleteButton,
-			eventContainers
-		);
+		appendEvent(appointment, eventBox, eventData, completeButton, deleteButton, eventContainers);
 	} else if (generateEvent.type.formInput.value == 'Other') {
-		appendEvent(
-			other,
-			eventBox,
-			eventData,
-			completeButton,
-			deleteButton,
-			eventContainers
-		);
+		appendEvent(other, eventBox, eventData, completeButton, deleteButton, eventContainers);
 	} else if (generateEvent.type.formInput.value == 'Note') {
-		appendEvent(
-			note,
-			eventBox,
-			eventData,
-			completeButton,
-			deleteButton,
-			eventContainers
-		);
+		appendEvent(note, eventBox, eventData, completeButton, deleteButton, eventContainers);
 	}
 	toggleClass(eventFormContainer, flexActive);
 });
@@ -596,40 +518,27 @@ toggleEventHolders(otherHolder, todoHolder, appointmentHolder, noteHolder);
 toggleEventHolders(noteHolder, todoHolder, appointmentHolder, otherHolder);
 
 //Load and append from local storage vars and function
-const storageKeys = [
-	toDo.name,
-	appointment.name,
-	other.name,
-	note.name,
-	'completedItems',
-];
+const storageKeys = [toDo.name, appointment.name, other.name, note.name, 'completedItems'];
 for (let key of storageKeys) {
 	if (key == toDo.name) {
-		loadFromLocalStorage(toDo.name).forEach((eventNode) =>
-			appendChild(toDo.container, eventNode)
-		);
+		loadFromLocalStorage(toDo.name).forEach((eventNode) => appendChild(toDo.container, eventNode));
 		textContent(toDo.counter, `To Do: ${toDo.container.childElementCount}`);
 	} else if (key == appointment.name) {
 		loadFromLocalStorage(appointment.name).forEach((eventNode) =>
-			appendChild(appointment.container, eventNode)
+			appendChild(appointment.container, eventNode),
 		);
-		textContent(
-			appointment.counter,
-			`App: ${appointment.container.childElementCount}`
-		);
+		textContent(appointment.counter, `App: ${appointment.container.childElementCount}`);
 	} else if (key == other.name) {
 		loadFromLocalStorage(other.name).forEach((eventNode) =>
-			appendChild(other.container, eventNode)
+			appendChild(other.container, eventNode),
 		);
 		textContent(other.counter, `Other: ${other.container.childElementCount}`);
 	} else if (key == note.name) {
-		loadFromLocalStorage(note.name).forEach((eventNode) =>
-			appendChild(note.container, eventNode)
-		);
+		loadFromLocalStorage(note.name).forEach((eventNode) => appendChild(note.container, eventNode));
 		textContent(note.counter, `Note: ${note.container.childElementCount}`);
 	} else if (key == 'completedItems') {
 		loadFromLocalStorage('completedItems').forEach((eventNode) =>
-			appendChild(completedItemsContainer, eventNode)
+			appendChild(completedItemsContainer, eventNode),
 		);
 	}
 }

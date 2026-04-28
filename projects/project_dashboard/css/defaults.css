@@ -63,6 +63,11 @@ body {
 	align-items: center;
 }
 
+#date-container {
+	text-align: center;
+	font-weight: 600;
+}
+
 .toggle-buttons {
 	width: 80px;
 	height: 35px;
@@ -318,12 +323,7 @@ label {
 	z-index: 99;
 	flex-direction: column;
 	transition: width ease 0.2s;
-	background: conic-gradient(
-		var(--black),
-		var(--red-dark),
-		var(--black),
-		var(--red-dark)
-	);
+	background: conic-gradient(var(--black), var(--red-dark), var(--black), var(--red-dark));
 }
 
 .completed-events-container.completed-active {
@@ -377,12 +377,7 @@ label {
 .completed-items-container {
 	height: 525px;
 	width: 100%;
-	background: conic-gradient(
-		var(--black),
-		var(--red-dark),
-		var(--black),
-		var(--red-dark)
-	);
+	background: conic-gradient(var(--black), var(--red-dark), var(--black), var(--red-dark));
 	position: absolute;
 	bottom: 0;
 	flex-wrap: wrap;
